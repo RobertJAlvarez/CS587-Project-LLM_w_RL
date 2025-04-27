@@ -8,7 +8,6 @@ tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
 
 def generate_text(
     prompt,
-    max_length: int = 50,
     top_p: float = 0.9,
     temperature: float = 1.0,
 ):
@@ -16,7 +15,6 @@ def generate_text(
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
-            max_length=max_length,
             do_sample=True,
             top_p=top_p,
             temperature=temperature,

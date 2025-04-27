@@ -1,0 +1,28 @@
+[nltk_data] Downloading package punkt to /home/alvar258/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     /home/alvar258/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+Loading datasets...
+Total samples: 10000
+Loaded 8333 training samples and 1657 test samples.
+Loaded 8333 prompt-reference pairs.
+Traceback (most recent call last):
+  File "/home/alvar258/CS587-Project-LLM_w_RL/all_run.py", line 249, in <module>
+    train_policy(train_prompts, train_references, epochs=500)
+  File "/home/alvar258/CS587-Project-LLM_w_RL/all_run.py", line 125, in train_policy
+    prompt_emb = model.transformer.wte(inputs.input_ids).mean(dim=1)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/torch/nn/modules/sparse.py", line 190, in forward
+    return F.embedding(
+           ^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/torch/nn/functional.py", line 2551, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Expected tensor for argument #1 'indices' to have one of the following scalar types: Long, Int; but got torch.cuda.FloatTensor instead (while checking arguments for embedding)
