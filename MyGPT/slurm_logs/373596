@@ -1,0 +1,48 @@
+[nltk_data] Downloading package punkt to /home/alvar258/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/train_policy.py:276: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model = GPT(config)
+Using device: cuda
+Model loaded from models/best_gpt_model.pt
+
+Training policy using standard generation...
+Loading datasets...
+Total samples: 10000
+Loaded 8333 training samples and 1657 test samples.
+Loaded 8333 prompt-reference pairs.
+Epoch 0: Loss -0.0029 Reward 1.2545
+Traceback (most recent call last):
+  File "/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/train_policy.py", line 363, in <module>
+    # Generate text.
+                     
+  File "/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/train_policy.py", line 363, in <listcomp>
+    # Generate text.
+                     
+  File "/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/train_policy.py", line 120, in compute_fluency_score
+    sentences = nltk.tokenize.sent_tokenize(text)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/__init__.py", line 120, in sent_tokenize
+    return tokenizer.tokenize(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1280, in tokenize
+    return list(self.sentences_from_text(text, realign_boundaries))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1340, in sentences_from_text
+    return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1340, in <listcomp>
+    return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1328, in span_tokenize
+    for sentence in slices:
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1457, in _realign_boundaries
+    for sentence1, sentence2 in _pair_iter(slices):
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 321, in _pair_iter
+    prev = next(iterator)
+           ^^^^^^^^^^^^^^
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1429, in _slices_from_text
+    for match, context in self._match_potential_end_contexts(text):
+  File "/home/alvar258/.conda/envs/cent7/2024.02-py311/CS587/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1394, in _match_potential_end_contexts
+    for match in self._lang_vars.period_context_re().finditer(text):
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected string or bytes-like object, got 'tuple'
