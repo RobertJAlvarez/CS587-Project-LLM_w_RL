@@ -28,8 +28,8 @@ def generate(
         model: The trained GPT model.
         tokenizer: The tokenizer used to encode/decode text.
         prompt: The text prompt to start generation.
-        max_new_tokens: Maximum number of tokens to generate.
         policy: Policy to generate the temperature to be use for the next token.
+        max_new_tokens: Maximum number of tokens to generate.
         default_top_p: Consider all token with high probability where its comulative is at least default_top_p.
 
     Returns:
@@ -44,8 +44,7 @@ def generate(
     )
 
     if policy:
-        prompt_emb = model.transformer.wte(tokens)
-        temperature, top_p = policy(prompt_emb)
+        temperature, top_p = policy(model.transformer.wte(tokens))
     else:
         temperature = 0.5
         top_p = default_top_p
@@ -103,38 +102,13 @@ def generate(
         # Update temperature if policy was given.
         if policy:
             with torch.no_grad():
-                prompt_emb = model.transformer.wte(tokens)
-                temperature, top_p = policy(prompt_emb)
+                temperature, top_p = policy(model.transformer.wte(tokens))
 
     # Decode the tokens.
     generated_text = tokenizer.decode(tokens[0].tolist())
 
     # Return both the generated text and timing information.
-    return generated_text
-
-
-def generate_w_policy(
-    model, tokenizer, prompt, other_eots, policy
-) -> tuple[str, torch.Tensor, torch.Tensor]:
-    # Sample.
-    sample = generate(model, tokenizer, prompt, other_eots, policy)
-
-    encoded_prompt = tokenizer.encode(sample)
-
-    tokens = (
-        torch.tensor(encoded_prompt, dtype=torch.long)
-        .unsqueeze(0)
-        .to(model.lm_head.weight.device)
-    )
-
-    # Mean pooling.
-    with torch.no_grad():
-        prompt_emb = model.transformer.wte(tokens)
-
-    # Get temperature and top_p.
-    temperature, top_p = policy(prompt_emb)
-
-    return sample, temperature, top_p
+    return generated_text, temperature, top_p
 
 
 class AttentionPooling(nn.Module):
@@ -166,6 +140,34 @@ class SamplingPolicy(nn.Module):
         temperature = torch.sigmoid(outputs[:, 0]) * 2.0  # (0, 2)
         top_p = 0.8 + torch.sigmoid(outputs[:, 1]) * 0.2  # (0.8, 1.0)
         return temperature, top_p
+
+
+def compute_rewards(sample, reference) -> float:
+    fluency = compute_fluency_score(sample)
+    coherence = compute_coherence_score(reference, sample)
+    return 0.6 * fluency + 0.4 * coherence
+
+
+def compute_pseudo_log_prob(
+    temperature: torch.Tensor, top_p: torch.Tensor, alpha=1.0, beta=1.0
+) -> torch.Tensor:
+    """
+    Smarter pseudo-log-prob using both temperature and top-p.
+    """
+    return -alpha * temperature + beta * (1.0 - top_p)
+
+
+def compute_entropy_regularizer(
+    temperature: torch.Tensor, top_p: torch.Tensor, temp_weight=1.0, top_p_weight=1.0
+) -> torch.Tensor:
+    """
+    Penalize overly confident (low temperature) or overly greedy (low top-p) behavior.
+    """
+    temp_entropy = -(
+        temperature * torch.log(temperature + 1e-8)
+    )  # encourage higher temp
+    top_p_entropy = -(top_p * torch.log(top_p + 1e-8))  # encourage higher top_p
+    return temp_weight * temp_entropy + top_p_weight * top_p_entropy
 
 
 if __name__ == "__main__":
@@ -252,18 +254,13 @@ if __name__ == "__main__":
         ed = (epoch + 1) * batch_size
         for prompt, reference in zip(train_prompts[st:ed], train_references[st:ed]):
             # Generate text from prompt.
-            sample, temperature, top_p = generate_w_policy(
+            sample, temperature, top_p = generate(
                 model, tokenizer, prompt, other_eots, policy
             )
 
-            # Compute reward.
-            fluency = compute_fluency_score(sample)
-            coherence = compute_coherence_score(reference, sample)
-
-            # Compute some values to later be used for the loss.
-            rewards.append(0.6 * fluency + 0.4 * coherence)
-            log_probs.append(torch.log(-1.0 * temperature + 1.0 * (1.0 - top_p)))
-            entropies.append(-(temperature * torch.log(temperature + 1e-8)))
+            rewards.append(compute_rewards(sample, reference))
+            log_probs.append(compute_pseudo_log_prob(temperature, top_p))
+            entropies.append(compute_entropy_regularizer(temperature, top_p))
 
         rewards = torch.tensor(rewards, device=device)
         log_probs = torch.stack(log_probs)
@@ -272,8 +269,8 @@ if __name__ == "__main__":
         # Normalize rewards: (r - mean) / (std + 1e-6) for stability
         rewards = normalize(rewards)
 
-        # Policy gradient loss: maximize expected reward (w/ baseline) + mean(entropy).
-        loss = ((rewards - rewards.mean()) * log_probs).mean() - 0.01 * entropies.mean()
+        # Policy gradient loss: maximize expected reward + mean(entropy).
+        loss = (rewards * log_probs).mean() - 0.01 * entropies.mean()
 
         loss.backward()
         optimizer.step()
@@ -301,12 +298,15 @@ if __name__ == "__main__":
 
     # Evaluate model sampling based on fluency, coherence, and diversity.
     test_prompts, test_references = test
+    test_prompts = test_prompts[:batch_size]
+    test_references = test_references[:batch_size]
 
     # Generate text w/o policy + metrics.
     start_time = time.time()
-    gen_text_wo_policy = [
-        generate(model, tokenizer, prompt, other_eots) for prompt in test_prompts
-    ]
+    gen_text_wo_policy = []
+    for prompt in test_prompts:
+        sample, *_ = generate(model, tokenizer, prompt, other_eots)
+        gen_text_wo_policy.append(sample)
     print_metrics(gen_text_wo_policy, test_references, w_policy=False)
     print(f"Total gen w/o policy time = {(time.time() - start_time):.4f}s")
 
@@ -315,7 +315,7 @@ if __name__ == "__main__":
     start_time = time.time()
     with torch.no_grad():
         for prompt in test_prompts:
-            sample, _ = generate_w_policy(model, tokenizer, prompt, other_eots, policy)
+            sample, *_ = generate(model, tokenizer, prompt, other_eots, policy)
             gen_text_w_policy.append(sample)
     print_metrics(gen_text_w_policy, test_references, w_policy=True)
     print(f"Total gen w/ policy time = {(time.time() - start_time):.4f}s")

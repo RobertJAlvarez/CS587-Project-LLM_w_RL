@@ -1,4 +1,30 @@
-[nltk_data] Downloading package punkt to /home/alvar258/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
-/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/train_policy.py:210: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  model.load_state_dict(torch.load(args.model_path, map_location=device))
+<!-- 20 epochs & 64 batch size -->
+<!-- top_p 0.9 & temp computed per token -->
+<!-- Policy was mlp(linear(256,128), ReLU(), Linear(128,1)) -->
+<!-- Policy uses AttentionPooling instead of .mean(dim=1) -->
+<!-- Now top_p is dynamic -->
+<!-- Log(probs) updated to consider the top_p result -->
+<!-- rewards are normalize -->
+
+<!-- TODO: Why is loss "nan"? -->
+
+Epoch 1: Loss nan Reward 0.0000
+Epoch 2: Loss nan Reward -0.0000
+Epoch 3: Loss nan Reward 0.0000
+Epoch 4: Loss nan Reward -0.0000
+Epoch 5: Loss nan Reward -0.0000
+Epoch 6: Loss nan Reward -0.0000
+Early stopping triggered.
+Total training time = 32.0071s
+
+=== Evaluation Results Without Policy ===
+Avg Fluency Score: 0.8474
+Avg Coherence Score (BLEU): 0.4253
+Avg ROUGE-L Score: 0.5942
+Diversity Score (1-SelfBLEU): 0.7310
+Total gen w/o policy time = 290.9321s
+Traceback (most recent call last):
+  File "/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/train_policy.py", line 318, in <module>
+    sample, _ = generate_w_policy(model, tokenizer, prompt, other_eots, policy)
+    ^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
