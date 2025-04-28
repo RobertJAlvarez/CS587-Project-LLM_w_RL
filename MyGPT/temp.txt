@@ -1,8 +1,8 @@
-373769:
+Next run would have this settings:
 <!-- 20 epochs & 64 batch size -->
 <!-- top_p 0.9 & temp computed per token -->
 <!-- Policy was mlp(linear(256,128), ReLU(), Linear(128,1)) -->
 <!-- Policy uses AttentionPooling instead of .mean(dim=1) -->
 <!-- Now top_p is dynamic -->
-<!-- Log(probs) updated to consider the top_p result -->
+<!-- log_probs updated to consider the top_p result -->
 <!-- rewards are normalize -->

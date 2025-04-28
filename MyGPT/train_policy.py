@@ -175,12 +175,6 @@ if __name__ == "__main__":
         description="Generate text with a trained RoPE GPT model"
     )
     parser.add_argument(
-        "--model_path",
-        type=str,
-        default="models/best_gpt_model.pt",
-        help="Path to the trained model",
-    )
-    parser.add_argument(
         "--batch_size", type=int, default=64, help="Batch size for training"
     )
     parser.add_argument(
@@ -209,8 +203,9 @@ if __name__ == "__main__":
 
     # Load the trained weights.
     try:
-        model.load_state_dict(torch.load(args.model_path, map_location=device))
-        print(f"Model loaded from {args.model_path}")
+        model_path = "models/best_gpt_model.pt"
+        model.load_state_dict(torch.load(model_path, map_location=device))
+        print(f"Model loaded from {model_path}")
     except Exception as e:
         print(f"Error loading model: {e}")
         exit(1)
@@ -266,7 +261,7 @@ if __name__ == "__main__":
         log_probs = torch.stack(log_probs)
         entropies = torch.stack(entropies)
 
-        # Normalize rewards: (r - mean) / (std + 1e-6) for stability
+        # Normalize rewards: (r - mean) / (std + 1e-6) for stability.
         rewards = normalize(rewards)
 
         # Policy gradient loss: maximize expected reward + mean(entropy).
