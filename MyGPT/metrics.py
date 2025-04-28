@@ -85,7 +85,7 @@ def print_metrics(
     print(f"\n=== Evaluation Results With{w_wo_str} Policy ===")
     print(f"Avg Fluency Score: {sum(fluency_scores)/len(fluency_scores):.4f}")
     print(
-        f"Avg Coherence Score (BLEU): {sum(coherence_scores)/len(coherence_scores):.4f}"
+        f"Avg Coherence Score (BLEU): {sum(coherence_scores)/len(coherence_scores):.4f} (higher is better)"
     )
     print(f"Avg ROUGE-L Score: {sum(rouge_l_scores)/len(rouge_l_scores):.4f}")
-    print(f"Diversity Score (1-SelfBLEU): {diversity_score:.4f}")
+    print(f"Diversity Score (1-SelfBLEU): {diversity_score:.4f} (lower is better)")

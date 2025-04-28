@@ -1,0 +1,173 @@
+<!-- 20 epochs & 32 batch size -->
+<!-- top_p 0.9 & temp computed per token -->
+<!-- Policy was mlp(linear(256,128), ReLU(), Linear(128,1)) -->
+<!-- Policy uses AttentionPooling instead of .mean(dim=1) -->
+<!-- Now top_p is dynamic -->
+<!-- log_probs updated to consider the top_p result -->
+<!-- rewards are normalize ONLY for the loss -->
+<!-- NOTE: Up to this run all the evaluations were with the last policy. Not the best policy !!! -->
+
+Epoch 1: Loss -0.0010 Reward 0.9228
+Epoch 2: Loss -0.0010 Reward 0.9042
+Epoch 3: Loss -0.0011 Reward 0.9155
+Epoch 4: Loss -0.0011 Reward 0.9006
+Epoch 5: Loss -0.0011 Reward 0.8871
+Epoch 6: Loss -0.0011 Reward 0.8872
+Early stopping triggered.
+Total training time = 32.7902s
+
+=== Evaluation Results Without Policy ===
+Avg Fluency Score: 0.8946
+Avg Coherence Score (BLEU): 0.8626
+Avg ROUGE-L Score: 0.9168
+Diversity Score (1-SelfBLEU): 0.9447
+Total gen w/o policy time = 4.2470s
+
+=== Evaluation Results With Policy ===
+Avg Fluency Score: 0.8978
+Avg Coherence Score (BLEU): 0.8560
+Avg ROUGE-L Score: 0.9130
+Diversity Score (1-SelfBLEU): 0.9426
+Total gen w/ policy time = 4.6483s
+======================
+** Prompt **
+You hear it, or see it if you're online, every time someone asks what they should do while visiting Dallas.  One of the quickest responses is always 'go check out the Dallas World Aquarium. ' Some mention of penguins or rare birds and how it's a little expensive ($20. 95) but worth it usually follows. 
+
+An article published yesterday by The New Republic's Ben Crair is enough to give any potential advocates for the aquarium second thoughts. 
+
+The DWA, as described by Crair, is a place where staff raped on aquarium property are called liars by management, dead jaguars are found with toucan beaks in their stomachs, and owner Daryl Richardson does whatever he needs to do to get the species he wants, conservation practices be damned. 
+
+Continue Reading
+
+Related Stories BBC Documentary to Feature Dallas World Aquarium's Manatee Rescue Program
+
+Crair's reporting centers on Richardson's quest to acquire a population of pygmy sloths, a species unique to Isla Escudo de Veraguas, an island off the coast of Panama.
+** Gen w/ policy **
+You hear it, or see it if you're online, every time someone asks what they should do while visiting Dallas.  One of the quickest responses is always 'go check out the Dallas World Aquarium. ' Some mention of penguins or rare birds and how it's a little expensive ($20. 95) but worth it usually follows. 
+
+An article published yesterday by The New Republic's Ben Crair is enough to give any potential advocates for the aquarium second thoughts. 
+
+The DWA, as described by Crair, is a place where staff raped on aquarium property are called liars by management, dead jaguars are found with toucan beaks in their stomachs, and owner Daryl Richardson does whatever he needs to do to get the species he wants, conservation practices be damned. 
+
+Continue Reading
+
+Related Stories BBC Documentary to Feature Dallas World Aquarium's Manatee Rescue Program
+
+Crair's reporting centers on Richardson's quest to acquire a population of pygmy sloths, a species unique to Isla Escudo de Veraguas, an island off the coast of Panama.
+** Gen w/o policy **
+You hear it, or see it if you're online, every time someone asks what they should do while visiting Dallas.  One of the quickest responses is always 'go check out the Dallas World Aquarium. ' Some mention of penguins or rare birds and how it's a little expensive ($20. 95) but worth it usually follows. 
+
+An article published yesterday by The New Republic's Ben Crair is enough to give any potential advocates for the aquarium second thoughts. 
+
+The DWA, as described by Crair, is a place where staff raped on aquarium property are called liars by management, dead jaguars are found with toucan beaks in their stomachs, and owner Daryl Richardson does whatever he needs to do to get the species he wants, conservation practices be damned. 
+
+Continue Reading
+
+Related Stories BBC Documentary to Feature Dallas World Aquarium's Manatee Rescue Program
+
+Crair's reporting centers on Richardson's quest to acquire a population of pygmy sloths, a species unique to Isla Escudo de Veraguas, an island off the coast of Panama.
+** Reference **
+You hear it, or see it if you're online, every time someone asks what they should do while visiting Dallas.  One of the quickest responses is always 'go check out the Dallas World Aquarium. ' Some mention of penguins or rare birds and how it's a little expensive ($20. 95) but worth it usually follows. 
+
+An article published yesterday by The New Republic's Ben Crair is enough to give any potential advocates for the aquarium second thoughts. 
+
+The DWA, as described by Crair, is a place where staff raped on aquarium property are called liars by management, dead jaguars are found with toucan beaks in their stomachs, and owner Daryl Richardson does whatever he needs to do to get the species he wants, conservation practices be damned. 
+
+Continue Reading
+
+Related Stories BBC Documentary to Feature Dallas World Aquarium's Manatee Rescue Program
+
+Crair's reporting centers on Richardson's quest to acquire a population of pygmy sloths, a species unique to Isla Escudo de Veraguas, an island off the coast of Panama.  Richardson got permits to bring the animals back to the DWA and establish a captive breeding population from the Panamanian government, but local environmentalists kept Richardson and his team from leaving a remote airport with the animals.
+======================
+======================
+** Prompt **
+SALT LAKE CITY -- Notorious Mexican drug cartels have their tentacles in Utah, and the top drug enforcement agent in Utah calls it "the greatest threat to public safety. "
+
+"The traffickers made no money in Utah last year, and this is about greed," said Frank Smith, DEA Assistant Special Agent in Charge of Utah.  "If we can stop them from making a profit, they're going to go away. "
+
+But that won't happen right away, and the Smith warned Utahns to be cautious in the backcountry this spring and summer.  He said Mexican drug cartels are developing and hiding more large-scale marijuana grows on our state's public lands, especially in southern Utah.  Federal agents are waging a war against those cartels. 
+
+Dateline NBC's Chris Hansen tackled the topic last night on the program.
+** Gen w/ policy **
+SALT LAKE CITY -- Notorious Mexican drug cartels have their tentacles in Utah, and the top drug enforcement agent in Utah calls it "the greatest threat to public safety. "
+
+"The traffickers made no money in Utah last year, and this is about greed," said Frank Smith, DEA Assistant Special Agent in Charge of Utah.  "If we can stop them from making a profit, they're going to go away. "
+
+But that won't happen right away, and the Smith warned Utahns to be cautious in the backcountry this spring and summer.  He said Mexican drug cartels are developing and hiding more large-scale marijuana grows on our state's public lands, especially in southern Utah.  Federal agents are waging a war against those cartels. 
+
+Dateline NBC's Chris Hansen tackled the topic last night on the program.
+** Gen w/o policy **
+SALT LAKE CITY -- Notorious Mexican drug cartels have their tentacles in Utah, and the top drug enforcement agent in Utah calls it "the greatest threat to public safety. "
+
+"The traffickers made no money in Utah last year, and this is about greed," said Frank Smith, DEA Assistant Special Agent in Charge of Utah.  "If we can stop them from making a profit, they're going to go away. "
+
+But that won't happen right away, and the Smith warned Utahns to be cautious in the backcountry this spring and summer.  He said Mexican drug cartels are developing and hiding more large-scale marijuana grows on our state's public lands, especially in southern Utah.  Federal agents are waging a war against those cartels. 
+
+Dateline NBC's Chris Hansen tackled the topic last night on the program.
+** Reference **
+SALT LAKE CITY -- Notorious Mexican drug cartels have their tentacles in Utah, and the top drug enforcement agent in Utah calls it "the greatest threat to public safety. "
+
+"The traffickers made no money in Utah last year, and this is about greed," said Frank Smith, DEA Assistant Special Agent in Charge of Utah.  "If we can stop them from making a profit, they're going to go away. "
+
+But that won't happen right away, and the Smith warned Utahns to be cautious in the backcountry this spring and summer.  He said Mexican drug cartels are developing and hiding more large-scale marijuana grows on our state's public lands, especially in southern Utah.  Federal agents are waging a war against those cartels. 
+
+Dateline NBC's Chris Hansen tackled the topic last night on the program.  Monday, KSL talked with Hansen and Smith about just how dangerous these farms are to the people of Utah.
+======================
+======================
+** Prompt **
+Indian Institute of Technology Kanpur (also known as IIT Kanpur or IITK) is a public engineering institution located in Kanpur, Uttar Pradesh.  It was declared to be an Institute of National Importance by the Government of India under the Institutes of Technology Act. 
+
+Established in 1960 as one of the first Indian Institutes of Technology, the institute was created with the assistance of a consortium of nine US research universities as part of the Kanpur Indo-American Programme (KIAP). [4][5]
+
+History [ edit ]
+
+Faculty Building, IIT Kanpur
+
+IIT Kanpur was established by an Act of Parliament in 1959.  The institute was started in December 1959 in a room in the canteen building of the Harcourt Butler Technological Institute at Agricultural Gardens in Kanpur.  In 1963, the institute moved to its present location, on the Grand Trunk Road near the locality of Kalyanpur in Kanpur district. [6]
+
+During the first ten years of its existence, a consortium of nine US universities (namely M.
+** Gen w/ policy **
+Indian Institute of Technology Kanpur (also known as IIT Kanpur or IITK) is a public engineering institution located in Kanpur, Uttar Pradesh.  It was declared to be an Institute of National Importance by the Government of India under the Institutes of Technology Act. 
+
+Established in 1960 as one of the first Indian Institutes of Technology, the institute was created with the assistance of a consortium of nine US research universities as part of the Kanpur Indo-American Programme (KIAP). [4][5]
+
+History [ edit ]
+
+Faculty Building, IIT Kanpur
+
+IIT Kanpur was established by an Act of Parliament in 1959.  The institute was started in December 1959 in a room in the canteen building of the Harcourt Butler Technological Institute at Agricultural Gardens in Kanpur.  In 1963, the institute moved to its present location, on the Grand Trunk Road near the locality of Kalyanpur in Kanpur district. [6]
+
+During the first ten years of its existence, a consortium of nine US universities (namely M. Aronnax; some pegasi with
+lengthened snouts, which their pectoral fins, being much elongated and
+formed in the shape of wings, allow, if not to fly, at least to shoot
+into the air; pigeon spatulae, with tails covered with many rings of
+shell; macrognathi with long jaws, an excellent fish, nine inches long,
+and bright with most agreeable colours; pale-coloured calliomores, with
+rugged heads; and plenty of chaetpdons, with long and tubular muzzles,
+which kill insects by shooting them, as from an air-gun, with a single
+drop of water
+** Gen w/o policy **
+Indian Institute of Technology Kanpur (also known as IIT Kanpur or IITK) is a public engineering institution located in Kanpur, Uttar Pradesh.  It was declared to be an Institute of National Importance by the Government of India under the Institutes of Technology Act. 
+
+Established in 1960 as one of the first Indian Institutes of Technology, the institute was created with the assistance of a consortium of nine US research universities as part of the Kanpur Indo-American Programme (KIAP). [4][5]
+
+History [ edit ]
+
+Faculty Building, IIT Kanpur
+
+IIT Kanpur was established by an Act of Parliament in 1959.  The institute was started in December 1959 in a room in the canteen building of the Harcourt Butler Technological Institute at Agricultural Gardens in Kanpur.  In 1963, the institute moved to its present location, on the Grand Trunk Road near the locality of Kalyanpur in Kanpur district. [6]
+
+During the first ten years of its existence, a consortium of nine US universities (namely M. Aronnax.”
+** Reference **
+Indian Institute of Technology Kanpur (also known as IIT Kanpur or IITK) is a public engineering institution located in Kanpur, Uttar Pradesh.  It was declared to be an Institute of National Importance by the Government of India under the Institutes of Technology Act. 
+
+Established in 1960 as one of the first Indian Institutes of Technology, the institute was created with the assistance of a consortium of nine US research universities as part of the Kanpur Indo-American Programme (KIAP). [4][5]
+
+History [ edit ]
+
+Faculty Building, IIT Kanpur
+
+IIT Kanpur was established by an Act of Parliament in 1959.  The institute was started in December 1959 in a room in the canteen building of the Harcourt Butler Technological Institute at Agricultural Gardens in Kanpur.  In 1963, the institute moved to its present location, on the Grand Trunk Road near the locality of Kalyanpur in Kanpur district. [6]
+
+During the first ten years of its existence, a consortium of nine US universities (namely M. I.
+======================

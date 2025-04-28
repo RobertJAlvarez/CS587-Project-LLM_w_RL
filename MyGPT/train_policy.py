@@ -2,144 +2,27 @@ import argparse
 import tiktoken  # type: ignore
 import time
 import torch  # type: ignore
-import torch.nn as nn  # type: ignore
 import torch.optim as optim  # type: ignore
 
 from my_gpt import GPT, Config
 from reward_logger import RewardLogger
-from utils import top_p_filtering, normalize
+from utils import normalize
 from metrics import print_metrics, compute_fluency_score, compute_coherence_score
-from load_dataset import load_prompts_and_references
+from load_dataset import sample_paragraph_splits
+from sampling_policy import SamplingPolicy
+from generate_w_policy import generate_w_policy
 
 
-def generate(
-    model,
-    tokenizer,
-    prompt,
-    other_eots: list = [],
-    policy=None,
-    max_new_tokens=1000,
-    default_top_p=0.9,
-) -> str:
-    """
-    Generate text from a prompt using the trained GPT model with KV caching support.
+def split_dataset(X, Y, train_pct: int = 80):
+    # Slip into training and testing.
+    train_size = int((train_pct / 100) * len(X))
 
-    Args:
-        model: The trained GPT model.
-        tokenizer: The tokenizer used to encode/decode text.
-        prompt: The text prompt to start generation.
-        policy: Policy to generate the temperature to be use for the next token.
-        max_new_tokens: Maximum number of tokens to generate.
-        default_top_p: Consider all token with high probability where its comulative is at least default_top_p.
+    train_prompts = X[:train_size]
+    train_references = Y[:train_size]
+    test_prompts = X[train_size:]
+    test_references = Y[train_size:]
 
-    Returns:
-        The generated text including the prompt and generation time.
-    """
-    # Encode the prompt.
-    encoded_prompt = tokenizer.encode(prompt)
-    tokens = (
-        torch.tensor(encoded_prompt, dtype=torch.long)
-        .unsqueeze(0)
-        .to(model.lm_head.weight.device)
-    )
-
-    if policy:
-        temperature, top_p = policy(model.transformer.wte(tokens))
-    else:
-        temperature = 0.5
-        top_p = default_top_p
-
-    # Initialize the past key values to None (no caching yet).
-    past_key_values = None
-    max_past_key_values_len = model.config.block_size - 1
-
-    # Create set of valid end of token.
-    eots = set(other_eots + [tokenizer.eot_token])
-
-    # Generate tokens one at a time.
-    for _ in range(max_new_tokens):
-        # For KV cache: after first iteration, only process the last token.
-        if past_key_values is None:
-            # Get only the last block_size tokens if input is too long.
-            context = tokens[:, -model.config.block_size :]
-        else:
-            context = tokens[:, -1:]  # With KV cache, we only need the last token.
-            # Get only the last block_size - 1 KV cache if the total input (KV cache + context) is too long.
-            if past_key_values[0][0].size(2) > max_past_key_values_len:
-                past_key_values = list(
-                    tuple(t[:, :, -max_past_key_values_len:] for t in layer_past)
-                    for layer_past in past_key_values
-                )
-
-        # Forward pass to get logits.
-        with torch.no_grad():
-            logits, new_past_key_values = model(
-                context, past_key_values=past_key_values
-            )
-
-            # Update KV cache for next iteration if using cache.
-            past_key_values = new_past_key_values
-
-        # Focus on the last token's predictions.
-        logits = logits[:, -1, :] / temperature
-
-        # Filter tokens to higher prop with compulative prob of top_p.
-        logits = top_p_filtering(logits, top_p=top_p)
-
-        # Apply softmax to get probabilities.
-        probs = torch.softmax(logits, dim=-1)
-
-        # Sample from the distribution.
-        next_token = torch.multinomial(probs, num_samples=1)
-
-        # If we reach the end of text token, stop.
-        if next_token.item() in eots:
-            break
-        else:
-            # Append the token to our sequence.
-            tokens = torch.cat((tokens, next_token), dim=1)
-
-        # Update temperature if policy was given.
-        if policy:
-            with torch.no_grad():
-                temperature, top_p = policy(model.transformer.wte(tokens))
-
-    # Decode the tokens.
-    generated_text = tokenizer.decode(tokens[0].tolist())
-
-    # Return both the generated text and timing information.
-    return generated_text, temperature, top_p
-
-
-class AttentionPooling(nn.Module):
-    def __init__(self, embed_dim):
-        super().__init__()
-        self.query = nn.Linear(embed_dim, 1)
-
-    def forward(self, token_embeddings):
-        # token_embeddings: (batch_size, seq_len, embed_dim)
-        attn_weights = torch.softmax(self.query(token_embeddings), dim=1)
-        return (attn_weights * token_embeddings).sum(dim=1)  # (batch_size, embed_dim)
-
-
-class SamplingPolicy(nn.Module):
-    """Learn temperature and top-p adjustments based on prompt embeddings."""
-
-    def __init__(self, embed_dim=256) -> None:
-        super().__init__()
-        self.attention_pooling = AttentionPooling(embed_dim)
-        self.mlp = nn.Sequential(
-            nn.Linear(embed_dim, 128),
-            nn.ReLU(),
-            nn.Linear(128, 2),  # Now output 2 values: [temperature, top_p]
-        )
-
-    def forward(self, token_embeddings) -> tuple[torch.Tensor, torch.Tensor]:
-        pooled_emb = self.attention_pooling(token_embeddings)  # (batch_size, embed_dim)
-        outputs = self.mlp(pooled_emb)
-        temperature = torch.sigmoid(outputs[:, 0]) * 2.0  # (0, 2)
-        top_p = 0.8 + torch.sigmoid(outputs[:, 1]) * 0.2  # (0.8, 1.0)
-        return temperature, top_p
+    return (train_prompts, train_references), (test_prompts, test_references)
 
 
 def compute_rewards(sample, reference) -> float:
@@ -151,9 +34,6 @@ def compute_rewards(sample, reference) -> float:
 def compute_pseudo_log_prob(
     temperature: torch.Tensor, top_p: torch.Tensor, alpha=1.0, beta=1.0
 ) -> torch.Tensor:
-    """
-    Smarter pseudo-log-prob using both temperature and top-p.
-    """
     return -alpha * temperature + beta * (1.0 - top_p)
 
 
@@ -163,10 +43,10 @@ def compute_entropy_regularizer(
     """
     Penalize overly confident (low temperature) or overly greedy (low top-p) behavior.
     """
-    temp_entropy = -(
-        temperature * torch.log(temperature + 1e-8)
-    )  # encourage higher temp
-    top_p_entropy = -(top_p * torch.log(top_p + 1e-8))  # encourage higher top_p
+    # Encourage higher temp.
+    temp_entropy = -(temperature * torch.log(temperature + 1e-8))
+    # Encourage higher top_p.
+    top_p_entropy = -(top_p * torch.log(top_p + 1e-8))
     return temp_weight * temp_entropy + top_p_weight * top_p_entropy
 
 
@@ -175,10 +55,16 @@ if __name__ == "__main__":
         description="Generate text with a trained RoPE GPT model"
     )
     parser.add_argument(
-        "--batch_size", type=int, default=64, help="Batch size for training"
+        "--batch_size", type=int, default=32, help="Batch size for training"
     )
     parser.add_argument(
-        "--num_epochs", type=int, default=20, help="Number of epochs to train for"
+        "--num_epochs", type=int, default=12, help="Number of epochs to train for"
+    )
+    parser.add_argument(
+        "--k", type=int, default=5, help="First k tokens from paragraph"
+    )
+    parser.add_argument(
+        "--num_samples", type=int, default=5, help="Number of paragraph samples"
     )
     args = parser.parse_args()
 
@@ -221,22 +107,18 @@ if __name__ == "__main__":
     policy = SamplingPolicy().to(device)
 
     # Load training and testing prompts.
-    train, test = load_prompts_and_references()
-    train_prompts, train_references = train
+    (train_prompts, train_references), (test_prompts, test_references) = split_dataset(
+        *sample_paragraph_splits(k=args.k, num_samples=args.num_samples), train_pct=80
+    )
 
     print(f"Loaded {len(train_prompts)} prompt-reference pairs.")
     optimizer = optim.Adam(policy.parameters(), lr=1e-4)  # AdamW w/ lr=5e-4?
 
     logger = RewardLogger()
 
-    # Testing is done between the real second sentence and the generated one.
-    #   So, a period is a valid end of token.
-    other_eots = tokenizer.encode(".")
-
     # Early stopping variables.
     best_avg_reward = -float("inf")
-    patience = 5
-    no_improve_epochs = 0
+    best_policy_path = "models/best_policy.pt"
 
     start_time = time.time()
     for epoch in range(num_epochs):
@@ -249,8 +131,8 @@ if __name__ == "__main__":
         ed = (epoch + 1) * batch_size
         for prompt, reference in zip(train_prompts[st:ed], train_references[st:ed]):
             # Generate text from prompt.
-            sample, temperature, top_p = generate(
-                model, tokenizer, prompt, other_eots, policy
+            sample, temperature, top_p = generate_w_policy(
+                model, tokenizer, prompt, policy
             )
 
             rewards.append(compute_rewards(sample, reference))
@@ -261,11 +143,8 @@ if __name__ == "__main__":
         log_probs = torch.stack(log_probs)
         entropies = torch.stack(entropies)
 
-        # Normalize rewards: (r - mean) / (std + 1e-6) for stability.
-        rewards = normalize(rewards)
-
         # Policy gradient loss: maximize expected reward + mean(entropy).
-        loss = (rewards * log_probs).mean() - 0.01 * entropies.mean()
+        loss = (normalize(rewards) * log_probs).mean() - 0.01 * entropies.mean()
 
         loss.backward()
         optimizer.step()
@@ -278,39 +157,32 @@ if __name__ == "__main__":
         # Save best policy.
         if avg_reward > best_avg_reward:
             best_avg_reward = avg_reward
-            no_improve_epochs = 0
-            torch.save(policy.state_dict(), "models/best_policy.pt")
-        else:
-            no_improve_epochs += 1
-
-        # Early stop.
-        if no_improve_epochs >= patience:
-            print("Early stopping triggered.")
-            break
+            torch.save(policy.state_dict(), best_policy_path)
 
     logger.save()
     print(f"Total training time = {(time.time() - start_time):.4f}s")
 
     # Evaluate model sampling based on fluency, coherence, and diversity.
-    test_prompts, test_references = test
-    test_prompts = test_prompts[:batch_size]
-    test_references = test_references[:batch_size]
 
     # Generate text w/o policy + metrics.
     start_time = time.time()
     gen_text_wo_policy = []
-    for prompt in test_prompts:
-        sample, *_ = generate(model, tokenizer, prompt, other_eots)
-        gen_text_wo_policy.append(sample)
+    with torch.no_grad():
+        for prompt in test_prompts:
+            sample, *_ = generate_w_policy(model, tokenizer, prompt)
+            gen_text_wo_policy.append(sample)
     print_metrics(gen_text_wo_policy, test_references, w_policy=False)
     print(f"Total gen w/o policy time = {(time.time() - start_time):.4f}s")
+
+    # Load the best policy for evaluation.
+    policy.load_state_dict(torch.load(best_policy_path))
 
     # Generate text w/ policy + metrics.
     gen_text_w_policy = []
     start_time = time.time()
     with torch.no_grad():
         for prompt in test_prompts:
-            sample, *_ = generate(model, tokenizer, prompt, other_eots, policy)
+            sample, *_ = generate_w_policy(model, tokenizer, prompt, policy)
             gen_text_w_policy.append(sample)
     print_metrics(gen_text_w_policy, test_references, w_policy=True)
     print(f"Total gen w/ policy time = {(time.time() - start_time):.4f}s")

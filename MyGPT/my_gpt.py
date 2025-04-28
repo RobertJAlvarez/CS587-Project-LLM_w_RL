@@ -215,7 +215,7 @@ class CausalSelfAttention(nn.Module):
             y: output tensor of shape (B, T, C)
             present: tuple (k_cache, v_cache) to be used in future forward passes if use_cache=True, otherwise None.
         """
-        B, T, C = x.size()  # batch size, sequence length, embedding dimension
+        B, T, C = x.size()  # (batch size, sequence length, embedding dimension)
 
         # Calculate query, key, values for all heads in batch via W_Q, W_K, W_V projection.
         qkv = self.c_attn(x)  # (B, T, 3*C)

@@ -1,0 +1,100 @@
+<!-- 20 epochs & 64 batch size -->
+<!-- top_p 0.9 & temp computed per token -->
+<!-- Policy was mlp(linear(256,128), ReLU(), Linear(128,1)) -->
+<!-- Policy uses AttentionPooling instead of .mean(dim=1) -->
+<!-- Now top_p is dynamic -->
+<!-- log_probs updated to consider the top_p result -->
+<!-- rewards are normalize ONLY for the loss -->
+
+Epoch 1: Loss -0.0006 Reward 0.6631
+Epoch 2: Loss -0.0006 Reward 0.6707
+Epoch 3: Loss -0.0006 Reward 0.7002
+Epoch 4: Loss -0.0007 Reward 0.6400
+Epoch 5: Loss -0.0007 Reward 0.6991
+Epoch 6: Loss -0.0007 Reward 0.6681
+Epoch 7: Loss -0.0008 Reward 0.6962
+Epoch 8: Loss -0.0008 Reward 0.6428
+Early stopping triggered.
+Total training time = 61.6145s
+
+=== Evaluation Results Without Policy ===
+Avg Fluency Score: 0.9056
+Avg Coherence Score (BLEU): 0.4690
+Avg ROUGE-L Score: 0.6226
+Diversity Score (1-SelfBLEU): 0.9479
+Total gen w/o policy time = 7.4812s
+
+=== Evaluation Results With Policy ===
+Avg Fluency Score: 0.8911
+Avg Coherence Score (BLEU): 0.4618
+Avg ROUGE-L Score: 0.6241
+Diversity Score (1-SelfBLEU): 0.9465
+Total gen w/ policy time = 7.8722s
+======================
+** Prompt **
+(Lula Marques/AGPT)
+
+SÃO PAULO - O relator da reforma política na comissão especial da Câmara dos Deputados, deputado Vicente Cândido (PT-SP), deve incluir em seu relatório um artigo que, se aprovado, impedirá a partir da eleição de 2018 a prisão de candidatos até oito meses antes da eleição.
+** Gen w/ policy **
+(Lula Marques/AGPT)
+
+SÃO PAULO - O relator da reforma política na comissão especial da Câmara dos Deputados, deputado Vicente Cândido (PT-SP), deve incluir em seu relatório um artigo que, se aprovado, impedirá a partir da eleição de 2018 a prisão de candidatos até oito meses antes da eleição. In
+the hand of man aught to do with this conflagration? Had he fanned this
+flame? Was I to meet in these depths companions and friends of Captain
+Nemo whom he was going to visit, and who, like him, led this strange
+existence? Should I find down there a whole colony of exiles who, weary
+of the miseries of this earth, had sought and found independence in the
+deep ocean? All these foolish and unreasonable ideas pursued me
+** Gen w/o policy **
+(Lula Marques/AGPT)
+
+SÃO PAULO - O relator da reforma política na comissão especial da Câmara dos Deputados, deputado Vicente Cândido (PT-SP), deve incluir em seu relatório um artigo que, se aprovado, impedirá a partir da eleição de 2018 a prisão de candidatos até oito meses antes da eleição. In
+the same monklike severity of aspect
+** Reference **
+(Lula Marques/AGPT)
+
+SÃO PAULO - O relator da reforma política na comissão especial da Câmara dos Deputados, deputado Vicente Cândido (PT-SP), deve incluir em seu relatório um artigo que, se aprovado, impedirá a partir da eleição de 2018 a prisão de candidatos até oito meses antes da eleição.  As informações são do jornal "O Estado de S.
+======================
+======================
+** Prompt **
+Why An African-American Sports Pioneer Remains Obscure
+
+Enlarge this image toggle caption AP AP
+
+Alice Coachman Davis never entered the pantheon of breakthrough African-American sports heroes, like Jesse Owens or Wilma Rudolph.
+** Gen w/ policy **
+Why An African-American Sports Pioneer Remains Obscure
+
+Enlarge this image toggle caption AP AP
+
+Alice Coachman Davis never entered the pantheon of breakthrough African-American sports heroes, like Jesse Owens or Wilma Rudolph. I am a hunter, I call this
+bivalve, and seemed to have a particular motive in verifying the actual
+state of this tridacne
+** Gen w/o policy **
+Why An African-American Sports Pioneer Remains Obscure
+
+Enlarge this image toggle caption AP AP
+
+Alice Coachman Davis never entered the pantheon of breakthrough African-American sports heroes, like Jesse Owens or Wilma Rudolph. I could not
+see, but below the time, however despatch-boat Alector saw on the
+_Nautilus_, with putting the frigate _hors de combat;_
+she will not have any difficulty in getting repaired at the next port.”
+** Reference **
+Why An African-American Sports Pioneer Remains Obscure
+
+Enlarge this image toggle caption AP AP
+
+Alice Coachman Davis never entered the pantheon of breakthrough African-American sports heroes, like Jesse Owens or Wilma Rudolph.  But she was a pioneer nonetheless.
+======================
+======================
+** Prompt **
+Sooner or later, climate change will consume our economy.
+** Gen w/ policy **
+Sooner or later, climate change will consume our economy. The
+_Nautilus_ begin our submarine journey.”
+** Gen w/o policy **
+Sooner or later, climate change will consume our economy. The Great Eastern sailed on the
+13th of July, 1866
+** Reference **
+Sooner or later, climate change will consume our economy.  If we are wise, we will let this happen sooner, and make massive preemptive investments into green energy and sustainable infrastructure; this will cost a lot up front, but it will mitigate even greater costs down the road.
+======================

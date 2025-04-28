@@ -1,0 +1,82 @@
+<!-- 20 epochs & 64 batch size -->
+<!-- top_p 0.9 & temp computed per token -->
+<!-- Policy was mlp(linear(256,128), ReLU(), Linear(128,1)) -->
+<!-- Policy uses AttentionPooling instead of .mean(dim=1) -->
+<!-- Now top_p is dynamic -->
+<!-- log_probs updated to consider the top_p result -->
+<!-- rewards are z-normalize -->
+
+Epoch 1: Loss -0.0014 Reward 0.0000
+Epoch 2: Loss -0.0014 Reward 0.0000
+Epoch 3: Loss -0.0015 Reward 0.0000
+Epoch 4: Loss -0.0015 Reward -0.0000
+Epoch 5: Loss -0.0015 Reward 0.0000
+Epoch 6: Loss -0.0015 Reward -0.0000
+Epoch 7: Loss -0.0015 Reward -0.0000
+Epoch 8: Loss -0.0016 Reward -0.0000
+Early stopping triggered.
+Total training time = 64.4748s
+
+=== Evaluation Results Without Policy ===
+Avg Fluency Score: 0.8665
+Avg Coherence Score (BLEU): 0.4662
+Avg ROUGE-L Score: 0.6296
+Diversity Score (1-SelfBLEU): 0.9068
+Total gen w/o policy time = 7.1176s
+
+=== Evaluation Results With Policy ===
+Avg Fluency Score: 0.8783
+Avg Coherence Score (BLEU): 0.4715
+Avg ROUGE-L Score: 0.6311
+Diversity Score (1-SelfBLEU): 0.9163
+Total gen w/ policy time = 7.8789s
+======================
+** Prompt **
+Ubisoft couldn’t have found a better way to conclude their 3oth anniversary giveaway than this: The company has decided to offer Assassin’s Creed 3 absolutely free for the entire month.
+** Gen w/ policy **
+Ubisoft couldn’t have found a better way to conclude their 3oth anniversary giveaway than this: The company has decided to offer Assassin’s Creed 3 absolutely free for the entire month. It is the
+built quite like your long-voyage steamers, but its lines are
+sufficiently long, and its curves prolonged enough, to allow the water
+to slide off easily, and oppose no obstacle to its passage
+** Gen w/o policy **
+Ubisoft couldn’t have found a better way to conclude their 3oth anniversary giveaway than this: The company has decided to offer Assassin’s Creed 3 absolutely free for the entire month. It is the
+iceberg, a hundred feet above our heads rose the top of the mountain,
+which cast a shadow on the brilliant irradiation of the opposite slope.
+Some petrified shrubs ran fantastically here and there
+** Reference **
+Ubisoft couldn’t have found a better way to conclude their 3oth anniversary giveaway than this: The company has decided to offer Assassin’s Creed 3 absolutely free for the entire month.  This makes the title its final gift to loyal gamers after their year-long series of giveaways launched this summer in honor of its 30th birthday.
+======================
+======================
+** Prompt **
+Even as the Extension School Cultural Studies Club dropped its sponsorship of the event, members of the Satanic Temple held what appeared to be a black mass ceremony at the Hong Kong restaurant and lounge Monday night.
+** Gen w/ policy **
+Even as the Extension School Cultural Studies Club dropped its sponsorship of the event, members of the Satanic Temple held what appeared to be a black mass ceremony at the Hong Kong restaurant and lounge Monday night. It was a favourable opportunity
+presents itself, it must be seized.”
+** Gen w/o policy **
+Even as the Extension School Cultural Studies Club dropped its sponsorship of the event, members of the Satanic Temple held what appeared to be a black mass ceremony at the Hong Kong restaurant and lounge Monday night. It was a whole league from the
+coast, above which reared a sharp peak about five hundred yards high.
+The boat took with me Captain Nemo, two men of the crew, and the
+instruments, which consisted of a chronometer, a telescope, and a
+barometer
+** Reference **
+Even as the Extension School Cultural Studies Club dropped its sponsorship of the event, members of the Satanic Temple held what appeared to be a black mass ceremony at the Hong Kong restaurant and lounge Monday night. 
+
+UPDATED: May 14, 2014, at 2:37 a.
+======================
+======================
+** Prompt **
+How do you top off a week at SXSW in front of a massive live audience? With Bill Murray.
+** Gen w/ policy **
+How do you top off a week at SXSW in front of a massive live audience? With Bill Murray. I
+kinds peculiar to the southern seas; the whale, or the English “right
+whale,” which has no dorsal fin; the “humpback,” with reeved chest and
+large, whitish fins, which, in spite of its name, do not form wings;
+and the fin-back, of a yellowish brown, the liveliest of all the
+cetacea
+** Gen w/o policy **
+How do you top off a week at SXSW in front of a massive live audience? With Bill Murray. I
+knew not what to think, when near me in a slow voice I heard Captain
+Nemo say:
+** Reference **
+How do you top off a week at SXSW in front of a massive live audience? With Bill Murray.  And if you think you’ve heard so many Bill Murray stories that he can’t possibly do anything new that would surprise you, you’re wrong because here comes Bill Murray.
+======================
