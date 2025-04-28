@@ -1,0 +1,80 @@
+<!-- Normal runs -->
+<!-- 20 epochs & 32 batch size -->
+
+Epoch 1: Loss -0.0434 Reward 1.1981
+Epoch 2: Loss -0.0405 Reward 1.2470
+Epoch 3: Loss -0.0246 Reward 1.2778
+Epoch 4: Loss -0.0363 Reward 1.3851
+Epoch 5: Loss -0.0278 Reward 1.2210
+Epoch 6: Loss -0.0451 Reward 1.2525
+Epoch 7: Loss -0.0257 Reward 1.3433
+Epoch 8: Loss -0.0534 Reward 1.3282
+Epoch 9: Loss -0.0478 Reward 1.2414
+Epoch 10: Loss -0.0488 Reward 1.2022
+Epoch 11: Loss -0.0469 Reward 1.3626
+Epoch 12: Loss -0.0411 Reward 1.3925
+Epoch 13: Loss -0.0336 Reward 1.2760
+Epoch 14: Loss -0.0547 Reward 1.2858
+Epoch 15: Loss -0.0727 Reward 1.1308
+Epoch 16: Loss -0.0452 Reward 1.3142
+Epoch 17: Loss -0.0478 Reward 1.2598
+Epoch 18: Loss -0.0299 Reward 1.3349
+Epoch 19: Loss -0.0517 Reward 1.3053
+Epoch 20: Loss -0.0550 Reward 1.2300
+Total training time = 94.116135597229s
+
+=== Evaluation Results Without  Policy ===
+Avg Fluency Score: 0.8498
+Avg Coherence Score (BLEU): 0.4270
+Diversity Score (1-SelfBLEU): 0.7301
+
+=== Evaluation Results With  Policy ===
+Avg Fluency Score: 0.8553
+Avg Coherence Score (BLEU): 0.4273
+Diversity Score (1-SelfBLEU): 0.7299
+
+======================
+** Prompt **
+A SECRETIVE BRITISH POLICE INVESTIGATION focusing on journalists working with Edward Snowden’s leaked documents has been designated the code name “Operation Curable,” according to details newly obtained by The Intercept under the U.
+** Gen w/ policy **
+A SECRETIVE BRITISH POLICE INVESTIGATION focusing on journalists working with Edward Snowden’s leaked documents has been designated the code name “Operation Curable,” according to details newly obtained by The Intercept under the U. This
+worthy animal may allow itself to be caught in the seas of Europe (for
+my particular benefit), and I will not bring back less than half a yard
+of his ivory halberd to the Museum of Natural History.” But in the
+meanwhile I must seek this narwhal in the North Pacific Ocean, which,
+to return to France, was taking the road to the antipodes
+** Gen w/o policy **
+A SECRETIVE BRITISH POLICE INVESTIGATION focusing on journalists working with Edward Snowden’s leaked documents has been designated the code name “Operation Curable,” according to details newly obtained by The Intercept under the U. This
+worthy animal may allow itself to be caught in the seas of Europe (for
+my particular benefit), and I will not bring back less than half a yard
+of his ivory halberd to the Museum of Natural History.” But in the
+meanwhile I must seek this narwhal in the North Pacific Ocean, which,
+to return to France, was taking the road to the antipodes
+** Reference **
+A SECRETIVE BRITISH POLICE INVESTIGATION focusing on journalists working with Edward Snowden’s leaked documents has been designated the code name “Operation Curable,” according to details newly obtained by The Intercept under the U. K.
+======================
+======================
+** Prompt **
+More small restaurants may be able to find a home on some of Edmonton's most vibrant streets if council approves a pilot to ease parking requirements for businesses in those areas.
+** Gen w/ policy **
+More small restaurants may be able to find a home on some of Edmonton's most vibrant streets if council approves a pilot to ease parking requirements for businesses in those areas. You
+are you into the sea, and the form of the Avenger
+disappeared by degrees from my sight
+** Gen w/o policy **
+More small restaurants may be able to find a home on some of Edmonton's most vibrant streets if council approves a pilot to ease parking requirements for businesses in those areas. There, better
+Dumont d’Urville had done, and held together by solid bolts
+** Reference **
+More small restaurants may be able to find a home on some of Edmonton's most vibrant streets if council approves a pilot to ease parking requirements for businesses in those areas. 
+
+Council is considering reducing the number of parking spots restaurants and bars need to open on 124th Street, Whyte Avenue or part of Jasper Avenue.
+======================
+======================
+** Prompt **
+A note about listicles: So we know a lot of people hate listicles and associate them with cheap, low-quality, traffic-driving, link-bait articles.
+** Gen w/ policy **
+A note about listicles: So we know a lot of people hate listicles and associate them with cheap, low-quality, traffic-driving, link-bait articles.
+** Gen w/o policy **
+A note about listicles: So we know a lot of people hate listicles and associate them with cheap, low-quality, traffic-driving, link-bait articles.
+** Reference **
+A note about listicles: So we know a lot of people hate listicles and associate them with cheap, low-quality, traffic-driving, link-bait articles.  But here’s the thing—a list is a great format for an article, and a format I was using on my old blog almost 10 years ago.
+======================

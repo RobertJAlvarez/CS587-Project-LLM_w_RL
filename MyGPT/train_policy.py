@@ -1,9 +1,4 @@
 import argparse
-from datasets import load_dataset  # type: ignore
-import json
-import nltk  # type: ignore
-from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction  # type: ignore
-import random
 import tiktoken  # type: ignore
 import time
 import torch  # type: ignore
@@ -11,17 +6,21 @@ import torch.nn as nn  # type: ignore
 import torch.optim as optim  # type: ignore
 
 from my_gpt import GPT, Config
+from reward_logger import RewardLogger
+from utils import top_p_filtering
+from metrics import print_metrics, compute_fluency_score, compute_coherence_score
+from load_dataset import load_prompts_and_references
 
 
 def generate(
     model,
     tokenizer,
     prompt,
+    other_eots: list = [],
+    policy=None,
     max_new_tokens=1000,
-    temperature=0.5,
-    top_k=10,
-    use_kv_cache=True,
-):
+    top_p=0.9,
+) -> str:
     """
     Generate text from a prompt using the trained GPT model with KV caching support.
 
@@ -30,15 +29,12 @@ def generate(
         tokenizer: The tokenizer used to encode/decode text.
         prompt: The text prompt to start generation.
         max_new_tokens: Maximum number of tokens to generate.
-        temperature: Controls randomness (higher = more random).
-        top_k: Number of highest probability tokens to consider for sampling.
-        use_kv_cache: Whether to use KV caching for more efficient generation.
+        policy: Policy to generate the temperature to be use for the next token.
+        top_p: Consider all token with high probability where its comulative is at least top_p.
 
     Returns:
         The generated text including the prompt and generation time.
     """
-    model.eval()  # Set the model to evaluation mode.
-
     # Encode the prompt.
     encoded_prompt = tokenizer.encode(prompt)
     tokens = (
@@ -47,18 +43,23 @@ def generate(
         .to(model.lm_head.weight.device)
     )
 
-    # Track timing for performance analysis.
-    start_time = time.time()
+    if policy:
+        prompt_emb = model.transformer.wte(tokens).mean(dim=1)
+        temperature = policy(prompt_emb)
+    else:
+        temperature = 0.5
 
     # Initialize the past key values to None (no caching yet).
     past_key_values = None
     max_past_key_values_len = model.config.block_size - 1
 
+    # Create set of valid end of token.
+    eots = set(other_eots + [tokenizer.eot_token])
+
     # Generate tokens one at a time.
     for _ in range(max_new_tokens):
         # For KV cache: after first iteration, only process the last token.
-        # For no KV cache: always process full sequence within block size limit.
-        if not use_kv_cache or past_key_values is None:
+        if past_key_values is None:
             # Get only the last block_size tokens if input is too long.
             context = tokens[:, -model.config.block_size :]
         else:
@@ -77,17 +78,13 @@ def generate(
             )
 
             # Update KV cache for next iteration if using cache.
-            if use_kv_cache:
-                past_key_values = new_past_key_values
+            past_key_values = new_past_key_values
 
         # Focus on the last token's predictions.
         logits = logits[:, -1, :] / temperature
 
-        # Apply top-k filtering.
-        if top_k > 0:
-            v, _ = torch.topk(logits, top_k)
-            # Set other logits outside top-l to a value of -inf.
-            logits[logits < v[:, [-1]]] = -float("Inf")
+        # Filter tokens to higher prop with compulative prob of top_p.
+        logits = top_p_filtering(logits, top_p=top_p)
 
         # Apply softmax to get probabilities.
         probs = torch.softmax(logits, dim=-1)
@@ -96,90 +93,45 @@ def generate(
         next_token = torch.multinomial(probs, num_samples=1)
 
         # If we reach the end of text token, stop.
-        if next_token.item() == tokenizer.eot_token:
+        if next_token.item() in eots:
             break
         else:
             # Append the token to our sequence.
             tokens = torch.cat((tokens, next_token), dim=1)
 
-    # Calculate generation time.
-    generation_time = time.time() - start_time
+        # Update temperature if policy was given.
+        if policy:
+            with torch.no_grad():
+                prompt_emb = model.transformer.wte(tokens).mean(dim=1)
+            temperature = policy(prompt_emb)
 
     # Decode the tokens.
     generated_text = tokenizer.decode(tokens[0].tolist())
 
     # Return both the generated text and timing information.
-    return generated_text, generation_time
+    return generated_text
 
 
-def compute_fluency_score(text):
-    """
-    A simple proxy for fluency: longer sentences, proper punctuation.
-    (Optional improvement: use perplexity from a small language model.)
-    """
-    sentences = nltk.tokenize.sent_tokenize(text)
-    if not sentences:
-        return 0.0
+def generate_w_policy(
+    model, tokenizer, prompt, other_eots, policy
+) -> tuple[str, torch.Tensor]:
+    # Sample.
+    sample = generate(model, tokenizer, prompt, other_eots, policy)
 
-    avg_sentence_length = sum(len(sentence.split()) for sentence in sentences) / len(
-        sentences
+    encoded_prompt = tokenizer.encode(sample)
+
+    tokens = (
+        torch.tensor(encoded_prompt, dtype=torch.long)
+        .unsqueeze(0)
+        .to(model.lm_head.weight.device)
     )
 
-    # Normalize to a range, e.g., divide by 20 (typical sentence length).
-    return min(avg_sentence_length / 20.0, 1.0)
+    # Mean pooling.
+    with torch.no_grad():
+        prompt_emb = model.transformer.wte(tokens).mean(dim=1)
 
-
-def compute_coherence_score(reference, generated):
-    """
-    Use BLEU score between reference and generated text.
-    """
-    reference_tokens = nltk.tokenize.word_tokenize(reference.lower())
-    generated_tokens = nltk.tokenize.word_tokenize(generated.lower())
-    return sentence_bleu(
-        [reference_tokens],
-        generated_tokens,
-        smoothing_function=SmoothingFunction().method4,
-    )
-
-
-def compute_diversity_score(samples) -> float:
-    """
-    Compute Self-BLEU: lower is better (more diversity).
-    """
-    n = len(samples)
-
-    # Perfect diversity if only one sample
-    if n <= 1:
-        return 1.0
-
-    tokenized_samples = [
-        nltk.tokenize.word_tokenize(sample.lower()) for sample in samples
-    ]
-    total_self_bleu = sum(
-        [
-            sentence_bleu(
-                tokenized_samples[:i] + tokenized_samples[i + 1 :],
-                tokenized_samples[i],
-                smoothing_function=SmoothingFunction().method4,
-            )
-            for i in range(n)
-        ]
-    )
-
-    return 1.0 - (total_self_bleu / n)
-
-
-class RewardLogger:
-    def __init__(self, save_path="rewards.json") -> None:
-        self.rewards = []
-        self.save_path = save_path
-
-    def log(self, reward_value) -> None:
-        self.rewards.append(reward_value)
-
-    def save(self) -> None:
-        with open(self.save_path, "w") as f:
-            json.dump(self.rewards, f)
+    # Get temperature.
+    return sample, policy(prompt_emb)
 
 
 class SamplingPolicy(nn.Module):
@@ -187,49 +139,12 @@ class SamplingPolicy(nn.Module):
 
     def __init__(self) -> None:
         super().__init__()
-        self.linear = nn.Linear(256, 1)  # model.config.n_embd = 256
+        # model.config.n_embd = 256
+        self.mlp = nn.Sequential(nn.Linear(256, 128), nn.ReLU(), nn.Linear(128, 1))
 
-    def forward(self, prompt_embedding):
+    def forward(self, prompt_embedding) -> torch.Tensor:
         # Temperature in (0, 2).
-        return torch.sigmoid(self.linear(prompt_embedding)) * 2.0
-
-
-def load_prompts_and_references(train_pct: int = 10, test_pct: str = 2):
-    """
-    Load prompts and references from OpenWebText.
-    Split into training and test sets.
-    """
-    tot_pct = train_pct + test_pct
-    assert tot_pct <= 100, "Train + test percent > 100"
-
-    print("Loading datasets...")
-    openwebtext = load_dataset("stas/openwebtext-10k")
-
-    texts = [sample["text"] for sample in openwebtext["train"] if "text" in sample]
-
-    print(f"Total samples: {len(texts)}")
-    random.shuffle(texts)
-
-    prompts = []
-    references = []
-    for text in texts:
-        sentences = text.split(".")
-        if len(sentences) >= 2:
-            prompts.append(sentences[0].strip() + ".")
-            references.append(". ".join(sentences[:2]).strip() + ".")
-
-    # Split.
-    train_size = int((train_pct / tot_pct) * len(texts))
-
-    train_prompts = prompts[:train_size]
-    train_references = references[:train_size]
-    test_prompts = prompts[train_size:]
-    test_references = references[train_size:]
-
-    print(
-        f"Loaded {len(train_prompts)} training samples and {len(test_prompts)} test samples."
-    )
-    return (train_prompts, train_references), (test_prompts, test_references)
+        return torch.sigmoid(self.mlp(prompt_embedding)) * 2.0
 
 
 if __name__ == "__main__":
@@ -243,10 +158,7 @@ if __name__ == "__main__":
         help="Path to the trained model",
     )
     parser.add_argument(
-        "--use_kv_cache", action="store_true", help="Use KV caching for generation"
-    )
-    parser.add_argument(
-        "--batch_size", type=int, default=32, help="Batch size for training"
+        "--batch_size", type=int, default=64, help="Batch size for training"
     )
     parser.add_argument(
         "--num_epochs", type=int, default=20, help="Number of epochs to train for"
@@ -259,9 +171,6 @@ if __name__ == "__main__":
 
     # Load the tokenizer (GPT-4 tokenizer).
     tokenizer = tiktoken.get_encoding("cl100k_base")
-
-    # Download NLTK resources if not already present
-    nltk.download("punkt")
 
     # Set device.
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -285,11 +194,10 @@ if __name__ == "__main__":
 
     # Move model to the appropriate device.
     model.to(device)
+    model.eval()  # Set the model to evaluation mode.
 
     # Generate text using specified setting.
-    print(
-        f"\nTraining policy using {'KV cache' if args.use_kv_cache else 'standard generation'}..."
-    )
+    print("Training policy using 'KV cache'")
 
     # Initialize policy.
     policy = SamplingPolicy().to(device)
@@ -301,35 +209,30 @@ if __name__ == "__main__":
     print(f"Loaded {len(train_prompts)} prompt-reference pairs.")
     optimizer = optim.Adam(policy.parameters(), lr=1e-4)  # AdamW w/ lr=5e-4?
 
-    model.eval()
     logger = RewardLogger()
 
-    # TODO: Properly set up the number of epochs and the train prompt per iteration.
+    # Testing is done between the real second sentence and the generated one.
+    #   So, a period is a valid end of token.
+    other_eots = tokenizer.encode(".")
+
+    # Early stopping variables.
+    best_avg_reward = -float("inf")
+    patience = 5
+    no_improve_epochs = 0
+
+    start_time = time.time()
     for epoch in range(num_epochs):
         optimizer.zero_grad()
 
         rewards = []
         log_probs = []
+        entropies = []
         st = epoch * batch_size
         ed = (epoch + 1) * batch_size
         for prompt, reference in zip(train_prompts[st:ed], train_references[st:ed]):
-            # Get prompt embedding.
-            encoded_prompt = tokenizer.encode(prompt)
-            tokens = (
-                torch.tensor(encoded_prompt, dtype=torch.long)
-                .unsqueeze(0)
-                .to(model.lm_head.weight.device)
-            )
-            with torch.no_grad():
-                # Mean pooling.
-                prompt_emb = model.transformer.wte(tokens).mean(dim=1)
-
-            # Get temperature.
-            temperature = policy(prompt_emb)
-
-            # Sample.
-            sample, _ = generate(
-                model, tokenizer, prompt, temperature=temperature.item()
+            # Generate text from prompt.
+            sample, temperature = generate_w_policy(
+                model, tokenizer, prompt, other_eots, policy
             )
 
             # Compute reward.
@@ -337,14 +240,16 @@ if __name__ == "__main__":
             coherence = compute_coherence_score(reference, sample)
 
             # Log probability (assume log_prob ~ -temperature for simple start).
-            rewards.append(fluency + coherence)  # This can be weighted.
+            rewards.append(0.6 * fluency + 0.4 * coherence)
             log_probs.append(torch.log(temperature + 1e-8))
+            entropies.append(-(temperature * torch.log(temperature + 1e-8)))
 
         rewards = torch.tensor(rewards, device=device)
         log_probs = torch.stack(log_probs)
+        entropies = torch.stack(entropies)
 
-        # Policy gradient loss: maximize expected reward.
-        loss = -(rewards * log_probs).mean()
+        # Policy gradient loss: maximize expected reward (w/ baseline) + mean(entropy).
+        loss = ((rewards - rewards.mean()) * log_probs).mean() - 0.01 * entropies.mean()
 
         loss.backward()
         optimizer.step()
@@ -352,40 +257,50 @@ if __name__ == "__main__":
         avg_reward = rewards.mean().item()
         logger.log(avg_reward)
 
-        print(f"Epoch {epoch}: Loss {loss.item():.4f} Reward {avg_reward:.4f}")
+        print(f"Epoch {epoch+1}: Loss {loss.item():.4f} Reward {avg_reward:.4f}")
+
+        # Save best policy.
+        if avg_reward > best_avg_reward:
+            best_avg_reward = avg_reward
+            no_improve_epochs = 0
+            torch.save(policy.state_dict(), "models/best_policy.pt")
+            print(f"New best policy saved with reward {best_avg_reward:.4f}")
+        else:
+            no_improve_epochs += 1
+            print(f"No improvement for {no_improve_epochs} epochs.")
+
+        # Early stop.
+        if no_improve_epochs >= patience:
+            print("Early stopping triggered.")
+            break
 
     logger.save()
+    print(f"Total training time = {time.time() - start_time}s")
 
     # Evaluate model sampling based on fluency, coherence, and diversity.
     test_prompts, test_references = test
 
-    # Generate text.
-    generated_texts = [generate(model, tokenizer, prompt) for prompt in test_prompts]
-
-    # Metrics.
-    fluency_scores = [compute_fluency_score(g) for g in generated_texts]
-    coherence_scores = [
-        compute_coherence_score(r, g) for r, g in zip(test_references, generated_texts)
+    # Generate text w/o policy.
+    gen_text_wo_policy = [
+        generate(model, tokenizer, prompt, other_eots) for prompt in test_prompts
     ]
-    diversity_score = compute_diversity_score(generated_texts)
+    print_metrics(gen_text_wo_policy, test_references, w_policy=False)
 
-    print("\n=== Evaluation Results ===")
-    print(f"Avg Fluency Score: {sum(fluency_scores)/len(fluency_scores):.4f}")
-    print(
-        f"Avg Coherence Score (BLEU): {sum(coherence_scores)/len(coherence_scores):.4f}"
-    )
-    print(f"Diversity Score (1-SelfBLEU): {diversity_score:.4f}")
+    # Generate text w/ policy.
+    gen_text_w_policy = []
+    with torch.no_grad():
+        for prompt in test_prompts:
+            sample, _ = generate_w_policy(model, tokenizer, prompt, other_eots, policy)
+            gen_text_w_policy.append(sample)
+
+    # Metrics for gen text w/ policy.
+    print_metrics(gen_text_w_policy, test_references, w_policy=True)
 
     # Print some generated examples.
-    for i in range(5):
-        print(f"\nPrompt: {test_prompts[i]}")
-        print(f"Generated: {generated_texts[i]}")
-        print(f"Reference: {test_references[i]}")
-
-    # Save policy.
-    best_policy_path = "models/best_policy.pt"
-    torch.save(model.state_dict(), best_policy_path)
-
-# TODO: Each generation may take a 1 second or more. If 10,000 samples are generated, then it would take at least 3.5 hours.
-#   Given that the comparison reference text is only a sentence longer, add "." as an early stop token (in generate()).
-#   Then re-run.
+    for i in range(3):
+        print("======================")
+        print(f"** Prompt **\n{test_prompts[i]}")
+        print(f"** Gen w/ policy **\n{gen_text_w_policy[i]}")
+        print(f"** Gen w/o policy **\n{gen_text_wo_policy[i]}")
+        print(f"** Reference **\n{test_references[i]}")
+        print("======================")

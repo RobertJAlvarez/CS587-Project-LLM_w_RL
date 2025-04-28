@@ -174,5 +174,5 @@ cython_debug/
 .pypirc
 
 # Others
-MyGPT/models/best_gpt_model.pt
+MyGPT/models/*
 
