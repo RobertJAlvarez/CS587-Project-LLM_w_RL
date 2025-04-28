@@ -1,4 +1,79 @@
-[nltk_data] Downloading package punkt to /home/alvar258/nltk_data...
-[nltk_data]   Package punkt is already up-to-date!
-/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/train_policy.py:189: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
-  model.load_state_dict(torch.load(args.model_path, map_location=device))
+<!-- 20 epochs & 32 batch size -->
+<!-- top_p 0.9 & temp computed per token -->
+<!-- Policy was mlp(linear(256,128), ReLU(), Linear(128,1)) -->
+
+Epoch 1: Loss 0.0003 Reward 0.7163
+Epoch 2: Loss 0.0004 Reward 0.6796
+Epoch 3: Loss 0.0003 Reward 0.6897
+Epoch 4: Loss 0.0003 Reward 0.7185
+Epoch 5: Loss 0.0003 Reward 0.7204
+Epoch 6: Loss 0.0002 Reward 0.7116
+Epoch 7: Loss 0.0002 Reward 0.6248
+Epoch 8: Loss 0.0002 Reward 0.6743
+Epoch 9: Loss 0.0002 Reward 0.7550
+Epoch 10: Loss 0.0002 Reward 0.6733
+Epoch 11: Loss 0.0001 Reward 0.6628
+Epoch 12: Loss 0.0001 Reward 0.6638
+Epoch 13: Loss 0.0000 Reward 0.6787
+Epoch 14: Loss -0.0000 Reward 0.6402
+Epoch 15: Loss -0.0000 Reward 0.7083
+Epoch 16: Loss -0.0001 Reward 0.6857
+Epoch 17: Loss -0.0002 Reward 0.6894
+Epoch 18: Loss -0.0001 Reward 0.7183
+Epoch 19: Loss -0.0002 Reward 0.6707
+Epoch 20: Loss -0.0001 Reward 0.6736
+Total training time = 93.87847471237183s
+
+=== Evaluation Results Without Policy ===
+Avg Fluency Score: 0.8492
+Avg Coherence Score (BLEU): 0.4278
+Diversity Score (1-SelfBLEU): 0.7215
+
+=== Evaluation Results With Policy ===
+Avg Fluency Score: 0.8473
+Avg Coherence Score (BLEU): 0.4290
+Diversity Score (1-SelfBLEU): 0.7320
+
+======================
+** Prompt **
+A West Virginia man was sentenced to five years of probation and 50 years of supervision after being convicted of impregnating his 11-year-old daughter and forcing her to get abortions.
+** Gen w/ policy **
+A West Virginia man was sentenced to five years of probation and 50 years of supervision after being convicted of impregnating his 11-year-old daughter and forcing her to get abortions.
+** Gen w/o policy **
+A West Virginia man was sentenced to five years of probation and 50 years of supervision after being convicted of impregnating his 11-year-old daughter and forcing her to get abortions.
+** Reference **
+A West Virginia man was sentenced to five years of probation and 50 years of supervision after being convicted of impregnating his 11-year-old daughter and forcing her to get abortions. 
+
+Michael Adkins was arrested in March 2014 after he and his wife arranged for two abortions for his 11-year-old daughter within 15 days, WSAZ reports.
+======================
+======================
+** Prompt **
+The FAA, continuing to remove redundant and underutilized ground-based instrument approaches from service as new technology comes on line, has announced the fate of 125 of 198 procedures it had listed as candidates for cancellation.
+** Gen w/ policy **
+The FAA, continuing to remove redundant and underutilized ground-based instrument approaches from service as new technology comes on line, has announced the fate of 125 of 198 procedures it had listed as candidates for cancellation. In spite of our efforts, if it did not
+reckon on an accidental meeting, a tiger full-face
+in the forest
+** Gen w/o policy **
+The FAA, continuing to remove redundant and underutilized ground-based instrument approaches from service as new technology comes on line, has announced the fate of 125 of 198 procedures it had listed as candidates for cancellation. In reality the column of
+the 4th of July, the _Nautilus_ then bore a pressure of 1,600 atmospheres, that
+is to say, 3,200 lbs
+** Reference **
+The FAA, continuing to remove redundant and underutilized ground-based instrument approaches from service as new technology comes on line, has announced the fate of 125 of 198 procedures it had listed as candidates for cancellation. 
+
+According to a final rule published Oct.
+======================
+======================
+** Prompt **
+Having been mostly in smaller vehicles, I'm really appreciating how the longer wheelbase helps make for a more relaxed ride, especially on some of the questionably maintained streets around here.
+** Gen w/ policy **
+Having been mostly in smaller vehicles, I'm really appreciating how the longer wheelbase helps make for a more relaxed ride, especially on some of the questionably maintained streets around here. It was
+exactly 232 feet, and its maximum of twenty miles an hour,
+and I agree with the power of the lantern!
+** Gen w/o policy **
+Having been mostly in smaller vehicles, I'm really appreciating how the longer wheelbase helps make for a more relaxed ride, especially on some of the questionably maintained streets around here. Not a word of it
+** Reference **
+Having been mostly in smaller vehicles, I'm really appreciating how the longer wheelbase helps make for a more relaxed ride, especially on some of the questionably maintained streets around here. 
+
+I also appreciate EyeSight.
+======================
+Saved best policy to models/best_policy.pt

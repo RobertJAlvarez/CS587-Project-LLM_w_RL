@@ -2,7 +2,7 @@ import torch
 
 
 def normalize(x):
-    return (x - x.mean()) / (x.std() + 1e-8)
+    return (x - x.mean()) / (x.std() + 1e-6)
 
 
 def top_p_filtering(logits, top_p=0.9):

@@ -1,0 +1,67 @@
+<!-- 20 epochs & 64 batch size -->
+<!-- top_p 0.9 & temp computed per token -->
+<!-- Policy was mlp(linear(256,128), ReLU(), Linear(128,1)) -->
+
+Epoch 1: Loss -0.0004 Reward 0.6975
+Epoch 2: Loss -0.0004 Reward 0.6853
+Epoch 3: Loss -0.0005 Reward 0.6955
+Epoch 4: Loss -0.0005 Reward 0.6706
+Epoch 5: Loss -0.0005 Reward 0.6901
+Epoch 6: Loss -0.0005 Reward 0.6863
+Early stopping triggered.
+Total training time = 47.22704553604126s
+
+=== Evaluation Results Without Policy ===
+Avg Fluency Score: 0.8506
+Avg Coherence Score (BLEU): 0.4320
+Avg ROUGE-L Score: 0.5978
+Diversity Score (1-SelfBLEU): 0.7244
+
+=== Evaluation Results With Policy ===
+Avg Fluency Score: 0.8497
+Avg Coherence Score (BLEU): 0.4289
+Avg ROUGE-L Score: 0.5949
+Diversity Score (1-SelfBLEU): 0.7346
+======================
+** Prompt **
+You’re reading Back of the Envelope, an experiment that aims to bring shorter, quicker content to FiveThirtyEight.
+** Gen w/ policy **
+You’re reading Back of the Envelope, an experiment that aims to bring shorter, quicker content to FiveThirtyEight. You have
+carried out your work as far as terrestrial science permitted you
+** Gen w/o policy **
+You’re reading Back of the Envelope, an experiment that aims to bring shorter, quicker content to FiveThirtyEight.
+** Reference **
+You’re reading Back of the Envelope, an experiment that aims to bring shorter, quicker content to FiveThirtyEight. 
+
+Halloween may be over, but there’s still a zombie among us: the Trans-Pacific Partnership.
+======================
+======================
+** Prompt **
+Plus: The greatest director of his generation on who he considers his one true peer, which Oscar he thinks should be named after him—and whether he really will quit after his tenth movie
+
+Quentin Tarantino lives up in the Hollywood Hills, in the same house he’s had since 1996, with a movie theater built into one wing of the house and a terrace with a swimming pool and an orange tree and a Planet of the Apes statue out back.
+** Gen w/ policy **
+Plus: The greatest director of his generation on who he considers his one true peer, which Oscar he thinks should be named after him—and whether he really will quit after his tenth movie
+
+Quentin Tarantino lives up in the Hollywood Hills, in the same house he’s had since 1996, with a movie theater built into one wing of the house and a terrace with a swimming pool and an orange tree and a Planet of the Apes statue out back.
+** Gen w/o policy **
+Plus: The greatest director of his generation on who he considers his one true peer, which Oscar he thinks should be named after him—and whether he really will quit after his tenth movie
+
+Quentin Tarantino lives up in the Hollywood Hills, in the same house he’s had since 1996, with a movie theater built into one wing of the house and a terrace with a swimming pool and an orange tree and a Planet of the Apes statue out back.
+** Reference **
+Plus: The greatest director of his generation on who he considers his one true peer, which Oscar he thinks should be named after him—and whether he really will quit after his tenth movie
+
+Quentin Tarantino lives up in the Hollywood Hills, in the same house he’s had since 1996, with a movie theater built into one wing of the house and a terrace with a swimming pool and an orange tree and a Planet of the Apes statue out back.  That’s where he’s sitting one night in October, glass of red wine in hand, watching the sun go down.
+======================
+======================
+** Prompt **
+This week, filmmaker Whitney Dow launched "The Whiteness Project," a non-satirical, "deadly serious" multi-platform investigation into "how Americans who identify as 'white' experience their ethnicity.
+** Gen w/ policy **
+This week, filmmaker Whitney Dow launched "The Whiteness Project," a non-satirical, "deadly serious" multi-platform investigation into "how Americans who identify as 'white' experience their ethnicity. Then I had a severe
+design
+** Gen w/o policy **
+This week, filmmaker Whitney Dow launched "The Whiteness Project," a non-satirical, "deadly serious" multi-platform investigation into "how Americans who identify as 'white' experience their ethnicity. Then I looked with the most terrible
+tempests of the Red Sea, nor its currents, nor its sandbanks.”
+** Reference **
+This week, filmmaker Whitney Dow launched "The Whiteness Project," a non-satirical, "deadly serious" multi-platform investigation into "how Americans who identify as 'white' experience their ethnicity. " You can see the first round of interviews with 24 Buffalo, New York residents on the website here, and a preview of the project, via backer PBS, below.
+======================

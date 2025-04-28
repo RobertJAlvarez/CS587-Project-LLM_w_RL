@@ -1,5 +1,6 @@
-<!-- Normal runs -->
 <!-- 20 epochs & 32 batch size -->
+<!-- top_k 10 & temp only computed in the original prompt (then constant) -->
+<!-- Policy was nn.Linear(256, 1) -->
 
 Epoch 1: Loss -0.0434 Reward 1.1981
 Epoch 2: Loss -0.0405 Reward 1.2470
