@@ -174,9 +174,9 @@ def test_models(num_samples: int = 32) -> None:
         "diversity",
         "rouge_l",
         # "perplexity",
-        # "diversity1",
-        # "diversity2",
-        # "repetition_rates",
+        "diversity1",
+        "diversity2",
+        "repetition_rates",
     ]
     colors = ["blue", "green", "red", "purple", "orange"]
 
@@ -186,7 +186,7 @@ def test_models(num_samples: int = 32) -> None:
             for title, color in zip(titles, colors):
                 times = dataset_results[title]["time"]
 
-                # Compute average time across k for that model
+                # Compute average time across k for that model.
                 avg_time = sum(times) / len(times)
 
                 plt.plot(
@@ -204,13 +204,15 @@ def test_models(num_samples: int = 32) -> None:
             plt.savefig(f"{dir_name}/{metric}_vs_k_{d_name}.png")
             plt.close()
 
+    print(results)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Generate text with a trained RoPE GPT model"
     )
     parser.add_argument(
-        "--num_samples", type=int, default=64, help="Number of paragraph samples"
+        "--num_samples", type=int, default=32, help="Number of paragraph samples"
     )
     args = parser.parse_args()
 
