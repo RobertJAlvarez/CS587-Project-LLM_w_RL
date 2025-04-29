@@ -66,7 +66,7 @@ def compute_diversity_score(samples) -> float:
 def compute_rouge_l(reference: str, generated: str) -> float:
     scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=True)
     score = scorer.score(reference, generated)
-    return score["rougeL"].fmeasure  # Return F1 measure
+    return score["rougeL"].fmeasure  # Return F1 measure.
 
 
 def print_metrics(

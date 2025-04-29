@@ -4,11 +4,10 @@ from utils import top_p_filtering
 
 def generate_w_policy(
     model,
-    tokenizer,
     prompt,
-    policy=None,
+    tokenizer,
+    policy,
     max_new_tokens=1000,
-    default_top_p=0.9,
 ) -> str:
     """
     Generate text from a prompt using the trained GPT model with KV caching support.
@@ -19,7 +18,6 @@ def generate_w_policy(
         prompt: The text prompt to start generation.
         policy: Policy to generate the temperature to be use for the next token.
         max_new_tokens: Maximum number of tokens to generate.
-        default_top_p: Consider all token with high probability where its comulative is at least default_top_p.
 
     Returns:
         The generated text including the prompt and generation time.
@@ -32,11 +30,7 @@ def generate_w_policy(
         .to(model.lm_head.weight.device)
     )
 
-    if policy:
-        temperature, top_p = policy(model.transformer.wte(tokens))
-    else:
-        temperature = 0.5
-        top_p = default_top_p
+    temperature, top_p = policy(model.transformer.wte(tokens))
 
     # Initialize the past key values to None (no caching yet).
     past_key_values = None
@@ -85,9 +79,8 @@ def generate_w_policy(
             # Append the token to our sequence.
             tokens = torch.cat((tokens, next_token), dim=1)
 
-        # Update temperature if policy was given.
-        if policy:
-            temperature, top_p = policy(model.transformer.wte(tokens))
+        # Update temperature and top_p.
+        temperature, top_p = policy(model.transformer.wte(tokens))
 
     # Decode the tokens.
     generated_text = tokenizer.decode(tokens[0].tolist())

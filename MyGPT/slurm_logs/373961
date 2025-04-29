@@ -1,0 +1,62 @@
+[nltk_data] Downloading package punkt to /home/alvar258/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/test_policy.py:49: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(model_path, map_location=device))
+/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/test_policy.py:92: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  policy.load_state_dict(torch.load("models/best_policy.pt"))
+Using device: cuda
+Model loaded from models/best_gpt_model.pt
+Training policy using 'KV cache'
+Loaded 1000 prompt-reference pairs.
+
+=== Evaluation Results Without Policy ===
+Avg Fluency Score: 0.6606
+Avg Coherence Score (BLEU): 0.9347 (higher is better)
+Avg ROUGE-L Score: 0.9463
+Diversity Score (1-SelfBLEU): 0.6124 (lower is better)
+Total gen w/o policy time = 466.9827s
+
+=== Evaluation Results With Policy ===
+Avg Fluency Score: 0.6622
+Avg Coherence Score (BLEU): 0.9206 (higher is better)
+Avg ROUGE-L Score: 0.9344
+Diversity Score (1-SelfBLEU): 0.6132 (lower is better)
+Total gen w/ policy time = 478.5477s
+======================
+** Prompt **
+“It is actually a manometer.
+** Gen w/ policy **
+“It is actually a manometer. But by communication with the water, whose
+external pressure it indicates, it gives our depth at the same time.”
+** Gen w/o policy **
+“It is actually a manometer. But by communication with the water, whose
+external pressure it indicates, it gives our depth at the same time.”
+** Reference **
+“It is actually a manometer. But by communication with the water, whose external pressure it indicates, it gives our depth at the same time.”
+======================
+======================
+** Prompt **
+I was stretched on the
+** Gen w/ policy **
+I was stretched on the ground, just under the shelter of a bush of
+algæ, when, raising my head, I saw some enormous mass, casting
+phosphorescent gleams, pass blusteringly by.
+** Gen w/o policy **
+I was stretched on the ground, just under the shelter of a bush of
+algæ, when, raising my head, I saw some enormous mass, casting
+phosphorescent gleams, pass blusteringly by.
+** Reference **
+I was stretched on the ground, just under the shelter of a bush of algæ, when, raising my head, I saw some enormous mass, casting phosphorescent gleams, pass blusteringly by.
+======================
+======================
+** Prompt **
+“Then, sir, I am forced
+** Gen w/ policy **
+“Then, sir, I am forced to believe that you have kept up a
+communication with Havannah.”
+** Gen w/o policy **
+“Then, sir, I am forced to believe that you have kept up a
+communication with Havannah.”
+** Reference **
+“Then, sir, I am forced to believe that you have kept up a communication with Havannah.”
+======================

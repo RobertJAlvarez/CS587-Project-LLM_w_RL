@@ -3,7 +3,13 @@ import random
 import re
 
 
-def load_prompts_and_references() -> tuple[list, list]:
+def tokenize(selected: list[str], k: int) -> tuple[list[str], list[str]]:
+    selected_tokens = [text.split()[:k] for text in selected]
+    prompts = [" ".join(tokens) for tokens in selected_tokens]
+    return prompts, selected
+
+
+def load_prompts_and_references(num_samples: int = 10, k: int = 5) -> tuple[list, list]:
     """
     Load prompts and references from OpenWebText.
     Split into training and test sets.
@@ -14,35 +20,29 @@ def load_prompts_and_references() -> tuple[list, list]:
     # Extract each prompt.
     org_text = [sample["text"] for sample in openwebtext["train"] if "text" in sample]
 
-    print(f"Total samples: {len(org_text)}")
+    # prompts = []
+    # references = []
+    # for prompt in org_text:
+    #     sentences = prompt.split(".")
 
-    prompts = []
-    references = []
-    for prompt in org_text:
-        sentences = prompt.split(".")
+    #     # Don't use single sentece prompts.
+    #     if len(sentences) <= 1:
+    #         continue
 
-        # Don't use single sentece prompts.
-        if len(sentences) <= 1:
-            continue
+    #     # Use from 1-10 sentences as prompt.
+    #     n_sentences = len(sentences)
+    #     idx = n_sentences - 1 if n_sentences <= 7 else 7
+    #     next_sentence_words = sentences[idx].lstrip().split(" ")
+    #     if len(next_sentence_words) <= 1:
+    #         continue
+    #     prompts.append(". ".join(sentences[:idx]) + ". " + next_sentence_words[0] + " ")
+    #     references.append(prompt)
 
-        # Use from 1-10 sentences as prompt.
-        n_sentences = len(sentences)
-        idx = n_sentences - 1 if n_sentences <= 7 else 7
-        next_sentence_words = sentences[idx].lstrip().split(" ")
-        if len(next_sentence_words) <= 1:
-            continue
-        prompts.append(". ".join(sentences[:idx]) + ". " + next_sentence_words[0] + " ")
-        references.append(prompt)
-
-    print(f"Loaded {len(prompts)} samples.")
-
-    return prompts, references
+    return tokenize(org_text[:num_samples], k)
 
 
 def sample_paragraph_splits(
-    file_path: str = "input.txt",
-    num_samples: int = 10,
-    k: int = 5,
+    file_path: str = "input.txt", num_samples: int = 10, k: int = 5
 ) -> tuple[list[str], list[str]]:
     """
     Read the text from `file_path`, split into paragraphs, randomly select
@@ -67,24 +67,4 @@ def sample_paragraph_splits(
     else:
         selected = [random.choice(paragraphs) for _ in range(num_samples)]
 
-    X: list[list[str]] = []
-    Y: list[list[str]] = []
-
-    for text in selected:
-        # 3) Tokenize on whitespace
-        tokens = text.split()
-
-        # 4) Build prefix and suffix
-        prefix = tokens[:k]
-        suffix = tokens[k:]  # all remaining tokens, including the EOT marker
-
-        X.append(prefix)
-        Y.append(suffix)
-
-    # Convert sequence of tokens to strings.
-    X = [" ".join(x) for x in X]
-    Y = [" ".join(y) for y in Y]
-
-    Y = [x + " " + y for x, y in zip(X, Y)]
-
-    return X, Y
+    return tokenize(selected, k)

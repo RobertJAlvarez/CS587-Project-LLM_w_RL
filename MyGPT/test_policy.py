@@ -70,9 +70,9 @@ if __name__ == "__main__":
     else:
         prompts, references = load_prompts_and_references()
 
-        # Use only 1,000 samples.
-        prompts = prompts[:1000]
-        references = references[:1000]
+    # Use only 1,000 samples.
+    prompts = prompts[: args.num_samples]
+    references = references[: args.num_samples]
 
     print(f"Loaded {len(prompts)} prompt-reference pairs.")
 
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     gen_text_wo_policy = []
     with torch.no_grad():
         for prompt in prompts:
-            sample, *_ = generate_w_policy(model, tokenizer, prompt)
+            sample, *_ = generate_w_policy(model, prompt, tokenizer)
             gen_text_wo_policy.append(sample)
     print_metrics(gen_text_wo_policy, references, w_policy=False)
     print(f"Total gen w/o policy time = {(time.time() - start_time):.4f}s")
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     start_time = time.time()
     with torch.no_grad():
         for prompt in prompts:
-            sample, *_ = generate_w_policy(model, tokenizer, prompt, policy)
+            sample, *_ = generate_w_policy(model, prompt, tokenizer, policy)
             gen_text_w_policy.append(sample)
     print_metrics(gen_text_w_policy, references, w_policy=True)
     print(f"Total gen w/ policy time = {(time.time() - start_time):.4f}s")

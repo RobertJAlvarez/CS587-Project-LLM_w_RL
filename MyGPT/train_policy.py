@@ -5,24 +5,11 @@ import torch  # type: ignore
 import torch.optim as optim  # type: ignore
 
 from my_gpt import GPT, Config
-from reward_logger import RewardLogger
-from utils import normalize
-from metrics import print_metrics, compute_fluency_score, compute_coherence_score
+from utils import normalize, ceildiv
+from metrics import compute_fluency_score, compute_coherence_score
 from load_dataset import sample_paragraph_splits
 from sampling_policy import SamplingPolicy
 from generate_w_policy import generate_w_policy
-
-
-def split_dataset(X, Y, train_pct: int = 80):
-    # Slip into training and testing.
-    train_size = int((train_pct / 100) * len(X))
-
-    train_prompts = X[:train_size]
-    train_references = Y[:train_size]
-    test_prompts = X[train_size:]
-    test_references = Y[train_size:]
-
-    return (train_prompts, train_references), (test_prompts, test_references)
 
 
 def compute_rewards(sample, reference) -> float:
@@ -58,13 +45,7 @@ if __name__ == "__main__":
         "--batch_size", type=int, default=32, help="Batch size for training"
     )
     parser.add_argument(
-        "--num_epochs", type=int, default=12, help="Number of epochs to train for"
-    )
-    parser.add_argument(
-        "--k", type=int, default=5, help="First k tokens from paragraph"
-    )
-    parser.add_argument(
-        "--num_samples", type=int, default=5, help="Number of paragraph samples"
+        "--num_epochs", type=int, default=20, help="Number of epochs to train for"
     )
     args = parser.parse_args()
 
@@ -107,14 +88,18 @@ if __name__ == "__main__":
     policy = SamplingPolicy().to(device)
 
     # Load training and testing prompts.
-    (train_prompts, train_references), (test_prompts, test_references) = split_dataset(
-        *sample_paragraph_splits(k=args.k, num_samples=args.num_samples), train_pct=80
-    )
+    prompts = []
+    references = []
+    ks = [5, 10, 15, 20]
+    n_samples = ceildiv(num_epochs * batch_size, len(ks))
 
-    print(f"Loaded {len(train_prompts)} prompt-reference pairs.")
+    for k in ks:
+        ps, rs = sample_paragraph_splits(num_samples=n_samples, k=k)
+        prompts.extend(ps)
+        references.extend(rs)
+
+    print(f"Loaded {len(prompts)} prompt-reference pairs.")
     optimizer = optim.Adam(policy.parameters(), lr=1e-4)  # AdamW w/ lr=5e-4?
-
-    logger = RewardLogger()
 
     # Early stopping variables.
     best_avg_reward = -float("inf")
@@ -129,10 +114,10 @@ if __name__ == "__main__":
         entropies = []
         st = epoch * batch_size
         ed = (epoch + 1) * batch_size
-        for prompt, reference in zip(train_prompts[st:ed], train_references[st:ed]):
+        for prompt, reference in zip(prompts[st:ed], references[st:ed]):
             # Generate text from prompt.
             sample, temperature, top_p = generate_w_policy(
-                model, tokenizer, prompt, policy
+                model, prompt, tokenizer, policy
             )
 
             rewards.append(compute_rewards(sample, reference))
@@ -150,7 +135,6 @@ if __name__ == "__main__":
         optimizer.step()
 
         avg_reward = rewards.mean().item()
-        logger.log(avg_reward)
 
         print(f"Epoch {epoch+1}: Loss {loss.item():.4f} Reward {avg_reward:.4f}")
 
@@ -159,39 +143,4 @@ if __name__ == "__main__":
             best_avg_reward = avg_reward
             torch.save(policy.state_dict(), best_policy_path)
 
-    logger.save()
     print(f"Total training time = {(time.time() - start_time):.4f}s")
-
-    # Evaluate model sampling based on fluency, coherence, and diversity.
-
-    # Generate text w/o policy + metrics.
-    start_time = time.time()
-    gen_text_wo_policy = []
-    with torch.no_grad():
-        for prompt in test_prompts:
-            sample, *_ = generate_w_policy(model, tokenizer, prompt)
-            gen_text_wo_policy.append(sample)
-    print_metrics(gen_text_wo_policy, test_references, w_policy=False)
-    print(f"Total gen w/o policy time = {(time.time() - start_time):.4f}s")
-
-    # Load the best policy for evaluation.
-    policy.load_state_dict(torch.load(best_policy_path))
-
-    # Generate text w/ policy + metrics.
-    gen_text_w_policy = []
-    start_time = time.time()
-    with torch.no_grad():
-        for prompt in test_prompts:
-            sample, *_ = generate_w_policy(model, tokenizer, prompt, policy)
-            gen_text_w_policy.append(sample)
-    print_metrics(gen_text_w_policy, test_references, w_policy=True)
-    print(f"Total gen w/ policy time = {(time.time() - start_time):.4f}s")
-
-    # Print some generated examples.
-    for i in range(3):
-        print("======================")
-        print(f"** Prompt **\n{test_prompts[i]}")
-        print(f"** Gen w/ policy **\n{gen_text_w_policy[i]}")
-        print(f"** Gen w/o policy **\n{gen_text_wo_policy[i]}")
-        print(f"** Reference **\n{test_references[i]}")
-        print("======================")
