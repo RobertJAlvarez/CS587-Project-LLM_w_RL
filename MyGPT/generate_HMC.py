@@ -105,7 +105,7 @@ def generate_HMC(
 
         # Append and check for end-of-text
         if next_token.item() == tokenizer.eot_token:
-            tokens = torch.cat([tokens, next_token], dim=1)
+            # tokens = torch.cat([tokens, next_token], dim=1)
             break
         tokens = torch.cat([tokens, next_token], dim=1)
         # ————————————————————————————————————————————————————————

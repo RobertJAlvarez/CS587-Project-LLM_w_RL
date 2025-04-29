@@ -1,0 +1,1382 @@
+
+All models use 'KV cache'
+=========== Original model, k=4, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“Well, here are learned men having to learn,” said the Captain. “Come,
+sit down, and I will tell you a curious episode in this history. Sir,
+listen well,” said he; “this history will interest you on one side, for
+it will answer a question which doubtless you have not been able to
+solve.”
+** Reference **
+“Well, here are learned men having to learn,” said the Captain. “Come,
+sit down, and I will tell you a curious episode in this history. Sir,
+listen well,” said he; “this history will interest you on one side, for
+it will answer a question which doubtless you have not been able to
+solve.”
+=========== Original model END ===========
+=========== Model w/ RL, k=4, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“Well, here are learned men having to learn.”
+** Reference **
+“Well, here are learned men having to learn,” said the Captain. “Come,
+sit down, and I will tell you a curious episode in this history. Sir,
+listen well,” said he; “this history will interest you on one side, for
+it will answer a question which doubtless you have not been able to
+solve.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=4, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“Well, here are learned men having to keep up with the other,
+without either saltpetre, long since our feet long since recognised, or parrot’s fleshy prolongations to the humps in the humps in the greatest breadth islets, you like the greatest breadth, each square miles. As public interest of which are especially used that extended to twenty ouncesrified blood, or
+to hunt, or three miles to keep clear face, or three thousand other in the stomach I recognised as if I suppose they would do to breathe and as if I suppose they would not to breathe and as good seaman, where Moses saw some thousands of the long jetty of these luminous clouds were larger than that has served as if some thousands of these parts of these parts of these luminous sheets of admiration when they would exhaust itself inoffensive serpoulps, I cannot beque aspect of admiration increased as if some volcanic islands protected by the _Nautilus_ and make barriers of the oxygen it is of the use of the Antarctic seas
+strong bands of the sea-water, especially studied this submarine boat; but inexplicable island there are circularut?”<|endoftext|>
+** Reference **
+“Well, here are learned men having to learn,” said the Captain. “Come,
+sit down, and I will tell you a curious episode in this history. Sir,
+listen well,” said he; “this history will interest you on one side, for
+it will answer a question which doubtless you have not been able to
+solve.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=4, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“Well, here are learned men having to make
+by which I am inclined to one of Captain Nemo. I am disturbing you call this high order to dress yourself
+to believe in the heart you—one, and you—one only produce of the Rouquainted with you counted?”<|endoftext|>
+** Reference **
+“Well, here are learned men having to learn,” said the Captain. “Come,
+sit down, and I will tell you a curious episode in this history. Sir,
+listen well,” said he; “this history will interest you on one side, for
+it will answer a question which doubtless you have not been able to
+solve.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=4, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“Well, here are learned men having to keep on the
+particularly excited of the iceberg, each other containing, each other in the galleons, without sails horizontally,” said Conseil, “and I place where we must be proud of the various ways of the roof to the tissue of the roof was simply
+of the breaking of the breaking of the roof was simply
+of the roof on the scene of the scene of the scene of the shell of the _Nautilus_ to the _Nautilus_ to the _Nautilus_ in the _Nautilus_ to the _Nautilus_ to the _Nautilus_ to the _Nautilus_ to the _Nautilus_ to the _Nautilus_ and to the _Nautilus_ with the unfortunate manœuvre with the unfortunate manœuvre very opening of the unfortunate man’s cage of the unfortunate man’s cage of the _Nautilus_. Now.<|endoftext|>
+** Reference **
+“Well, here are learned men having to learn,” said the Captain. “Come,
+sit down, and I will tell you a curious episode in this history. Sir,
+listen well,” said he; “this history will interest you on one side, for
+it will answer a question which doubtless you have not been able to
+solve.”
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A memorial sponsored by his fourness
+limy concretions, hung at the level of the mountains, and
+formidable battering-ram. It broke it by backing and then rushing
+forward against the field, which gradually gave way; and at last,
+dashing suddenly against it, shot forwards on the ice-field, that
+crushed beneath its weight. The panel was opened—one might say torn
+off—and the pure air came in in abundance to all parts of the
+_Nautilus_.
+** Reference **
+A memorial sponsored by the College Republicans club at a small, liberal arts college in California was repeatedly vandalized on the 15th anniversary of the September 11 terrorist attacks. Nearly 3,000 flags at Occidental College were crushed and trashed.
+
+“Today is meant to be a day of respect and remembrance for all the victims and heroes of 9/11,” the Occidental College Republicans wrote in a Facebook post. The 2,997 American flags the club sponsored were planted by “students of all backgrounds” to represent the people who died in the terrorist attacks.
+
+However, the memorial was destroyed in the overnight hours ahead of the anniversary.
+
+“At midnight early this morning, vandals crushed, snapped, and threw in the garbage every single flag,” the club wrote on Sunday. “Not one was left in the ground. Not only did they destroy the memorial, they put posters and flyers up that shamed the victims of 9/11.”
+
+Those makeshift flyers were taped to benches and other surfaces. Many of them read: “R.I.P. The 2,996 Americans who died in 9/11. R.I.P. the 1,455,590 innocent Iraqis who died during the U.S. invasion for something they didn’t do.”
+
+A group of 15 students pulled the flags out of the trash and replaced them on the quad. But the vandalism wasn’t finished. Despite having a few students who “stood guard at the memorial” in the early hours of Sunday morning, “[f]our Occidental students came up and snapped a few flags right in our faces. When we confronted them, those cowards got away as fast as they possibly could.”
+
+Later in the morning, the club said, there was “another lazy attempt at vandalism,” with hundreds of the flags “kicked and smashed,” and about 50 were again thrown out.
+
+“This is beyond politics, this is about those lives that were so tragically taken,” the Occidental College Republicans wrote. “We ask that all students respect the memorial for the remainder of its time in the quad. If you try to destroy it, we will rebuild it.”
+
+The school itself is looking into the vandalism.
+
+“We don't yet know who is responsible for this incident, but the college is investigating and will take appropriate disciplinary action,” Occidental said in a statement. “If you have any information about this incident, please share that information with us at conduct@oxy.edu."
+
+President Barack Obama attended the small, left-leaning liberal arts school in Los Angeles for two years before transferring to Columbia University to finish his undergraduate degree.
+
+Occidental’s 9/11 memorial wasn’t the only one that was vandalized ahead of the 15th anniversary of the terrorist attacks. On Friday, Emergency Medical Veterans Response in Phoenix, Arizona discovered that the specially designed memorial wrap on its ambulance was torn and burned beyond repair. The company’s owner, Trinidy Currier, found the damage as he was heading to Arizona State University to provide medical aid at the school’s 9/11 Tribute Run.
+
+"It was a very stupid move. It was very inconsiderate and thoughtless," Currier, an Army veteran, told KSAZ. “A lot of us are firefighters, a lot of are veterans, so it's kind of like having 911 on site."
+
+"There's a lot of different emotions going on right now. I've got the anger, I've got the sadness, I've got the where do we go from here," he added.
+
+A local sign company has stepped up to donate a new wrap, which is expected to cost between $4,500 and $5,500.
+=========== Original model END ===========
+=========== Model w/ RL, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A memorial sponsored by way of describing this unlooked-for scene, the history of the
+patriot ship, told at first so coldly, and the emotion with which this
+strange man pronounced the last words, the name of the Avenger, the
+significance of which could not escape me, all impressed itself deeply
+on my mind. My eyes did not leave the Captain, who, with his hand
+stretched out to sea, was watching with a glowing eye the glorious
+wreck. Perhaps I was never to know who he was, from whence he came, or
+where he was going to, but I saw the man move, and apart from the
+_savant_. It was no common misanthropy which had shut Captain Nemo and
+his companions within the _Nautilus_, but a hatred, either monstrous or
+sublime, which time could never weaken. Did this hatred still seek for
+vengeance? The future would soon teach me that. But the _Nautilus_ was
+rising slowly to the surface of the sea, and the form of the Avenger
+disappeared by degrees from my sight. Soon a slight rolling told me
+that we were in the open air. At that moment a dull boom was heard. I
+looked at the Captain. He did not move.
+** Reference **
+A memorial sponsored by the College Republicans club at a small, liberal arts college in California was repeatedly vandalized on the 15th anniversary of the September 11 terrorist attacks. Nearly 3,000 flags at Occidental College were crushed and trashed.
+
+“Today is meant to be a day of respect and remembrance for all the victims and heroes of 9/11,” the Occidental College Republicans wrote in a Facebook post. The 2,997 American flags the club sponsored were planted by “students of all backgrounds” to represent the people who died in the terrorist attacks.
+
+However, the memorial was destroyed in the overnight hours ahead of the anniversary.
+
+“At midnight early this morning, vandals crushed, snapped, and threw in the garbage every single flag,” the club wrote on Sunday. “Not one was left in the ground. Not only did they destroy the memorial, they put posters and flyers up that shamed the victims of 9/11.”
+
+Those makeshift flyers were taped to benches and other surfaces. Many of them read: “R.I.P. The 2,996 Americans who died in 9/11. R.I.P. the 1,455,590 innocent Iraqis who died during the U.S. invasion for something they didn’t do.”
+
+A group of 15 students pulled the flags out of the trash and replaced them on the quad. But the vandalism wasn’t finished. Despite having a few students who “stood guard at the memorial” in the early hours of Sunday morning, “[f]our Occidental students came up and snapped a few flags right in our faces. When we confronted them, those cowards got away as fast as they possibly could.”
+
+Later in the morning, the club said, there was “another lazy attempt at vandalism,” with hundreds of the flags “kicked and smashed,” and about 50 were again thrown out.
+
+“This is beyond politics, this is about those lives that were so tragically taken,” the Occidental College Republicans wrote. “We ask that all students respect the memorial for the remainder of its time in the quad. If you try to destroy it, we will rebuild it.”
+
+The school itself is looking into the vandalism.
+
+“We don't yet know who is responsible for this incident, but the college is investigating and will take appropriate disciplinary action,” Occidental said in a statement. “If you have any information about this incident, please share that information with us at conduct@oxy.edu."
+
+President Barack Obama attended the small, left-leaning liberal arts school in Los Angeles for two years before transferring to Columbia University to finish his undergraduate degree.
+
+Occidental’s 9/11 memorial wasn’t the only one that was vandalized ahead of the 15th anniversary of the terrorist attacks. On Friday, Emergency Medical Veterans Response in Phoenix, Arizona discovered that the specially designed memorial wrap on its ambulance was torn and burned beyond repair. The company’s owner, Trinidy Currier, found the damage as he was heading to Arizona State University to provide medical aid at the school’s 9/11 Tribute Run.
+
+"It was a very stupid move. It was very inconsiderate and thoughtless," Currier, an Army veteran, told KSAZ. “A lot of us are firefighters, a lot of are veterans, so it's kind of like having 911 on site."
+
+"There's a lot of different emotions going on right now. I've got the anger, I've got the sadness, I've got the where do we go from here," he added.
+
+A local sign company has stepped up to donate a new wrap, which is expected to cost between $4,500 and $5,500.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A memorial sponsored by the wer his gun quickly, I imagine, “Help!
+Amongst these words that his gun are imperturbable coolness of Ned Land and I loved to one of my companions are nearly equal to one of these words inoffence to you are unknown seas escaped his last words in spite of events?”<|endoftext|>
+** Reference **
+A memorial sponsored by the College Republicans club at a small, liberal arts college in California was repeatedly vandalized on the 15th anniversary of the September 11 terrorist attacks. Nearly 3,000 flags at Occidental College were crushed and trashed.
+
+“Today is meant to be a day of respect and remembrance for all the victims and heroes of 9/11,” the Occidental College Republicans wrote in a Facebook post. The 2,997 American flags the club sponsored were planted by “students of all backgrounds” to represent the people who died in the terrorist attacks.
+
+However, the memorial was destroyed in the overnight hours ahead of the anniversary.
+
+“At midnight early this morning, vandals crushed, snapped, and threw in the garbage every single flag,” the club wrote on Sunday. “Not one was left in the ground. Not only did they destroy the memorial, they put posters and flyers up that shamed the victims of 9/11.”
+
+Those makeshift flyers were taped to benches and other surfaces. Many of them read: “R.I.P. The 2,996 Americans who died in 9/11. R.I.P. the 1,455,590 innocent Iraqis who died during the U.S. invasion for something they didn’t do.”
+
+A group of 15 students pulled the flags out of the trash and replaced them on the quad. But the vandalism wasn’t finished. Despite having a few students who “stood guard at the memorial” in the early hours of Sunday morning, “[f]our Occidental students came up and snapped a few flags right in our faces. When we confronted them, those cowards got away as fast as they possibly could.”
+
+Later in the morning, the club said, there was “another lazy attempt at vandalism,” with hundreds of the flags “kicked and smashed,” and about 50 were again thrown out.
+
+“This is beyond politics, this is about those lives that were so tragically taken,” the Occidental College Republicans wrote. “We ask that all students respect the memorial for the remainder of its time in the quad. If you try to destroy it, we will rebuild it.”
+
+The school itself is looking into the vandalism.
+
+“We don't yet know who is responsible for this incident, but the college is investigating and will take appropriate disciplinary action,” Occidental said in a statement. “If you have any information about this incident, please share that information with us at conduct@oxy.edu."
+
+President Barack Obama attended the small, left-leaning liberal arts school in Los Angeles for two years before transferring to Columbia University to finish his undergraduate degree.
+
+Occidental’s 9/11 memorial wasn’t the only one that was vandalized ahead of the 15th anniversary of the terrorist attacks. On Friday, Emergency Medical Veterans Response in Phoenix, Arizona discovered that the specially designed memorial wrap on its ambulance was torn and burned beyond repair. The company’s owner, Trinidy Currier, found the damage as he was heading to Arizona State University to provide medical aid at the school’s 9/11 Tribute Run.
+
+"It was a very stupid move. It was very inconsiderate and thoughtless," Currier, an Army veteran, told KSAZ. “A lot of us are firefighters, a lot of are veterans, so it's kind of like having 911 on site."
+
+"There's a lot of different emotions going on right now. I've got the anger, I've got the sadness, I've got the where do we go from here," he added.
+
+A local sign company has stepped up to donate a new wrap, which is expected to cost between $4,500 and $5,500.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A memorial sponsored by
+peranceeasily.”<|endoftext|>
+** Reference **
+A memorial sponsored by the College Republicans club at a small, liberal arts college in California was repeatedly vandalized on the 15th anniversary of the September 11 terrorist attacks. Nearly 3,000 flags at Occidental College were crushed and trashed.
+
+“Today is meant to be a day of respect and remembrance for all the victims and heroes of 9/11,” the Occidental College Republicans wrote in a Facebook post. The 2,997 American flags the club sponsored were planted by “students of all backgrounds” to represent the people who died in the terrorist attacks.
+
+However, the memorial was destroyed in the overnight hours ahead of the anniversary.
+
+“At midnight early this morning, vandals crushed, snapped, and threw in the garbage every single flag,” the club wrote on Sunday. “Not one was left in the ground. Not only did they destroy the memorial, they put posters and flyers up that shamed the victims of 9/11.”
+
+Those makeshift flyers were taped to benches and other surfaces. Many of them read: “R.I.P. The 2,996 Americans who died in 9/11. R.I.P. the 1,455,590 innocent Iraqis who died during the U.S. invasion for something they didn’t do.”
+
+A group of 15 students pulled the flags out of the trash and replaced them on the quad. But the vandalism wasn’t finished. Despite having a few students who “stood guard at the memorial” in the early hours of Sunday morning, “[f]our Occidental students came up and snapped a few flags right in our faces. When we confronted them, those cowards got away as fast as they possibly could.”
+
+Later in the morning, the club said, there was “another lazy attempt at vandalism,” with hundreds of the flags “kicked and smashed,” and about 50 were again thrown out.
+
+“This is beyond politics, this is about those lives that were so tragically taken,” the Occidental College Republicans wrote. “We ask that all students respect the memorial for the remainder of its time in the quad. If you try to destroy it, we will rebuild it.”
+
+The school itself is looking into the vandalism.
+
+“We don't yet know who is responsible for this incident, but the college is investigating and will take appropriate disciplinary action,” Occidental said in a statement. “If you have any information about this incident, please share that information with us at conduct@oxy.edu."
+
+President Barack Obama attended the small, left-leaning liberal arts school in Los Angeles for two years before transferring to Columbia University to finish his undergraduate degree.
+
+Occidental’s 9/11 memorial wasn’t the only one that was vandalized ahead of the 15th anniversary of the terrorist attacks. On Friday, Emergency Medical Veterans Response in Phoenix, Arizona discovered that the specially designed memorial wrap on its ambulance was torn and burned beyond repair. The company’s owner, Trinidy Currier, found the damage as he was heading to Arizona State University to provide medical aid at the school’s 9/11 Tribute Run.
+
+"It was a very stupid move. It was very inconsiderate and thoughtless," Currier, an Army veteran, told KSAZ. “A lot of us are firefighters, a lot of are veterans, so it's kind of like having 911 on site."
+
+"There's a lot of different emotions going on right now. I've got the anger, I've got the sadness, I've got the where do we go from here," he added.
+
+A local sign company has stepped up to donate a new wrap, which is expected to cost between $4,500 and $5,500.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A memorial sponsored by their weight. From that
+electric light reigned on the breast and describing a dull boom was followed their spiral glassy stare, was felt in their centre of the vessel, was felt in their centre of the vessel, was soon light boat.<|endoftext|>
+** Reference **
+A memorial sponsored by the College Republicans club at a small, liberal arts college in California was repeatedly vandalized on the 15th anniversary of the September 11 terrorist attacks. Nearly 3,000 flags at Occidental College were crushed and trashed.
+
+“Today is meant to be a day of respect and remembrance for all the victims and heroes of 9/11,” the Occidental College Republicans wrote in a Facebook post. The 2,997 American flags the club sponsored were planted by “students of all backgrounds” to represent the people who died in the terrorist attacks.
+
+However, the memorial was destroyed in the overnight hours ahead of the anniversary.
+
+“At midnight early this morning, vandals crushed, snapped, and threw in the garbage every single flag,” the club wrote on Sunday. “Not one was left in the ground. Not only did they destroy the memorial, they put posters and flyers up that shamed the victims of 9/11.”
+
+Those makeshift flyers were taped to benches and other surfaces. Many of them read: “R.I.P. The 2,996 Americans who died in 9/11. R.I.P. the 1,455,590 innocent Iraqis who died during the U.S. invasion for something they didn’t do.”
+
+A group of 15 students pulled the flags out of the trash and replaced them on the quad. But the vandalism wasn’t finished. Despite having a few students who “stood guard at the memorial” in the early hours of Sunday morning, “[f]our Occidental students came up and snapped a few flags right in our faces. When we confronted them, those cowards got away as fast as they possibly could.”
+
+Later in the morning, the club said, there was “another lazy attempt at vandalism,” with hundreds of the flags “kicked and smashed,” and about 50 were again thrown out.
+
+“This is beyond politics, this is about those lives that were so tragically taken,” the Occidental College Republicans wrote. “We ask that all students respect the memorial for the remainder of its time in the quad. If you try to destroy it, we will rebuild it.”
+
+The school itself is looking into the vandalism.
+
+“We don't yet know who is responsible for this incident, but the college is investigating and will take appropriate disciplinary action,” Occidental said in a statement. “If you have any information about this incident, please share that information with us at conduct@oxy.edu."
+
+President Barack Obama attended the small, left-leaning liberal arts school in Los Angeles for two years before transferring to Columbia University to finish his undergraduate degree.
+
+Occidental’s 9/11 memorial wasn’t the only one that was vandalized ahead of the 15th anniversary of the terrorist attacks. On Friday, Emergency Medical Veterans Response in Phoenix, Arizona discovered that the specially designed memorial wrap on its ambulance was torn and burned beyond repair. The company’s owner, Trinidy Currier, found the damage as he was heading to Arizona State University to provide medical aid at the school’s 9/11 Tribute Run.
+
+"It was a very stupid move. It was very inconsiderate and thoughtless," Currier, an Army veteran, told KSAZ. “A lot of us are firefighters, a lot of are veterans, so it's kind of like having 911 on site."
+
+"There's a lot of different emotions going on right now. I've got the anger, I've got the sadness, I've got the where do we go from here," he added.
+
+A local sign company has stepped up to donate a new wrap, which is expected to cost between $4,500 and $5,500.
+=========== Model w/ MH END ===========
+=========== Original model, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I began to tell our adventures, articulating each syllable clearly, and
+without omitting one single detail. I announced our names and rank,
+introducing in person Professor Aronnax, his servant Conseil, and
+master Ned Land, the harpooner.
+** Reference **
+I began to tell our adventures, articulating each syllable clearly, and
+without omitting one single detail. I announced our names and rank,
+introducing in person Professor Aronnax, his servant Conseil, and
+master Ned Land, the harpooner.
+=========== Original model END ===========
+=========== Model w/ RL, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I began to tell our adventures, articulating each syllable clearly, and
+without omitting one single detail. I announced our names and rank,
+introducing in person Professor Aronnax, his servant Conseil, and
+master Ned Land, the harpooner.
+** Reference **
+I began to tell our adventures, articulating each syllable clearly, and
+without omitting one single detail. I announced our names and rank,
+introducing in person Professor Aronnax, his servant Conseil, and
+master Ned Land, the harpooner.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I began to tell our adventures, articulating each syllable clearly, and monster, with what must be insubmersible, where it moved backwards,
+can be in three weeks before the N.N.E.<|endoftext|>
+** Reference **
+I began to tell our adventures, articulating each syllable clearly, and
+without omitting one single detail. I announced our names and rank,
+introducing in person Professor Aronnax, his servant Conseil, and
+master Ned Land, the harpooner.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I began to tell our adventures, articulating each syllable clearly, and closed, where man consumes, and our backs on its lastly, and
+uponful state whose eyes open!”<|endoftext|>
+** Reference **
+I began to tell our adventures, articulating each syllable clearly, and
+without omitting one single detail. I announced our names and rank,
+introducing in person Professor Aronnax, his servant Conseil, and
+master Ned Land, the harpooner.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I began to tell our adventures, articulating each syllable clearly, and, where it moved not to be in those, where it is.<|endoftext|>
+** Reference **
+I began to tell our adventures, articulating each syllable clearly, and
+without omitting one single detail. I announced our names and rank,
+introducing in person Professor Aronnax, his servant Conseil, and
+master Ned Land, the harpooner.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=8, in_dist=False START ===========
+** Prompt **
+I
+** Gen text **
+It is with great sadness that we are fighting!”
+** Reference **
+It is with great sadness that we are sharing the tragic news that Jana Robeyst died on April 8th 2016, whilst pursuing a promising career dedicated to the study and conservation of wild forest elephants at Mbeli Bai, Nouabale-Ndoki National Park. Jana was an amazing scientist and a wonderful person who loved the work she was doing. She was living her dream by being out in the African rainforest each day observing her beloved forest elephants and western lowland gorillas in Mbeli bai.
+
+Jana arrived in Congo to work at the Mbeli Bai Study in December 2013 as a volunteer research assistant for a period of one year. She remained an enthusiastic advocate of the site ever since, returning in September 2015 for three months to train new researchers at the bai. Finally she returned for a third time a few weeks ago to once again assist at the site, and share her knowledge of the elephants and gorillas that visit the bai with the new researchers.
+=========== Original model END ===========
+=========== Model w/ RL, k=8, in_dist=False START ===========
+** Prompt **
+I
+** Gen text **
+It is with great sadness that we are easy
+to break it, and as lower down, this continent was alive with myriads of
+birds. But their rule was now divided with large troops of sea-mammals,
+looking at us with their soft eyes. There were several kinds of seals,
+some stretched on the earth, some on flakes of ice, many going in and
+out of the sea. They did not flee at our approach, never having had
+anything to do with man; and I reckoned that there were provisions
+there for hundreds of vessels.
+** Reference **
+It is with great sadness that we are sharing the tragic news that Jana Robeyst died on April 8th 2016, whilst pursuing a promising career dedicated to the study and conservation of wild forest elephants at Mbeli Bai, Nouabale-Ndoki National Park. Jana was an amazing scientist and a wonderful person who loved the work she was doing. She was living her dream by being out in the African rainforest each day observing her beloved forest elephants and western lowland gorillas in Mbeli bai.
+
+Jana arrived in Congo to work at the Mbeli Bai Study in December 2013 as a volunteer research assistant for a period of one year. She remained an enthusiastic advocate of the site ever since, returning in September 2015 for three months to train new researchers at the bai. Finally she returned for a third time a few weeks ago to once again assist at the site, and share her knowledge of the elephants and gorillas that visit the bai with the new researchers.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=8, in_dist=False START ===========
+** Prompt **
+I
+** Gen text **
+It is with great sadness that we are out of the perfection of
+to hunt, M. Yesterday and in the opinion, the opinion, the number of the number of the number of the number of the number of the animal, and in fourteenth century?”<|endoftext|>
+** Reference **
+It is with great sadness that we are sharing the tragic news that Jana Robeyst died on April 8th 2016, whilst pursuing a promising career dedicated to the study and conservation of wild forest elephants at Mbeli Bai, Nouabale-Ndoki National Park. Jana was an amazing scientist and a wonderful person who loved the work she was doing. She was living her dream by being out in the African rainforest each day observing her beloved forest elephants and western lowland gorillas in Mbeli bai.
+
+Jana arrived in Congo to work at the Mbeli Bai Study in December 2013 as a volunteer research assistant for a period of one year. She remained an enthusiastic advocate of the site ever since, returning in September 2015 for three months to train new researchers at the bai. Finally she returned for a third time a few weeks ago to once again assist at the site, and share her knowledge of the elephants and gorillas that visit the bai with the new researchers.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=8, in_dist=False START ===========
+** Prompt **
+I
+** Gen text **
+It is with great sadness that we are generally attached to you, Captain Nemo, a
+like a diversion, a sort of suffocation to observe even higheroundreligal hand, these imprisoned, a perfect lake appeared to one of holy-water, the oxygen that are white as drunk with an alimentary like that are peculiar to observe even to that inspired me of the other seas, and oppressed country of the oxygen that are peculiar to observe even and this species, and to do not to observe that kind of the oxygen it is a hundred and the oxygen it isos that men.”<|endoftext|>
+** Reference **
+It is with great sadness that we are sharing the tragic news that Jana Robeyst died on April 8th 2016, whilst pursuing a promising career dedicated to the study and conservation of wild forest elephants at Mbeli Bai, Nouabale-Ndoki National Park. Jana was an amazing scientist and a wonderful person who loved the work she was doing. She was living her dream by being out in the African rainforest each day observing her beloved forest elephants and western lowland gorillas in Mbeli bai.
+
+Jana arrived in Congo to work at the Mbeli Bai Study in December 2013 as a volunteer research assistant for a period of one year. She remained an enthusiastic advocate of the site ever since, returning in September 2015 for three months to train new researchers at the bai. Finally she returned for a third time a few weeks ago to once again assist at the site, and share her knowledge of the elephants and gorillas that visit the bai with the new researchers.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=8, in_dist=False START ===========
+** Prompt **
+I
+** Gen text **
+It is with great sadness that we are lost in the
+formation of this sea-water, the Besides, the Greenland whale-oysters on either sinks diagonally much debated by the English “and steam.”<|endoftext|>
+** Reference **
+It is with great sadness that we are sharing the tragic news that Jana Robeyst died on April 8th 2016, whilst pursuing a promising career dedicated to the study and conservation of wild forest elephants at Mbeli Bai, Nouabale-Ndoki National Park. Jana was an amazing scientist and a wonderful person who loved the work she was doing. She was living her dream by being out in the African rainforest each day observing her beloved forest elephants and western lowland gorillas in Mbeli bai.
+
+Jana arrived in Congo to work at the Mbeli Bai Study in December 2013 as a volunteer research assistant for a period of one year. She remained an enthusiastic advocate of the site ever since, returning in September 2015 for three months to train new researchers at the bai. Finally she returned for a third time a few weeks ago to once again assist at the site, and share her knowledge of the elephants and gorillas that visit the bai with the new researchers.
+=========== Model w/ MH END ===========
+=========== Original model, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+Time was getting on, and we were fearfully hungry; and this time the
+steward did not appear. It was rather too long to leave us, if they
+really had good intentions towards us. Ned Land, tormented by the
+cravings of hunger, got still more angry; and, notwithstanding his
+promise, I dreaded an explosion when he found himself with one of the
+crew.
+** Reference **
+Time was getting on, and we were fearfully hungry; and this time the
+steward did not appear. It was rather too long to leave us, if they
+really had good intentions towards us. Ned Land, tormented by the
+cravings of hunger, got still more angry; and, notwithstanding his
+promise, I dreaded an explosion when he found himself with one of the
+crew.
+=========== Original model END ===========
+=========== Model w/ RL, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+Time was getting on, and we were fearfully hungry; and this time the
+steward did not appear. It was rather too long to leave us, if they
+really had good intentions towards us. Ned Land, tormented by the
+cravings of hunger, got still more angry; and, notwithstanding his
+promise, I dreaded an explosion when he found himself with one of the
+crew.
+** Reference **
+Time was getting on, and we were fearfully hungry; and this time the
+steward did not appear. It was rather too long to leave us, if they
+really had good intentions towards us. Ned Land, tormented by the
+cravings of hunger, got still more angry; and, notwithstanding his
+promise, I dreaded an explosion when he found himself with one of the
+crew.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+Time was getting on, and we were fearfully hungry; and this time the poor boy had been alarmed, they were we had been alarmed, had to the true Papuans, they were uttering ram
+leaning over his apparatus for the true, they placed those small islands on the true, they brought up beautiful animals for the poop, from which the beat for the beat for the beat with boarding-holoc lorn-tenth is armed with anguish, from which the horrible claws of the soul of the deck a long sandy coasted arches spring to the whitish activity, from which heaped up inside, from which heaped up inside, from which heaped up to the natives of the deck communicating with which heaped upholds and oppressed races
+which the monster could not that precious metals to the natives of the dinner was forty years old language among these chiefs, from which heaped upholds and healthy men will long ribbons of the _Nautilus_ kept upholds and from their phosphorescent liquid mass of digging round its inventor!”<|endoftext|>
+** Reference **
+Time was getting on, and we were fearfully hungry; and this time the
+steward did not appear. It was rather too long to leave us, if they
+really had good intentions towards us. Ned Land, tormented by the
+cravings of hunger, got still more angry; and, notwithstanding his
+promise, I dreaded an explosion when he found himself with one of the
+crew.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+Time was getting on, and we were fearfully hungry; and this time the poopes did not for the poop for the last rays of the last rays of the
+more powerful light which he had beenpoetry of the good seaman could not dried up and furnished with anguish, for the lastly light reeds.<|endoftext|>
+** Reference **
+Time was getting on, and we were fearfully hungry; and this time the
+steward did not appear. It was rather too long to leave us, if they
+really had good intentions towards us. Ned Land, tormented by the
+cravings of hunger, got still more angry; and, notwithstanding his
+promise, I dreaded an explosion when he found himself with one of the
+crew.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+Time was getting on, and we were fearfully hungry; and this time the poop, if only to the poop, thanks to the poop, thanks to see with it was determined to see
+did and furnished with escaped his apparatus that there perished nearly furnished with life and furnished with life and furnished with life and furnished with life and furnished with life and furnished with life and furnished with life and furnished with life and furnished with life.<|endoftext|>
+** Reference **
+Time was getting on, and we were fearfully hungry; and this time the
+steward did not appear. It was rather too long to leave us, if they
+really had good intentions towards us. Ned Land, tormented by the
+cravings of hunger, got still more angry; and, notwithstanding his
+promise, I dreaded an explosion when he found himself with one of the
+crew.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A would-be contestant on America's Next Top Model has admitted to authorities ice in
+the upper jaw.
+** Reference **
+A would-be contestant on America's Next Top Model has admitted to authorities in Alabama that she faked her own abduction in a poorly conceived effort to win back the affection of her estranged boyfriend.
+
+Kayla B. Earl of Hueytown was found by a Jefferson County sheriff's deputy lying in the dirt by the side of the road near a Pleasant Grove cemetery this past Tuesday.
+
+Earl, who had a Walmart bag over her head and appeared unconscious, was taken by emergency workers to be examined at a nearby hospital.
+
+After being released she told detectives that a man had approached her from behind while she was visiting the gravesite of a friend, and placed a bag over her head.
+
+He then grabbed her and a struggle ensued.
+
+Earl was able to break loose, and fled to the roadway where she was discovered, ostensibly passed out.
+
+After several hours of investigation that included a review of surveillance footage and the alleged victim's cellphone records, detectives confronted Earl and she confessed to making the whole thing up.
+
+Earl reportedly admitted she was "trying to lure back her estranged boyfriend with sympathy."
+
+"She even said she put the bag on her head to make it look like someone tried to suffocate her," Pleasant Grove Detective Jason Davis told AL.com. "She is going through some personal problems. Between that and wanting attention, it turns out none of this happened."
+
+Earl turned herself in yesterday afternoon and was charged with misdemeanor False Reporting to Law Enforcement.
+
+Earlier this year, a man in Arkansas tried to impress a love interest by staging a fake rape attempt.
+
+Jeffery Tyler Siegel's hoax ended in similar disgrace, but, unlike Earl, he was not charged with a crime.
+
+[H/T: Guyism, photos via Model Mayhem, mug shot via AL.com]
+=========== Original model END ===========
+=========== Model w/ RL, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A would-be contestant on America's Next Top Model has admitted to authorities
+the furies’ hair.
+** Reference **
+A would-be contestant on America's Next Top Model has admitted to authorities in Alabama that she faked her own abduction in a poorly conceived effort to win back the affection of her estranged boyfriend.
+
+Kayla B. Earl of Hueytown was found by a Jefferson County sheriff's deputy lying in the dirt by the side of the road near a Pleasant Grove cemetery this past Tuesday.
+
+Earl, who had a Walmart bag over her head and appeared unconscious, was taken by emergency workers to be examined at a nearby hospital.
+
+After being released she told detectives that a man had approached her from behind while she was visiting the gravesite of a friend, and placed a bag over her head.
+
+He then grabbed her and a struggle ensued.
+
+Earl was able to break loose, and fled to the roadway where she was discovered, ostensibly passed out.
+
+After several hours of investigation that included a review of surveillance footage and the alleged victim's cellphone records, detectives confronted Earl and she confessed to making the whole thing up.
+
+Earl reportedly admitted she was "trying to lure back her estranged boyfriend with sympathy."
+
+"She even said she put the bag on her head to make it look like someone tried to suffocate her," Pleasant Grove Detective Jason Davis told AL.com. "She is going through some personal problems. Between that and wanting attention, it turns out none of this happened."
+
+Earl turned herself in yesterday afternoon and was charged with misdemeanor False Reporting to Law Enforcement.
+
+Earlier this year, a man in Arkansas tried to impress a love interest by staging a fake rape attempt.
+
+Jeffery Tyler Siegel's hoax ended in similar disgrace, but, unlike Earl, he was not charged with a crime.
+
+[H/T: Guyism, photos via Model Mayhem, mug shot via AL.com]
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A would-be contestant on America's Next Top Model has admitted to authorities
+the other seas. The electric organ sounded 5. The electric organ sounded 5. The electric sheets light reeds. The electric ball of Vanikoro, marked direct west quarter of the galleons are marked 7th of the apparatus grounded on the _Nautilus_ was, 7th of the sea flapped before the _Nautilus_ was soon
+at its electric sheets of the monster’s feet, 7th of the _Nautilus_ was beautiful things most beautiful things most beautiful things most beautiful animals, 7th of the _Nautilus_, in the _Nautilus_ was Suez to its diorama. The _Nautilus_ was beautiful things most
+bottom but whales and 14th of the breeze alone canoes?”<|endoftext|>
+** Reference **
+A would-be contestant on America's Next Top Model has admitted to authorities in Alabama that she faked her own abduction in a poorly conceived effort to win back the affection of her estranged boyfriend.
+
+Kayla B. Earl of Hueytown was found by a Jefferson County sheriff's deputy lying in the dirt by the side of the road near a Pleasant Grove cemetery this past Tuesday.
+
+Earl, who had a Walmart bag over her head and appeared unconscious, was taken by emergency workers to be examined at a nearby hospital.
+
+After being released she told detectives that a man had approached her from behind while she was visiting the gravesite of a friend, and placed a bag over her head.
+
+He then grabbed her and a struggle ensued.
+
+Earl was able to break loose, and fled to the roadway where she was discovered, ostensibly passed out.
+
+After several hours of investigation that included a review of surveillance footage and the alleged victim's cellphone records, detectives confronted Earl and she confessed to making the whole thing up.
+
+Earl reportedly admitted she was "trying to lure back her estranged boyfriend with sympathy."
+
+"She even said she put the bag on her head to make it look like someone tried to suffocate her," Pleasant Grove Detective Jason Davis told AL.com. "She is going through some personal problems. Between that and wanting attention, it turns out none of this happened."
+
+Earl turned herself in yesterday afternoon and was charged with misdemeanor False Reporting to Law Enforcement.
+
+Earlier this year, a man in Arkansas tried to impress a love interest by staging a fake rape attempt.
+
+Jeffery Tyler Siegel's hoax ended in similar disgrace, but, unlike Earl, he was not charged with a crime.
+
+[H/T: Guyism, photos via Model Mayhem, mug shot via AL.com]
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A would-be contestant on America's Next Top Model has admitted to authorities
+the other seas. The electric heat is something like a
+the sea for two distinct rays from the shell of the 145estimating the electric ball of bindweed, and at Reunion and insubians colours to France.”<|endoftext|>
+** Reference **
+A would-be contestant on America's Next Top Model has admitted to authorities in Alabama that she faked her own abduction in a poorly conceived effort to win back the affection of her estranged boyfriend.
+
+Kayla B. Earl of Hueytown was found by a Jefferson County sheriff's deputy lying in the dirt by the side of the road near a Pleasant Grove cemetery this past Tuesday.
+
+Earl, who had a Walmart bag over her head and appeared unconscious, was taken by emergency workers to be examined at a nearby hospital.
+
+After being released she told detectives that a man had approached her from behind while she was visiting the gravesite of a friend, and placed a bag over her head.
+
+He then grabbed her and a struggle ensued.
+
+Earl was able to break loose, and fled to the roadway where she was discovered, ostensibly passed out.
+
+After several hours of investigation that included a review of surveillance footage and the alleged victim's cellphone records, detectives confronted Earl and she confessed to making the whole thing up.
+
+Earl reportedly admitted she was "trying to lure back her estranged boyfriend with sympathy."
+
+"She even said she put the bag on her head to make it look like someone tried to suffocate her," Pleasant Grove Detective Jason Davis told AL.com. "She is going through some personal problems. Between that and wanting attention, it turns out none of this happened."
+
+Earl turned herself in yesterday afternoon and was charged with misdemeanor False Reporting to Law Enforcement.
+
+Earlier this year, a man in Arkansas tried to impress a love interest by staging a fake rape attempt.
+
+Jeffery Tyler Siegel's hoax ended in similar disgrace, but, unlike Earl, he was not charged with a crime.
+
+[H/T: Guyism, photos via Model Mayhem, mug shot via AL.com]
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A would-be contestant on America's Next Top Model has admitted to authorities
+the front.”<|endoftext|>
+** Reference **
+A would-be contestant on America's Next Top Model has admitted to authorities in Alabama that she faked her own abduction in a poorly conceived effort to win back the affection of her estranged boyfriend.
+
+Kayla B. Earl of Hueytown was found by a Jefferson County sheriff's deputy lying in the dirt by the side of the road near a Pleasant Grove cemetery this past Tuesday.
+
+Earl, who had a Walmart bag over her head and appeared unconscious, was taken by emergency workers to be examined at a nearby hospital.
+
+After being released she told detectives that a man had approached her from behind while she was visiting the gravesite of a friend, and placed a bag over her head.
+
+He then grabbed her and a struggle ensued.
+
+Earl was able to break loose, and fled to the roadway where she was discovered, ostensibly passed out.
+
+After several hours of investigation that included a review of surveillance footage and the alleged victim's cellphone records, detectives confronted Earl and she confessed to making the whole thing up.
+
+Earl reportedly admitted she was "trying to lure back her estranged boyfriend with sympathy."
+
+"She even said she put the bag on her head to make it look like someone tried to suffocate her," Pleasant Grove Detective Jason Davis told AL.com. "She is going through some personal problems. Between that and wanting attention, it turns out none of this happened."
+
+Earl turned herself in yesterday afternoon and was charged with misdemeanor False Reporting to Law Enforcement.
+
+Earlier this year, a man in Arkansas tried to impress a love interest by staging a fake rape attempt.
+
+Jeffery Tyler Siegel's hoax ended in similar disgrace, but, unlike Earl, he was not charged with a crime.
+
+[H/T: Guyism, photos via Model Mayhem, mug shot via AL.com]
+=========== Model w/ MH END ===========
+=========== Original model, k=16, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“All that is true,” replied the Canadian. “But your observation applies equally to all attempts at flight, whether in
+the midst of these southern regions. We had scarcely time to reflect; taking refuge in
+my room, we looked at each other without speaking. A deep stupor had
+taken hold of my mind: thought seemed to stand still. I was in that
+painful state of expectation preceding a dreadful report. I waited, I
+listened, every sense was merged in that of hearing! The speed of the
+_Nautilus_ was accelerated. It was preparing to rush. The whole ship
+trembled. Suddenly I screamed. I felt the shock, but comparatively
+light. I felt the penetrating power of the steel spur. I heard
+rattlings and scrapings. But the _Nautilus_, carried along by its
+propelling power, passed through the mass of the vessel like a needle
+through sailcloth!
+** Reference **
+“All that is true,” replied the Canadian. “But your observation applies
+equally to all attempts at flight, whether in two years’ time, or in
+two days’. But the question is still this: If a favourable opportunity
+presents itself, it must be seized.”
+=========== Original model END ===========
+=========== Model w/ RL, k=16, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“All that is true,” replied the Canadian. “But your observation applies equally to all attempts at flight, whether in two years’ time, or in
+two days’. But the question is still this: If a favourable opportunity
+presents itself, it must be seized.”
+** Reference **
+“All that is true,” replied the Canadian. “But your observation applies
+equally to all attempts at flight, whether in two years’ time, or in
+two days’. But the question is still this: If a favourable opportunity
+presents itself, it must be seized.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=16, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“All that is true,” replied the Canadian. “But your observation applies equally to all attempts at flight, “But your observation applies
+your disposal, “But your observation applies
+your disposal, “But your permission, “The Persian sea is not sea is always rough and we are beginning to admit that you are beginning to give heat of Manaarctic seas, but do not only ties which time.”<|endoftext|>
+** Reference **
+“All that is true,” replied the Canadian. “But your observation applies
+equally to all attempts at flight, whether in two years’ time, or in
+two days’. But the question is still this: If a favourable opportunity
+presents itself, it must be seized.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=16, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“All that is true,” replied the Canadian. “But your observation applies equally to all attempts at flight, “But your observation applies
+your disposal, “But your observation applies captain and we are beginning to admit your permission, “The Persian roads lead back of the Museum of the wants of the Red Sea you are reading with you are reading little oxygen we are submerged: Have you are assembled the pearl?”<|endoftext|>
+** Reference **
+“All that is true,” replied the Canadian. “But your observation applies
+equally to all attempts at flight, whether in two years’ time, or in
+two days’. But the question is still this: If a favourable opportunity
+presents itself, it must be seized.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=16, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“All that is true,” replied the Canadian. “But your observation applies equally to all attempts at flight, “But your observation applies
+your disposal, “But your observation to use is not sea is not sea is not sea is not sea-water, “But your honour to admit that of your calculations, “But your honour may be feared that master’s hands to be seen the dorsal fin; and I have hunted up inside, “That that he asking where we are proper caverns capable of the most beautiful! What a field,” I am disturbing you know what end of time to be more possibility—I do not listen; and I have hunted up inside, “That that heaped up inside, “Mediterranean.”<|endoftext|>
+** Reference **
+“All that is true,” replied the Canadian. “But your observation applies
+equally to all attempts at flight, whether in two years’ time, or in
+two days’. But the question is still this: If a favourable opportunity
+presents itself, it must be seized.”
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=16, in_dist=False START ===========
+** Prompt **
+T
+** Gen text **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle of indefinite
+and shifting proportions.
+** Reference **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle that sets up a heated debate over how much the Senate should know about cabinet nominees ahead of their hearings.
+
+The independent Office of Government Ethics expressed “great concern” that several of President-elect Donald Trump’s cabinet nominees have not yet completed the required ethics review process or even filed any financial information but face confirmation hearings in the next week.
+
+A Senate Democratic aide told NewsHour that four upcoming nominees have not cleared the ethics process yet: Ben Carson, Housing and Urban Development; Betsy DeVos, Education; John Kelly, Homeland Security; and Wilbur Ross, Commerce.
+
+A Republican aide on the Senate Health, Education, Labor and Pensions (HELP) Committee confirmed the DeVos has not yet completed the OGE ethics process. Her hearing is one of the first, scheduled for Wednesday at 10 a.m. The NewsHour reached out to all committees involved and received no other direct responses on nominees’ ethics status.
+
+The Trump transition team also declined to address individual nominees, but pushed back strongly against the federal ethics office, accusing it of playing politics.
+
+“President-elect Trump is putting together the most qualified administration in history and the transition process is currently running smoothly,” wrote Trump transition spokeswoman Jessica Ditto in an email. “In the midst of a historic election where Americans voted to drain the swamp, it is disappointing some have chosen to politicize the process in order to distract from important issues facing our country. This is a disservice to the country and is exactly why voters chose Donald J. Trump as their next president.”
+
+The concerns came in a Friday letter from Walter Shaub, the director of the Office of Government Ethics, who was responding to questions from top Democrats in the Senate. Senate Democratic Leader Chuck Schumer released the letter Saturday.
+
+“The announced hearing schedule for several nominees who have not completed the ethics review process is of great concern to me,” Shaub wrote. “I am not aware of any occasion in the four decades since OGE was established when the Senate held a confirmation hearing before the nominee had completed the ethics review process.”
+
+Senate confirmation hearings are set to begin Tuesday, with 10 nominees scheduled to go before various Senate panels next week.
+
+OGE director Shaub argued that federal law requires that ethics reports be completed before any hearings take place.
+
+But Senate Republicans disagree.
+
+The spokesperson for the Republican majority on the HELP committee, Margaret Atkinson, insisted that clearance of the ethics process is not a requirement before hearings start.
+
+“Our committee precedent is that we require the OGE paperwork to be submitted before the committee holds a vote on the nominee, not before the committee holds a hearing on the nominee,” she told the NewsHour.
+
+The committee sent the NewsHour examples from the past, including George W. Bush education nominee Rod Paige whose hearing was on Jan. 10, 2001, but whose ethics paperwork was not complete until Jan. 18 of that year.
+
+As the Senate Republicans and the ethics office debate what is required at nominee hearings, the ethics office is also raising questions about the Trump transition process.
+
+The problems, the ethics chief wrote, have been the hearing schedule combined with a lack of timely information from nominees and the Trump team. “It has left some of the nominees with potentially unknown or unresolved ethics issues shortly before their scheduled hearings.” He did not indicate which nominees have completed which portions of the process.
+
+The Office of Government Ethics, or OGE, is an independent agency whose current director was appointed by President Barack Obama. It was created after the Watergate scandal to oversee ethics for the executive branch.
+
+Typically during the confirmation process, the ethics office writes reports outlining any possible ethics issues and steps the nominee agrees to take to resolve them.
+
+But the ethics director implied his office has not had time to complete reviews yet because the Trump transition team did not “pre-clear” any potential nominees before announcing them publicly.
+
+“In the past, the ethics work was fully completed prior to the announcement of nominees in the overwhelming majority of cases … and, therefore, there was no opportunity for undue influence on the independent ethics review process,” Shaub wrote.
+
+The letter was also sent to Republican Senate Leader Mitch McConnell. His office told the PBS NewsHour that they have no comment at this time. The Trump transition team did not respond to questions and a request for comment.
+
+The letter lands in a quickly-boiling political cauldron surrounding the Trump cabinet confirmation process. Senate Democrats have indicated they have sharp questions about, and may work to delay confirmation on, at least eight nominees. That has incensed Republicans, who point to 2009 when President Obama saw seven cabinet nominees confirmed on Inauguration Day and two more the next.
+
+Republicans charge that Democrats are holding Trump’s choices to a different standard than Obama’s. They point to Democrats’ request for tax returns for several positions for which that step has not been required in the past. Republicans have rejected those requests and are not adding any new requirements for nominees.
+
+But the disclosure from the Office of Government Ethics comes from an outside agency and indicates that at least some nominees have not yet met a significant and important requirement. Without ethics reports, senators would go into confirmation hearings without a usual source of potential questions.
+
+Shaub called that a “cause for alarm” and said that he will not rush the ethics review process. “For as long as I remain director, OGE’s staff and agency ethics officials will not succumb to pressure to cut corners and ignore conflicts of interest,” he wrote.
+=========== Original model END ===========
+=========== Model w/ RL, k=16, in_dist=False START ===========
+** Prompt **
+T
+** Gen text **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle of green variety
+capricornamented.
+** Reference **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle that sets up a heated debate over how much the Senate should know about cabinet nominees ahead of their hearings.
+
+The independent Office of Government Ethics expressed “great concern” that several of President-elect Donald Trump’s cabinet nominees have not yet completed the required ethics review process or even filed any financial information but face confirmation hearings in the next week.
+
+A Senate Democratic aide told NewsHour that four upcoming nominees have not cleared the ethics process yet: Ben Carson, Housing and Urban Development; Betsy DeVos, Education; John Kelly, Homeland Security; and Wilbur Ross, Commerce.
+
+A Republican aide on the Senate Health, Education, Labor and Pensions (HELP) Committee confirmed the DeVos has not yet completed the OGE ethics process. Her hearing is one of the first, scheduled for Wednesday at 10 a.m. The NewsHour reached out to all committees involved and received no other direct responses on nominees’ ethics status.
+
+The Trump transition team also declined to address individual nominees, but pushed back strongly against the federal ethics office, accusing it of playing politics.
+
+“President-elect Trump is putting together the most qualified administration in history and the transition process is currently running smoothly,” wrote Trump transition spokeswoman Jessica Ditto in an email. “In the midst of a historic election where Americans voted to drain the swamp, it is disappointing some have chosen to politicize the process in order to distract from important issues facing our country. This is a disservice to the country and is exactly why voters chose Donald J. Trump as their next president.”
+
+The concerns came in a Friday letter from Walter Shaub, the director of the Office of Government Ethics, who was responding to questions from top Democrats in the Senate. Senate Democratic Leader Chuck Schumer released the letter Saturday.
+
+“The announced hearing schedule for several nominees who have not completed the ethics review process is of great concern to me,” Shaub wrote. “I am not aware of any occasion in the four decades since OGE was established when the Senate held a confirmation hearing before the nominee had completed the ethics review process.”
+
+Senate confirmation hearings are set to begin Tuesday, with 10 nominees scheduled to go before various Senate panels next week.
+
+OGE director Shaub argued that federal law requires that ethics reports be completed before any hearings take place.
+
+But Senate Republicans disagree.
+
+The spokesperson for the Republican majority on the HELP committee, Margaret Atkinson, insisted that clearance of the ethics process is not a requirement before hearings start.
+
+“Our committee precedent is that we require the OGE paperwork to be submitted before the committee holds a vote on the nominee, not before the committee holds a hearing on the nominee,” she told the NewsHour.
+
+The committee sent the NewsHour examples from the past, including George W. Bush education nominee Rod Paige whose hearing was on Jan. 10, 2001, but whose ethics paperwork was not complete until Jan. 18 of that year.
+
+As the Senate Republicans and the ethics office debate what is required at nominee hearings, the ethics office is also raising questions about the Trump transition process.
+
+The problems, the ethics chief wrote, have been the hearing schedule combined with a lack of timely information from nominees and the Trump team. “It has left some of the nominees with potentially unknown or unresolved ethics issues shortly before their scheduled hearings.” He did not indicate which nominees have completed which portions of the process.
+
+The Office of Government Ethics, or OGE, is an independent agency whose current director was appointed by President Barack Obama. It was created after the Watergate scandal to oversee ethics for the executive branch.
+
+Typically during the confirmation process, the ethics office writes reports outlining any possible ethics issues and steps the nominee agrees to take to resolve them.
+
+But the ethics director implied his office has not had time to complete reviews yet because the Trump transition team did not “pre-clear” any potential nominees before announcing them publicly.
+
+“In the past, the ethics work was fully completed prior to the announcement of nominees in the overwhelming majority of cases … and, therefore, there was no opportunity for undue influence on the independent ethics review process,” Shaub wrote.
+
+The letter was also sent to Republican Senate Leader Mitch McConnell. His office told the PBS NewsHour that they have no comment at this time. The Trump transition team did not respond to questions and a request for comment.
+
+The letter lands in a quickly-boiling political cauldron surrounding the Trump cabinet confirmation process. Senate Democrats have indicated they have sharp questions about, and may work to delay confirmation on, at least eight nominees. That has incensed Republicans, who point to 2009 when President Obama saw seven cabinet nominees confirmed on Inauguration Day and two more the next.
+
+Republicans charge that Democrats are holding Trump’s choices to a different standard than Obama’s. They point to Democrats’ request for tax returns for several positions for which that step has not been required in the past. Republicans have rejected those requests and are not adding any new requirements for nominees.
+
+But the disclosure from the Office of Government Ethics comes from an outside agency and indicates that at least some nominees have not yet met a significant and important requirement. Without ethics reports, senators would go into confirmation hearings without a usual source of potential questions.
+
+Shaub called that a “cause for alarm” and said that he will not rush the ethics review process. “For as long as I remain director, OGE’s staff and agency ethics officials will not succumb to pressure to cut corners and ignore conflicts of interest,” he wrote.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=16, in_dist=False START ===========
+** Prompt **
+T
+** Gen text **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle between the
+the French Republic!’ I cannot form of one of one of one of one of one atmosphere is quite naturalists, and
+the size, and
+the size, and
+the greatest breadth of the crown of twenty-sixth of twenty-six feet this pressure. Who knows if I amiableestimating the crown of mollusc. It was ignorant of these defensive weapons of these chiefs, and more delicate hatches, and more tadpole than that they were larger than that are marked on the monster among other seas life.<|endoftext|>
+** Reference **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle that sets up a heated debate over how much the Senate should know about cabinet nominees ahead of their hearings.
+
+The independent Office of Government Ethics expressed “great concern” that several of President-elect Donald Trump’s cabinet nominees have not yet completed the required ethics review process or even filed any financial information but face confirmation hearings in the next week.
+
+A Senate Democratic aide told NewsHour that four upcoming nominees have not cleared the ethics process yet: Ben Carson, Housing and Urban Development; Betsy DeVos, Education; John Kelly, Homeland Security; and Wilbur Ross, Commerce.
+
+A Republican aide on the Senate Health, Education, Labor and Pensions (HELP) Committee confirmed the DeVos has not yet completed the OGE ethics process. Her hearing is one of the first, scheduled for Wednesday at 10 a.m. The NewsHour reached out to all committees involved and received no other direct responses on nominees’ ethics status.
+
+The Trump transition team also declined to address individual nominees, but pushed back strongly against the federal ethics office, accusing it of playing politics.
+
+“President-elect Trump is putting together the most qualified administration in history and the transition process is currently running smoothly,” wrote Trump transition spokeswoman Jessica Ditto in an email. “In the midst of a historic election where Americans voted to drain the swamp, it is disappointing some have chosen to politicize the process in order to distract from important issues facing our country. This is a disservice to the country and is exactly why voters chose Donald J. Trump as their next president.”
+
+The concerns came in a Friday letter from Walter Shaub, the director of the Office of Government Ethics, who was responding to questions from top Democrats in the Senate. Senate Democratic Leader Chuck Schumer released the letter Saturday.
+
+“The announced hearing schedule for several nominees who have not completed the ethics review process is of great concern to me,” Shaub wrote. “I am not aware of any occasion in the four decades since OGE was established when the Senate held a confirmation hearing before the nominee had completed the ethics review process.”
+
+Senate confirmation hearings are set to begin Tuesday, with 10 nominees scheduled to go before various Senate panels next week.
+
+OGE director Shaub argued that federal law requires that ethics reports be completed before any hearings take place.
+
+But Senate Republicans disagree.
+
+The spokesperson for the Republican majority on the HELP committee, Margaret Atkinson, insisted that clearance of the ethics process is not a requirement before hearings start.
+
+“Our committee precedent is that we require the OGE paperwork to be submitted before the committee holds a vote on the nominee, not before the committee holds a hearing on the nominee,” she told the NewsHour.
+
+The committee sent the NewsHour examples from the past, including George W. Bush education nominee Rod Paige whose hearing was on Jan. 10, 2001, but whose ethics paperwork was not complete until Jan. 18 of that year.
+
+As the Senate Republicans and the ethics office debate what is required at nominee hearings, the ethics office is also raising questions about the Trump transition process.
+
+The problems, the ethics chief wrote, have been the hearing schedule combined with a lack of timely information from nominees and the Trump team. “It has left some of the nominees with potentially unknown or unresolved ethics issues shortly before their scheduled hearings.” He did not indicate which nominees have completed which portions of the process.
+
+The Office of Government Ethics, or OGE, is an independent agency whose current director was appointed by President Barack Obama. It was created after the Watergate scandal to oversee ethics for the executive branch.
+
+Typically during the confirmation process, the ethics office writes reports outlining any possible ethics issues and steps the nominee agrees to take to resolve them.
+
+But the ethics director implied his office has not had time to complete reviews yet because the Trump transition team did not “pre-clear” any potential nominees before announcing them publicly.
+
+“In the past, the ethics work was fully completed prior to the announcement of nominees in the overwhelming majority of cases … and, therefore, there was no opportunity for undue influence on the independent ethics review process,” Shaub wrote.
+
+The letter was also sent to Republican Senate Leader Mitch McConnell. His office told the PBS NewsHour that they have no comment at this time. The Trump transition team did not respond to questions and a request for comment.
+
+The letter lands in a quickly-boiling political cauldron surrounding the Trump cabinet confirmation process. Senate Democrats have indicated they have sharp questions about, and may work to delay confirmation on, at least eight nominees. That has incensed Republicans, who point to 2009 when President Obama saw seven cabinet nominees confirmed on Inauguration Day and two more the next.
+
+Republicans charge that Democrats are holding Trump’s choices to a different standard than Obama’s. They point to Democrats’ request for tax returns for several positions for which that step has not been required in the past. Republicans have rejected those requests and are not adding any new requirements for nominees.
+
+But the disclosure from the Office of Government Ethics comes from an outside agency and indicates that at least some nominees have not yet met a significant and important requirement. Without ethics reports, senators would go into confirmation hearings without a usual source of potential questions.
+
+Shaub called that a “cause for alarm” and said that he will not rush the ethics review process. “For as long as I remain director, OGE’s staff and agency ethics officials will not succumb to pressure to cut corners and ignore conflicts of interest,” he wrote.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=16, in_dist=False START ===========
+** Prompt **
+T
+** Gen text **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle between the
+the French agent of fire.<|endoftext|>
+** Reference **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle that sets up a heated debate over how much the Senate should know about cabinet nominees ahead of their hearings.
+
+The independent Office of Government Ethics expressed “great concern” that several of President-elect Donald Trump’s cabinet nominees have not yet completed the required ethics review process or even filed any financial information but face confirmation hearings in the next week.
+
+A Senate Democratic aide told NewsHour that four upcoming nominees have not cleared the ethics process yet: Ben Carson, Housing and Urban Development; Betsy DeVos, Education; John Kelly, Homeland Security; and Wilbur Ross, Commerce.
+
+A Republican aide on the Senate Health, Education, Labor and Pensions (HELP) Committee confirmed the DeVos has not yet completed the OGE ethics process. Her hearing is one of the first, scheduled for Wednesday at 10 a.m. The NewsHour reached out to all committees involved and received no other direct responses on nominees’ ethics status.
+
+The Trump transition team also declined to address individual nominees, but pushed back strongly against the federal ethics office, accusing it of playing politics.
+
+“President-elect Trump is putting together the most qualified administration in history and the transition process is currently running smoothly,” wrote Trump transition spokeswoman Jessica Ditto in an email. “In the midst of a historic election where Americans voted to drain the swamp, it is disappointing some have chosen to politicize the process in order to distract from important issues facing our country. This is a disservice to the country and is exactly why voters chose Donald J. Trump as their next president.”
+
+The concerns came in a Friday letter from Walter Shaub, the director of the Office of Government Ethics, who was responding to questions from top Democrats in the Senate. Senate Democratic Leader Chuck Schumer released the letter Saturday.
+
+“The announced hearing schedule for several nominees who have not completed the ethics review process is of great concern to me,” Shaub wrote. “I am not aware of any occasion in the four decades since OGE was established when the Senate held a confirmation hearing before the nominee had completed the ethics review process.”
+
+Senate confirmation hearings are set to begin Tuesday, with 10 nominees scheduled to go before various Senate panels next week.
+
+OGE director Shaub argued that federal law requires that ethics reports be completed before any hearings take place.
+
+But Senate Republicans disagree.
+
+The spokesperson for the Republican majority on the HELP committee, Margaret Atkinson, insisted that clearance of the ethics process is not a requirement before hearings start.
+
+“Our committee precedent is that we require the OGE paperwork to be submitted before the committee holds a vote on the nominee, not before the committee holds a hearing on the nominee,” she told the NewsHour.
+
+The committee sent the NewsHour examples from the past, including George W. Bush education nominee Rod Paige whose hearing was on Jan. 10, 2001, but whose ethics paperwork was not complete until Jan. 18 of that year.
+
+As the Senate Republicans and the ethics office debate what is required at nominee hearings, the ethics office is also raising questions about the Trump transition process.
+
+The problems, the ethics chief wrote, have been the hearing schedule combined with a lack of timely information from nominees and the Trump team. “It has left some of the nominees with potentially unknown or unresolved ethics issues shortly before their scheduled hearings.” He did not indicate which nominees have completed which portions of the process.
+
+The Office of Government Ethics, or OGE, is an independent agency whose current director was appointed by President Barack Obama. It was created after the Watergate scandal to oversee ethics for the executive branch.
+
+Typically during the confirmation process, the ethics office writes reports outlining any possible ethics issues and steps the nominee agrees to take to resolve them.
+
+But the ethics director implied his office has not had time to complete reviews yet because the Trump transition team did not “pre-clear” any potential nominees before announcing them publicly.
+
+“In the past, the ethics work was fully completed prior to the announcement of nominees in the overwhelming majority of cases … and, therefore, there was no opportunity for undue influence on the independent ethics review process,” Shaub wrote.
+
+The letter was also sent to Republican Senate Leader Mitch McConnell. His office told the PBS NewsHour that they have no comment at this time. The Trump transition team did not respond to questions and a request for comment.
+
+The letter lands in a quickly-boiling political cauldron surrounding the Trump cabinet confirmation process. Senate Democrats have indicated they have sharp questions about, and may work to delay confirmation on, at least eight nominees. That has incensed Republicans, who point to 2009 when President Obama saw seven cabinet nominees confirmed on Inauguration Day and two more the next.
+
+Republicans charge that Democrats are holding Trump’s choices to a different standard than Obama’s. They point to Democrats’ request for tax returns for several positions for which that step has not been required in the past. Republicans have rejected those requests and are not adding any new requirements for nominees.
+
+But the disclosure from the Office of Government Ethics comes from an outside agency and indicates that at least some nominees have not yet met a significant and important requirement. Without ethics reports, senators would go into confirmation hearings without a usual source of potential questions.
+
+Shaub called that a “cause for alarm” and said that he will not rush the ethics review process. “For as long as I remain director, OGE’s staff and agency ethics officials will not succumb to pressure to cut corners and ignore conflicts of interest,” he wrote.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=16, in_dist=False START ===========
+** Prompt **
+T
+** Gen text **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle of the
+the force of the different light.<|endoftext|>
+** Reference **
+The incoming president and the current federal office of ethics openly clashed Saturday, in a battle that sets up a heated debate over how much the Senate should know about cabinet nominees ahead of their hearings.
+
+The independent Office of Government Ethics expressed “great concern” that several of President-elect Donald Trump’s cabinet nominees have not yet completed the required ethics review process or even filed any financial information but face confirmation hearings in the next week.
+
+A Senate Democratic aide told NewsHour that four upcoming nominees have not cleared the ethics process yet: Ben Carson, Housing and Urban Development; Betsy DeVos, Education; John Kelly, Homeland Security; and Wilbur Ross, Commerce.
+
+A Republican aide on the Senate Health, Education, Labor and Pensions (HELP) Committee confirmed the DeVos has not yet completed the OGE ethics process. Her hearing is one of the first, scheduled for Wednesday at 10 a.m. The NewsHour reached out to all committees involved and received no other direct responses on nominees’ ethics status.
+
+The Trump transition team also declined to address individual nominees, but pushed back strongly against the federal ethics office, accusing it of playing politics.
+
+“President-elect Trump is putting together the most qualified administration in history and the transition process is currently running smoothly,” wrote Trump transition spokeswoman Jessica Ditto in an email. “In the midst of a historic election where Americans voted to drain the swamp, it is disappointing some have chosen to politicize the process in order to distract from important issues facing our country. This is a disservice to the country and is exactly why voters chose Donald J. Trump as their next president.”
+
+The concerns came in a Friday letter from Walter Shaub, the director of the Office of Government Ethics, who was responding to questions from top Democrats in the Senate. Senate Democratic Leader Chuck Schumer released the letter Saturday.
+
+“The announced hearing schedule for several nominees who have not completed the ethics review process is of great concern to me,” Shaub wrote. “I am not aware of any occasion in the four decades since OGE was established when the Senate held a confirmation hearing before the nominee had completed the ethics review process.”
+
+Senate confirmation hearings are set to begin Tuesday, with 10 nominees scheduled to go before various Senate panels next week.
+
+OGE director Shaub argued that federal law requires that ethics reports be completed before any hearings take place.
+
+But Senate Republicans disagree.
+
+The spokesperson for the Republican majority on the HELP committee, Margaret Atkinson, insisted that clearance of the ethics process is not a requirement before hearings start.
+
+“Our committee precedent is that we require the OGE paperwork to be submitted before the committee holds a vote on the nominee, not before the committee holds a hearing on the nominee,” she told the NewsHour.
+
+The committee sent the NewsHour examples from the past, including George W. Bush education nominee Rod Paige whose hearing was on Jan. 10, 2001, but whose ethics paperwork was not complete until Jan. 18 of that year.
+
+As the Senate Republicans and the ethics office debate what is required at nominee hearings, the ethics office is also raising questions about the Trump transition process.
+
+The problems, the ethics chief wrote, have been the hearing schedule combined with a lack of timely information from nominees and the Trump team. “It has left some of the nominees with potentially unknown or unresolved ethics issues shortly before their scheduled hearings.” He did not indicate which nominees have completed which portions of the process.
+
+The Office of Government Ethics, or OGE, is an independent agency whose current director was appointed by President Barack Obama. It was created after the Watergate scandal to oversee ethics for the executive branch.
+
+Typically during the confirmation process, the ethics office writes reports outlining any possible ethics issues and steps the nominee agrees to take to resolve them.
+
+But the ethics director implied his office has not had time to complete reviews yet because the Trump transition team did not “pre-clear” any potential nominees before announcing them publicly.
+
+“In the past, the ethics work was fully completed prior to the announcement of nominees in the overwhelming majority of cases … and, therefore, there was no opportunity for undue influence on the independent ethics review process,” Shaub wrote.
+
+The letter was also sent to Republican Senate Leader Mitch McConnell. His office told the PBS NewsHour that they have no comment at this time. The Trump transition team did not respond to questions and a request for comment.
+
+The letter lands in a quickly-boiling political cauldron surrounding the Trump cabinet confirmation process. Senate Democrats have indicated they have sharp questions about, and may work to delay confirmation on, at least eight nominees. That has incensed Republicans, who point to 2009 when President Obama saw seven cabinet nominees confirmed on Inauguration Day and two more the next.
+
+Republicans charge that Democrats are holding Trump’s choices to a different standard than Obama’s. They point to Democrats’ request for tax returns for several positions for which that step has not been required in the past. Republicans have rejected those requests and are not adding any new requirements for nominees.
+
+But the disclosure from the Office of Government Ethics comes from an outside agency and indicates that at least some nominees have not yet met a significant and important requirement. Without ethics reports, senators would go into confirmation hearings without a usual source of potential questions.
+
+Shaub called that a “cause for alarm” and said that he will not rush the ethics review process. “For as long as I remain director, OGE’s staff and agency ethics officials will not succumb to pressure to cut corners and ignore conflicts of interest,” he wrote.
+=========== Model w/ MH END ===========
+=========== Original model, k=20, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The lieutenant had taken up the glass and examined the horizon steadfastly, going and coming, stamping his foot and showing more
+nervous agitation than his superior officer. Besides, this mystery must
+necessarily be solved, and before long; for, upon an order from Captain
+Nemo, the engine, increasing its propelling power, made the screw turn
+more rapidly.
+** Reference **
+The lieutenant had taken up the glass and examined the horizon
+steadfastly, going and coming, stamping his foot and showing more
+nervous agitation than his superior officer. Besides, this mystery must
+necessarily be solved, and before long; for, upon an order from Captain
+Nemo, the engine, increasing its propelling power, made the screw turn
+more rapidly.
+=========== Original model END ===========
+=========== Model w/ RL, k=20, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The lieutenant had taken up the glass and examined the horizon steadfastly, going and coming, stamping his foot and showing more
+nervous agitation than his superior officer. Besides, this mystery must
+necessarily be solved, and before long; for, upon an order from Captain
+Nemo, the engine, increasing its propelling power, made the screw turn
+more rapidly.
+** Reference **
+The lieutenant had taken up the glass and examined the horizon
+steadfastly, going and coming, stamping his foot and showing more
+nervous agitation than his superior officer. Besides, this mystery must
+necessarily be solved, and before long; for, upon an order from Captain
+Nemo, the engine, increasing its propelling power, made the screw turn
+more rapidly.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=20, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The lieutenant had taken up the glass and examined the horizon steadfastly, going and coming, stamping his foot and showing more command the
+ straightened soundings of the high mountains, and was renewed, but it was he perceived of the monster:<|endoftext|>
+** Reference **
+The lieutenant had taken up the glass and examined the horizon
+steadfastly, going and coming, stamping his foot and showing more
+nervous agitation than his superior officer. Besides, this mystery must
+necessarily be solved, and before long; for, upon an order from Captain
+Nemo, the engine, increasing its propelling power, made the screw turn
+more rapidly.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=20, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The lieutenant had taken up the glass and examined the horizon steadfastly, going and coming, stamping his foot and showing more took a horn of
+back of the mollusc. The longnour use of the machinery that the mollusc!<|endoftext|>
+** Reference **
+The lieutenant had taken up the glass and examined the horizon
+steadfastly, going and coming, stamping his foot and showing more
+nervous agitation than his superior officer. Besides, this mystery must
+necessarily be solved, and before long; for, upon an order from Captain
+Nemo, the engine, increasing its propelling power, made the screw turn
+more rapidly.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=20, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The lieutenant had taken up the glass and examined the horizon steadfastly, going and coming, stamping his foot and showing more command the
+ straightened soundings of the animal, and attacked it was he relied, and could not measure it was out of the animal, and could not measure it was determined out of the _Nautilus_ oblique position behind all inquiries, and could not measure it was determined not being marked with great depths. The _Nautilus_ oblong intervals to which he relied, and could not without taking was soon free passage of the sea fog—<|endoftext|>
+** Reference **
+The lieutenant had taken up the glass and examined the horizon
+steadfastly, going and coming, stamping his foot and showing more
+nervous agitation than his superior officer. Besides, this mystery must
+necessarily be solved, and before long; for, upon an order from Captain
+Nemo, the engine, increasing its propelling power, made the screw turn
+more rapidly.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=20, in_dist=False START ===========
+** Prompt **
+R
+** Gen text **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the
+starboard quarter, a sea seemed to be illuminated all over. It was
+not a mere phosphoric phenomenon. The monster emerged some fathoms from
+the water, and then threw out that very intense but inexplicable light
+mentioned in the report of several captains. This magnificent
+irradiation must have been produced by an agent of great _shining_
+power. The luminous part traced on the sea an immense oval, much
+elongated, the centre of which condensed a burning heat, whose
+overpowering brilliancy died out by successive gradations.
+** Reference **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the current so-called scandals. But the furors over the IRS , Benghazi, and the Justice Department’s sweeping investigation of the Associated Press, don’t begin to rise—or sink—to that level. The wise and pithy Matt Dowd, a former Republican operative, said recently, “We rush to scandal before we settle on stupidity.” Washington just loves scandals; they’re ever so much more exciting than the daily grind of legislation—if there is any—and the tit-for-tat between the president and the congressional Republicans over the budget was becoming tedious. Faux outrage is a specialty here.
+
+Obama, anxious not to be seen defending everybody’s punching bag, the IRS , quickly ceded ground on what could be perfectly defensible actions. He may come to regret taking what seemed a trigger-happy decision to order a criminal investigation of the Internal Revenue Service, a sure way to drag people who may have—may have—simply made errors of judgment through a long and expensive legal process that is likely also to keep the agency from examining the validity of the application for tax-free status of any group with powerful allies. If, following the Citizens United decision, there is a sudden doubling of the number of new organizations with similar names and missions, and these organizations apply for tax exempt status—and also the right to hide the names of their donors—might it not make sense to use a search engine to find them? This what the just-fired sacrificial acting IRS commissioner, testifying before a congressional committee on Friday, termed a “grouping” of the cases that had already been almost universally condemned as “targeting,” which he insisted it wasn’t. But this simple explanation wouldn’t do, didn’t warrant the term “outrage” routinely conferred on the IRS case. Could it just possibly be that the Tea Party and their allies see a great benefit in making a stink over this? How better to freeze the IRS examinations of these groups?
+
+According to press reports none of the Tea Party groups have as yet been denied 501(c)(4) status, though this has happened to some liberal organizations. The real problem is that the process takes a long time and the questions are excessive, some even ridiculous. Pinning the whole thing on Obama—pinning all that they can of these “scandals” on him—gladdens most Republicans’ hearts. I say “most,” because such prominent conservative commentators as Charles Krauthammer and Bill Kristol have urged the Republicans to proceed with more caution, fearing that as often happens they will overdo it. And Republican congressional leaders have begun to worry that the troops may go too far, inviting the sort of backlash that smacked Newt Gingrich and his fellow revolutionaries in 1998, following their reckless impeachment of Bill Clinton, losing them seats and costing Gingrich his Speakership. It’s quite possible that some lower-rank government employees did some stupid things, and it’s clear that the agency had poor leadership (under a Bush-appointed director) but there is no evidence that any of this was directly or indirectly on the president’s orders.
+
+Meanwhile, new information about what happened in Benghazi keeps coming in, changing that story. The Talmudic scholarship that’s been applied to the administration’s talking points—what the various agencies urged that a representative of the administration should say on the Sunday talk shows—has led to the conclusion that that mushy and somewhat misleading statement was the typical product of a typical inter-agency struggle over blame-shifting. The omission of some material from an original draft—on the not unreasonable ground that the terrorist groups that perpetrated the attack shouldn’t be put on notice that the US knew who they were—hardly ranks as a cover-up. Was the administration confused or was it anxious to avoid the acknowledgement that the US consulate in Benghazi was attacked by terrorists from the start, by saying that they came in later? The administration later released all of the emails among the agencies to Congress but few members bothered to go to the briefing or read the material. And as it turned out, the White House didn’t play a hand in doctoring what the talking points would say.
+
+In order to stoke the conspiracy theories, Republican congressional aides leaked false versions of the interagency emails and ABC ran with them without checking. Republicans focused the controversy on Hillary Clinton rather than David Petraeus, the CIA director at the time, though Petraeus also agreed to the talking points and was responsible for hiring the local defenders who melted away at the first shot, and the misinformed intelligence on what happened that night was a failure by the CIA. (But Petraeus was most unlikely to run for president in 2016.) That the US presence in Benghazi was essentially a CIA operation was kept quiet. The inability to adequately protect our foreign missions has been a bipartisan failure and Congress’s stinginess with funds for the protection of our assets in foreign countries also bears some responsibility. In any case, the Republicans might be well advised to tread carefully on the matter of ignored warnings. So far, the George W. Bush administration has got by amazingly with their obvious failure to act on indications months before September 11, 2001, that a major terrorist plot was in the works .
+
+The Justice Department clearly overreached—even its own guidelines were ignored—in its effort to gather information about a leak to the Associated Press about the CIA foiling a terrorist plot in Yemen—a leak which the AP delayed publishing at the request of the White House and the CIA, and only ran when it heard that the White House was going to release information. But this doesn’t reflect a crusade against the press—though the news media make a lot of noise about such actions, and perhaps rightly so. It is true that Obama has been especially fierce (if selectively) about national security leaks, but there’s a long history of administrations going too far to stop leaks and intimidate potential leakers. Even if the president urged Attorney General Eric Holder, a close friend, to go after the AP, does anyone seriously believe that he spelled out how it was to do so?
+
+Thus far, not one of these so-called scandals has reached the Oval Office. Even in the event, which seems unlikely now, that one of them does, it still wouldn’t come close to the pattern of actions taken by Nixon and his aides that nearly undid our democratic system of government four decades ago. Barack Obama couldn’t be Richard Nixon if he tried. No one could. Nixon was, fortunately, sui generis. So, what was Watergate about, and how does it differ from what is going on now?
+
+Compared to Watergate, on the basis of everything we know about what are the current “scandals” amount to a piffle. Watergate was a Constitutional crisis. It was about a pattern of behavior on the part of the president of the United States abusing power to carry out his personal vendettas. It was about whether the president was accountable to the other branches of the government; it was about whether the Congress could summon the courage to hold accountable a president who held himself above the law. It was about a president and his aides who were out of control in their efforts to punish the president’s “enemies.”
+
+It was also about, though this has still gone largely unrecognized, an attempt by a sitting president to determine the nomination of the opposition party’s presidential candidate. Potentially strong challengers were spied upon, their offices broken into and files disappeared, their campaign events disrupted by what were diminished by their categorization as laughable “dirty tricks.” It was about black bag jobs and paying criminals to carry out ideas that sprang from the fevered brain of a president who saw opponents, political and otherwise, as enemies, and then trying to hush the whole thing up. The attempt, not unsuccessful though not exclusively their doing, to try to get the opposition party to nominate its weakest candidate was a step along the road to fascism. It was a putsch by a head of state.
+
+Nixon’s extraordinary abuse of his new power started almost as soon as he had put away his Inaugural finery. In February 1969 he told his staff that he wanted private funds raised to establish an intelligence unit within the White House to carry out around-the-clock surveillance of political opponents. This led to the hiring of a group of fanatics, bums, fools, and losers—most of them paid for with private funds but run by White House aides and right out of the Executive Office Building, next door to the White House. Some were of Cuban origin and had participated in the disastrous Bay of Pigs invasion of Cuba; to motivate them Nixon instructed that they be told that their mission was to root out Communists in the Democratic Party. (He even ordered that they be required to read the chapter of his memoir Six Crisis that recounts his exposure of Alger Hiss as a spy for the Soviet Union. But Nixon was always telling people, even Mao, to read Six Crises. The shrewd Mao had beat him to it.).
+
+The following year Nixon signed off on a plan (the “Huston plan”) that included not just wiretaps also but break-ins and intercepting mail; the plan was so extreme that even the powerful FBI director J. Edgar Hoover, no civil libertarian, objected; though Nixon said that the plan had been rescinded parts of it were implemented. The list of “enemies” he ordered John Dean to draw up, was considered by many who were on it funny and even a point of pride, but it was a chilling exercise of power: the president used the levers of government, including the IRS , to audit and harass his opponents, a wide swath of people in public and private lives. Nixon was often heard on the tapes telling his aides he wanted them to “get the goods” on this or that perceived enemy. Edward Kennedy, presumably Nixon’s most powerful opponent for reelection, was put under twenty-four hour surveillance for a time by one of the clowns hired by the White House to carry out Nixon’s plan.
+
+Nixon’s most serious problems arose out of his obsession about the leak of the Pentagon Papers, in 1971. This led—shortly after the Papers were first published in The New York Times—to the establishing, four days later, the White House “plumbers” office in the EOB . A sign saying PLUMBERS was on the door. But even before the plumbers office was fully set up Nixon’s aides implemented “Special Operation No. 1”: in a first step toward punishing the leaker, Daniel Ellsberg, the White House sanctioned the gravest offense—a break-in at the office of Ellsberg’s psychiatrist in order to get the files of this particular patient. A raid of the office of the psychiatrist of a private citizen on the orders of the president of the United States. This clear flouting of the Fourth Amendment protection of private property from searches and seizures was the most disturbing act during this extraordinary period and it shook even conservative senators; Nixon knew that its discovery was the single greatest danger to him, and this was what he was so frantically trying to cover up. As it happened, even though one of the plumbers had cased the place, the psychiatrist’s office contained no files at all.
+
+The obsession over the leak of the Pentagon Papers also led to the mad suggestion by the president of the United States that the offices of the Brookings Institution be firebombed in order to get to the safes in the offices of former Kissinger aides, Leslie Gelb and Morton Halperin, who were suspected of keeping the drafts of some unpublished chapters of the Pentagon Papers. The president could be heard on the tapes instructing his aides: “Godammit. Get in there and get those files. Blow the safe and get it.” You see, Kissinger had ordered up the study. Ellsberg had been assigned by Kissinger to do a super-secret study on the papers and had been given access to them, which were stored at Rand. Though one of the burglars had searched Brookings and reported that the files existed, there were none. In any event, some White House aides thwarted that plan before it was fully carried out.
+
+In this context the break-in of the Democratic National Committee headquarters in the Watergate office building on June 17, 1972 was almost routine. This one, when the burglars were caught, which started the unraveling of Nixon’s secret plots against his enemies, was actually the burglars’ fourth attempt: in the first attempt they faked a banquet to get into the building but ended up locked in a closet; the second time they couldn’t break the lock on the DNC office door; the third time, on Memorial Day, they got into the DNC office but put a bug on the wrong phone, so on they went back to fix it. Perhaps because breaking in had become so habitual they got sloppy and left the immortal piece of tape on a door. That the plumbers were stumblebums doesn’t negate the sinister nature of what they were told to do.
+
+In October 1973, Nixon rattled through a series of beheadings of those who got in the way of his desperate attempts to prevent the tapes into which he had sealed his own fate—as he was oddly aware—from being turned over to the prosecutors. He first ordered the attorney general, Elliott Richardson, to fire Archibald Cox, the Independent Prosecutor who had subpoenaed the tapes and got a court order that they must be released. Richardson, a Boston Brahmin, also refused and was fired by the president; the next in line, Bill Ruckelshaus, a popular environmentalist, also refused and was fired. Finally, the next in line, Robert Bork, agreed to fire Cox. The prosecutors’ staff was barricaded in their offices trying to protect their files from the FBI , who had surrounded them and told them they could not remove their papers. As the bulletins rolled in, one after another on that dark Saturday night, it felt as if we were living in a banana republic and now there were grounds for fearing a President who was irrational and out of control. There was a run on the bookstores to buy legal scholar Raoul Berger’s Impeachment: The Constitutional Problems (1969). No one knew how to impeach a president.
+
+When the House Judiciary Committee took up its work at the beginning of 1974, trying to impeach a sitting president who still had a fairly strong political base was a daunting prospect. Impeachment had not yet been cheapened by the zealots who conducted a trivial pursuit of President Clinton. The triumphalism came later, spurred on by the myth that Watergate was a victory of the good guys over the bad guys. It was about something far deeper: whether our constitutional system would survive. If the Committee did vote for articles of impeachment by a bipartisan and definite majority it was probable that the House would agree and vote to impeach—indict—the president. Next would come a trial in the Senate. And the president remained defiant. The committee had to get it right.
+
+Almost forgotten is the part played by an obscure New Jersey congressman, Peter Rodino, who had been chairman of the committee for only a year. (Inevitably once the spotlight fell on him, rumors circulated, without any evidence, that he must have ties to the mob.) Rodino was not the most articulate member by far but the miracle of the Judiciary Committee’s adopting on a bipartisan basis three articles of impeachment was due to the fact that ordinary people rose to the task and did extraordinary things; Rodino’s choices made a critical difference.
+
+Showboat attorneys or flashy advisers were turned away. As it was, Rodino had to struggle against some committee members who wanted to conduct a prosecution of the president. The two people who along with Rodino shaped not just the committee’s action but the history of the downfall of Richard Nixon were a twenty-seven-year-old Francis O’Brien, who had no prior experience in such matters but was recommended to Rodino for his uncommon judgment, and John Doar, the counsel whom O’Brien had found. Doar had served in the Eisenhower Justice Department and then was a civil rights hero in Robert Kennedy’s Justice Department. He was methodical and low-key and built the case against Nixon brick by brick, slowly earning the trust of committee members, the press, and the public.
+
+These three men had concluded that if there were to be articles of impeachment that would be accepted by a still-divided country they had to be seen as arising from a fair process, be bipartisan and come from the center of the committee members: those on the right who defended Nixon to the end and the most partisan Democrats on the committee had to be contained, and moderate Republicans and southern Democrats had to be convinced that voting for articles of impeachment was necessary and urgent. James Madison’s writings and the Federalist Papers became as familiar in the discussions as morning newspapers.
+
+The atmosphere in Washington was unlike anything that had gone before or has happened since. We lived in fear. Knowing that the telephones of some of the presidents’ “enemies” were being tapped, we joked in our telephone conversations about our phones being bugged. (No Internet then, but just think of the Nixon people’s probable temptation to trace emails.) One Sunday morning when the newspaper delivery was late, a perfectly sane woman I knew said, “They’ve stopped the papers.” It got to the point where, near the end, Secretary of Defense James Schlesinger felt compelled to send a memo to military commanders to obey no command that came from the White House to dispatch the troops to restore order.
+
+This brings us to the strange character of Richard Nixon, probably the most peculiar person to serve as president of the United States. He was also an unlikely successful political figure. He didn’t particularly like people and few people liked him. He had very few friends, trusted almost no one. He was awkward in many ways, from his odd motions at times to his virtual inability to make small talk. Nixon’s confusion of opponents with enemies and his indulging his long nurtured grievances gave us a president who came to office filled with hatreds and was willing to use the instruments of government to “get” them. The president was a dangerous man.
+
+But even then, we didn’t know just how dangerous were Nixon’s personality traits. Not until I was doing research for a book about him for the American Presidents series did it become clear that he was often drunk, barking out orders in after-midnight calls to his aides, his words slurred, and they would have to decide whether to carry them out. Worse still, on the advice of a wealthy backer who kept him stocked, Nixon began to take Dilantin, an anti-convulsive drug, on the grounds that it would lessen depression, though it had never been approved for that. Dilantin served to enhance the effects of too much alcohol: mental confusion, slurring of words, physical clumsiness. Often Nixon was holed up with his best and only close pal, Bebe Rebozo, outside the White House, in Key Biscayne or at Camp David. On the eve of the “incursion” into Cambodia, a disastrous spreading of the Vietnam War, the two men were at Camp David and one or the other would call Kissinger to make sure that the incursion went forward. “It’s your ass, Henry,” said one of them, their drunken voices hard to distinguish.
+
+So contrary to the myths that have been built around it, or the use that later politicians want to make of it, Watergate wasn’t about the mistakes of a bureaucracy, it wasn’t a cops and robbers story, or about courageous journalism. It was about a pattern of acts by a president that threatened the constitution, the law, and the Bill of Rights.
+
+Nothing happening now comes close to that.
+=========== Original model END ===========
+=========== Model w/ RL, k=20, in_dist=False START ===========
+** Prompt **
+R
+** Gen text **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the
+Canadian. They found it exact as to facts, but insufficient as to
+effect. To paint such pictures, one must have the pen of the most
+illustrious of our poets, the author of The Toilers of the Deep.
+** Reference **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the current so-called scandals. But the furors over the IRS , Benghazi, and the Justice Department’s sweeping investigation of the Associated Press, don’t begin to rise—or sink—to that level. The wise and pithy Matt Dowd, a former Republican operative, said recently, “We rush to scandal before we settle on stupidity.” Washington just loves scandals; they’re ever so much more exciting than the daily grind of legislation—if there is any—and the tit-for-tat between the president and the congressional Republicans over the budget was becoming tedious. Faux outrage is a specialty here.
+
+Obama, anxious not to be seen defending everybody’s punching bag, the IRS , quickly ceded ground on what could be perfectly defensible actions. He may come to regret taking what seemed a trigger-happy decision to order a criminal investigation of the Internal Revenue Service, a sure way to drag people who may have—may have—simply made errors of judgment through a long and expensive legal process that is likely also to keep the agency from examining the validity of the application for tax-free status of any group with powerful allies. If, following the Citizens United decision, there is a sudden doubling of the number of new organizations with similar names and missions, and these organizations apply for tax exempt status—and also the right to hide the names of their donors—might it not make sense to use a search engine to find them? This what the just-fired sacrificial acting IRS commissioner, testifying before a congressional committee on Friday, termed a “grouping” of the cases that had already been almost universally condemned as “targeting,” which he insisted it wasn’t. But this simple explanation wouldn’t do, didn’t warrant the term “outrage” routinely conferred on the IRS case. Could it just possibly be that the Tea Party and their allies see a great benefit in making a stink over this? How better to freeze the IRS examinations of these groups?
+
+According to press reports none of the Tea Party groups have as yet been denied 501(c)(4) status, though this has happened to some liberal organizations. The real problem is that the process takes a long time and the questions are excessive, some even ridiculous. Pinning the whole thing on Obama—pinning all that they can of these “scandals” on him—gladdens most Republicans’ hearts. I say “most,” because such prominent conservative commentators as Charles Krauthammer and Bill Kristol have urged the Republicans to proceed with more caution, fearing that as often happens they will overdo it. And Republican congressional leaders have begun to worry that the troops may go too far, inviting the sort of backlash that smacked Newt Gingrich and his fellow revolutionaries in 1998, following their reckless impeachment of Bill Clinton, losing them seats and costing Gingrich his Speakership. It’s quite possible that some lower-rank government employees did some stupid things, and it’s clear that the agency had poor leadership (under a Bush-appointed director) but there is no evidence that any of this was directly or indirectly on the president’s orders.
+
+Meanwhile, new information about what happened in Benghazi keeps coming in, changing that story. The Talmudic scholarship that’s been applied to the administration’s talking points—what the various agencies urged that a representative of the administration should say on the Sunday talk shows—has led to the conclusion that that mushy and somewhat misleading statement was the typical product of a typical inter-agency struggle over blame-shifting. The omission of some material from an original draft—on the not unreasonable ground that the terrorist groups that perpetrated the attack shouldn’t be put on notice that the US knew who they were—hardly ranks as a cover-up. Was the administration confused or was it anxious to avoid the acknowledgement that the US consulate in Benghazi was attacked by terrorists from the start, by saying that they came in later? The administration later released all of the emails among the agencies to Congress but few members bothered to go to the briefing or read the material. And as it turned out, the White House didn’t play a hand in doctoring what the talking points would say.
+
+In order to stoke the conspiracy theories, Republican congressional aides leaked false versions of the interagency emails and ABC ran with them without checking. Republicans focused the controversy on Hillary Clinton rather than David Petraeus, the CIA director at the time, though Petraeus also agreed to the talking points and was responsible for hiring the local defenders who melted away at the first shot, and the misinformed intelligence on what happened that night was a failure by the CIA. (But Petraeus was most unlikely to run for president in 2016.) That the US presence in Benghazi was essentially a CIA operation was kept quiet. The inability to adequately protect our foreign missions has been a bipartisan failure and Congress’s stinginess with funds for the protection of our assets in foreign countries also bears some responsibility. In any case, the Republicans might be well advised to tread carefully on the matter of ignored warnings. So far, the George W. Bush administration has got by amazingly with their obvious failure to act on indications months before September 11, 2001, that a major terrorist plot was in the works .
+
+The Justice Department clearly overreached—even its own guidelines were ignored—in its effort to gather information about a leak to the Associated Press about the CIA foiling a terrorist plot in Yemen—a leak which the AP delayed publishing at the request of the White House and the CIA, and only ran when it heard that the White House was going to release information. But this doesn’t reflect a crusade against the press—though the news media make a lot of noise about such actions, and perhaps rightly so. It is true that Obama has been especially fierce (if selectively) about national security leaks, but there’s a long history of administrations going too far to stop leaks and intimidate potential leakers. Even if the president urged Attorney General Eric Holder, a close friend, to go after the AP, does anyone seriously believe that he spelled out how it was to do so?
+
+Thus far, not one of these so-called scandals has reached the Oval Office. Even in the event, which seems unlikely now, that one of them does, it still wouldn’t come close to the pattern of actions taken by Nixon and his aides that nearly undid our democratic system of government four decades ago. Barack Obama couldn’t be Richard Nixon if he tried. No one could. Nixon was, fortunately, sui generis. So, what was Watergate about, and how does it differ from what is going on now?
+
+Compared to Watergate, on the basis of everything we know about what are the current “scandals” amount to a piffle. Watergate was a Constitutional crisis. It was about a pattern of behavior on the part of the president of the United States abusing power to carry out his personal vendettas. It was about whether the president was accountable to the other branches of the government; it was about whether the Congress could summon the courage to hold accountable a president who held himself above the law. It was about a president and his aides who were out of control in their efforts to punish the president’s “enemies.”
+
+It was also about, though this has still gone largely unrecognized, an attempt by a sitting president to determine the nomination of the opposition party’s presidential candidate. Potentially strong challengers were spied upon, their offices broken into and files disappeared, their campaign events disrupted by what were diminished by their categorization as laughable “dirty tricks.” It was about black bag jobs and paying criminals to carry out ideas that sprang from the fevered brain of a president who saw opponents, political and otherwise, as enemies, and then trying to hush the whole thing up. The attempt, not unsuccessful though not exclusively their doing, to try to get the opposition party to nominate its weakest candidate was a step along the road to fascism. It was a putsch by a head of state.
+
+Nixon’s extraordinary abuse of his new power started almost as soon as he had put away his Inaugural finery. In February 1969 he told his staff that he wanted private funds raised to establish an intelligence unit within the White House to carry out around-the-clock surveillance of political opponents. This led to the hiring of a group of fanatics, bums, fools, and losers—most of them paid for with private funds but run by White House aides and right out of the Executive Office Building, next door to the White House. Some were of Cuban origin and had participated in the disastrous Bay of Pigs invasion of Cuba; to motivate them Nixon instructed that they be told that their mission was to root out Communists in the Democratic Party. (He even ordered that they be required to read the chapter of his memoir Six Crisis that recounts his exposure of Alger Hiss as a spy for the Soviet Union. But Nixon was always telling people, even Mao, to read Six Crises. The shrewd Mao had beat him to it.).
+
+The following year Nixon signed off on a plan (the “Huston plan”) that included not just wiretaps also but break-ins and intercepting mail; the plan was so extreme that even the powerful FBI director J. Edgar Hoover, no civil libertarian, objected; though Nixon said that the plan had been rescinded parts of it were implemented. The list of “enemies” he ordered John Dean to draw up, was considered by many who were on it funny and even a point of pride, but it was a chilling exercise of power: the president used the levers of government, including the IRS , to audit and harass his opponents, a wide swath of people in public and private lives. Nixon was often heard on the tapes telling his aides he wanted them to “get the goods” on this or that perceived enemy. Edward Kennedy, presumably Nixon’s most powerful opponent for reelection, was put under twenty-four hour surveillance for a time by one of the clowns hired by the White House to carry out Nixon’s plan.
+
+Nixon’s most serious problems arose out of his obsession about the leak of the Pentagon Papers, in 1971. This led—shortly after the Papers were first published in The New York Times—to the establishing, four days later, the White House “plumbers” office in the EOB . A sign saying PLUMBERS was on the door. But even before the plumbers office was fully set up Nixon’s aides implemented “Special Operation No. 1”: in a first step toward punishing the leaker, Daniel Ellsberg, the White House sanctioned the gravest offense—a break-in at the office of Ellsberg’s psychiatrist in order to get the files of this particular patient. A raid of the office of the psychiatrist of a private citizen on the orders of the president of the United States. This clear flouting of the Fourth Amendment protection of private property from searches and seizures was the most disturbing act during this extraordinary period and it shook even conservative senators; Nixon knew that its discovery was the single greatest danger to him, and this was what he was so frantically trying to cover up. As it happened, even though one of the plumbers had cased the place, the psychiatrist’s office contained no files at all.
+
+The obsession over the leak of the Pentagon Papers also led to the mad suggestion by the president of the United States that the offices of the Brookings Institution be firebombed in order to get to the safes in the offices of former Kissinger aides, Leslie Gelb and Morton Halperin, who were suspected of keeping the drafts of some unpublished chapters of the Pentagon Papers. The president could be heard on the tapes instructing his aides: “Godammit. Get in there and get those files. Blow the safe and get it.” You see, Kissinger had ordered up the study. Ellsberg had been assigned by Kissinger to do a super-secret study on the papers and had been given access to them, which were stored at Rand. Though one of the burglars had searched Brookings and reported that the files existed, there were none. In any event, some White House aides thwarted that plan before it was fully carried out.
+
+In this context the break-in of the Democratic National Committee headquarters in the Watergate office building on June 17, 1972 was almost routine. This one, when the burglars were caught, which started the unraveling of Nixon’s secret plots against his enemies, was actually the burglars’ fourth attempt: in the first attempt they faked a banquet to get into the building but ended up locked in a closet; the second time they couldn’t break the lock on the DNC office door; the third time, on Memorial Day, they got into the DNC office but put a bug on the wrong phone, so on they went back to fix it. Perhaps because breaking in had become so habitual they got sloppy and left the immortal piece of tape on a door. That the plumbers were stumblebums doesn’t negate the sinister nature of what they were told to do.
+
+In October 1973, Nixon rattled through a series of beheadings of those who got in the way of his desperate attempts to prevent the tapes into which he had sealed his own fate—as he was oddly aware—from being turned over to the prosecutors. He first ordered the attorney general, Elliott Richardson, to fire Archibald Cox, the Independent Prosecutor who had subpoenaed the tapes and got a court order that they must be released. Richardson, a Boston Brahmin, also refused and was fired by the president; the next in line, Bill Ruckelshaus, a popular environmentalist, also refused and was fired. Finally, the next in line, Robert Bork, agreed to fire Cox. The prosecutors’ staff was barricaded in their offices trying to protect their files from the FBI , who had surrounded them and told them they could not remove their papers. As the bulletins rolled in, one after another on that dark Saturday night, it felt as if we were living in a banana republic and now there were grounds for fearing a President who was irrational and out of control. There was a run on the bookstores to buy legal scholar Raoul Berger’s Impeachment: The Constitutional Problems (1969). No one knew how to impeach a president.
+
+When the House Judiciary Committee took up its work at the beginning of 1974, trying to impeach a sitting president who still had a fairly strong political base was a daunting prospect. Impeachment had not yet been cheapened by the zealots who conducted a trivial pursuit of President Clinton. The triumphalism came later, spurred on by the myth that Watergate was a victory of the good guys over the bad guys. It was about something far deeper: whether our constitutional system would survive. If the Committee did vote for articles of impeachment by a bipartisan and definite majority it was probable that the House would agree and vote to impeach—indict—the president. Next would come a trial in the Senate. And the president remained defiant. The committee had to get it right.
+
+Almost forgotten is the part played by an obscure New Jersey congressman, Peter Rodino, who had been chairman of the committee for only a year. (Inevitably once the spotlight fell on him, rumors circulated, without any evidence, that he must have ties to the mob.) Rodino was not the most articulate member by far but the miracle of the Judiciary Committee’s adopting on a bipartisan basis three articles of impeachment was due to the fact that ordinary people rose to the task and did extraordinary things; Rodino’s choices made a critical difference.
+
+Showboat attorneys or flashy advisers were turned away. As it was, Rodino had to struggle against some committee members who wanted to conduct a prosecution of the president. The two people who along with Rodino shaped not just the committee’s action but the history of the downfall of Richard Nixon were a twenty-seven-year-old Francis O’Brien, who had no prior experience in such matters but was recommended to Rodino for his uncommon judgment, and John Doar, the counsel whom O’Brien had found. Doar had served in the Eisenhower Justice Department and then was a civil rights hero in Robert Kennedy’s Justice Department. He was methodical and low-key and built the case against Nixon brick by brick, slowly earning the trust of committee members, the press, and the public.
+
+These three men had concluded that if there were to be articles of impeachment that would be accepted by a still-divided country they had to be seen as arising from a fair process, be bipartisan and come from the center of the committee members: those on the right who defended Nixon to the end and the most partisan Democrats on the committee had to be contained, and moderate Republicans and southern Democrats had to be convinced that voting for articles of impeachment was necessary and urgent. James Madison’s writings and the Federalist Papers became as familiar in the discussions as morning newspapers.
+
+The atmosphere in Washington was unlike anything that had gone before or has happened since. We lived in fear. Knowing that the telephones of some of the presidents’ “enemies” were being tapped, we joked in our telephone conversations about our phones being bugged. (No Internet then, but just think of the Nixon people’s probable temptation to trace emails.) One Sunday morning when the newspaper delivery was late, a perfectly sane woman I knew said, “They’ve stopped the papers.” It got to the point where, near the end, Secretary of Defense James Schlesinger felt compelled to send a memo to military commanders to obey no command that came from the White House to dispatch the troops to restore order.
+
+This brings us to the strange character of Richard Nixon, probably the most peculiar person to serve as president of the United States. He was also an unlikely successful political figure. He didn’t particularly like people and few people liked him. He had very few friends, trusted almost no one. He was awkward in many ways, from his odd motions at times to his virtual inability to make small talk. Nixon’s confusion of opponents with enemies and his indulging his long nurtured grievances gave us a president who came to office filled with hatreds and was willing to use the instruments of government to “get” them. The president was a dangerous man.
+
+But even then, we didn’t know just how dangerous were Nixon’s personality traits. Not until I was doing research for a book about him for the American Presidents series did it become clear that he was often drunk, barking out orders in after-midnight calls to his aides, his words slurred, and they would have to decide whether to carry them out. Worse still, on the advice of a wealthy backer who kept him stocked, Nixon began to take Dilantin, an anti-convulsive drug, on the grounds that it would lessen depression, though it had never been approved for that. Dilantin served to enhance the effects of too much alcohol: mental confusion, slurring of words, physical clumsiness. Often Nixon was holed up with his best and only close pal, Bebe Rebozo, outside the White House, in Key Biscayne or at Camp David. On the eve of the “incursion” into Cambodia, a disastrous spreading of the Vietnam War, the two men were at Camp David and one or the other would call Kissinger to make sure that the incursion went forward. “It’s your ass, Henry,” said one of them, their drunken voices hard to distinguish.
+
+So contrary to the myths that have been built around it, or the use that later politicians want to make of it, Watergate wasn’t about the mistakes of a bureaucracy, it wasn’t a cops and robbers story, or about courageous journalism. It was about a pattern of acts by a president that threatened the constitution, the law, and the Bill of Rights.
+
+Nothing happening now comes close to that.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=20, in_dist=False START ===========
+** Prompt **
+R
+** Gen text **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the
+for fresh ice above all bodies have made one of admiration increased with
+carried on the recollection of admiration increased and from the lantern! The _Nautilus_ inclined planes are rich waters seemed very rough and make funnels of admiration when the _Nautilus_ inclined planes are marked by our situation have begun another unfortunate cetacean increasing resistance enough to direct west. But Ned Land, and make funnels of the temperature of the _Nautilus_ inclined planes are not, and make funnels of the _Nautilus_ inclined planes are rich waters are marked with great depths of the sea-water, and make funnels of the electric sheets of the electric sheets of the particular occurring of the _Nautilus_ inclined planes are marked by
+the _Nautilus_ inclined planes are circularutian winds and closed. It is armed with great depths of the sea-dress.<|endoftext|>
+** Reference **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the current so-called scandals. But the furors over the IRS , Benghazi, and the Justice Department’s sweeping investigation of the Associated Press, don’t begin to rise—or sink—to that level. The wise and pithy Matt Dowd, a former Republican operative, said recently, “We rush to scandal before we settle on stupidity.” Washington just loves scandals; they’re ever so much more exciting than the daily grind of legislation—if there is any—and the tit-for-tat between the president and the congressional Republicans over the budget was becoming tedious. Faux outrage is a specialty here.
+
+Obama, anxious not to be seen defending everybody’s punching bag, the IRS , quickly ceded ground on what could be perfectly defensible actions. He may come to regret taking what seemed a trigger-happy decision to order a criminal investigation of the Internal Revenue Service, a sure way to drag people who may have—may have—simply made errors of judgment through a long and expensive legal process that is likely also to keep the agency from examining the validity of the application for tax-free status of any group with powerful allies. If, following the Citizens United decision, there is a sudden doubling of the number of new organizations with similar names and missions, and these organizations apply for tax exempt status—and also the right to hide the names of their donors—might it not make sense to use a search engine to find them? This what the just-fired sacrificial acting IRS commissioner, testifying before a congressional committee on Friday, termed a “grouping” of the cases that had already been almost universally condemned as “targeting,” which he insisted it wasn’t. But this simple explanation wouldn’t do, didn’t warrant the term “outrage” routinely conferred on the IRS case. Could it just possibly be that the Tea Party and their allies see a great benefit in making a stink over this? How better to freeze the IRS examinations of these groups?
+
+According to press reports none of the Tea Party groups have as yet been denied 501(c)(4) status, though this has happened to some liberal organizations. The real problem is that the process takes a long time and the questions are excessive, some even ridiculous. Pinning the whole thing on Obama—pinning all that they can of these “scandals” on him—gladdens most Republicans’ hearts. I say “most,” because such prominent conservative commentators as Charles Krauthammer and Bill Kristol have urged the Republicans to proceed with more caution, fearing that as often happens they will overdo it. And Republican congressional leaders have begun to worry that the troops may go too far, inviting the sort of backlash that smacked Newt Gingrich and his fellow revolutionaries in 1998, following their reckless impeachment of Bill Clinton, losing them seats and costing Gingrich his Speakership. It’s quite possible that some lower-rank government employees did some stupid things, and it’s clear that the agency had poor leadership (under a Bush-appointed director) but there is no evidence that any of this was directly or indirectly on the president’s orders.
+
+Meanwhile, new information about what happened in Benghazi keeps coming in, changing that story. The Talmudic scholarship that’s been applied to the administration’s talking points—what the various agencies urged that a representative of the administration should say on the Sunday talk shows—has led to the conclusion that that mushy and somewhat misleading statement was the typical product of a typical inter-agency struggle over blame-shifting. The omission of some material from an original draft—on the not unreasonable ground that the terrorist groups that perpetrated the attack shouldn’t be put on notice that the US knew who they were—hardly ranks as a cover-up. Was the administration confused or was it anxious to avoid the acknowledgement that the US consulate in Benghazi was attacked by terrorists from the start, by saying that they came in later? The administration later released all of the emails among the agencies to Congress but few members bothered to go to the briefing or read the material. And as it turned out, the White House didn’t play a hand in doctoring what the talking points would say.
+
+In order to stoke the conspiracy theories, Republican congressional aides leaked false versions of the interagency emails and ABC ran with them without checking. Republicans focused the controversy on Hillary Clinton rather than David Petraeus, the CIA director at the time, though Petraeus also agreed to the talking points and was responsible for hiring the local defenders who melted away at the first shot, and the misinformed intelligence on what happened that night was a failure by the CIA. (But Petraeus was most unlikely to run for president in 2016.) That the US presence in Benghazi was essentially a CIA operation was kept quiet. The inability to adequately protect our foreign missions has been a bipartisan failure and Congress’s stinginess with funds for the protection of our assets in foreign countries also bears some responsibility. In any case, the Republicans might be well advised to tread carefully on the matter of ignored warnings. So far, the George W. Bush administration has got by amazingly with their obvious failure to act on indications months before September 11, 2001, that a major terrorist plot was in the works .
+
+The Justice Department clearly overreached—even its own guidelines were ignored—in its effort to gather information about a leak to the Associated Press about the CIA foiling a terrorist plot in Yemen—a leak which the AP delayed publishing at the request of the White House and the CIA, and only ran when it heard that the White House was going to release information. But this doesn’t reflect a crusade against the press—though the news media make a lot of noise about such actions, and perhaps rightly so. It is true that Obama has been especially fierce (if selectively) about national security leaks, but there’s a long history of administrations going too far to stop leaks and intimidate potential leakers. Even if the president urged Attorney General Eric Holder, a close friend, to go after the AP, does anyone seriously believe that he spelled out how it was to do so?
+
+Thus far, not one of these so-called scandals has reached the Oval Office. Even in the event, which seems unlikely now, that one of them does, it still wouldn’t come close to the pattern of actions taken by Nixon and his aides that nearly undid our democratic system of government four decades ago. Barack Obama couldn’t be Richard Nixon if he tried. No one could. Nixon was, fortunately, sui generis. So, what was Watergate about, and how does it differ from what is going on now?
+
+Compared to Watergate, on the basis of everything we know about what are the current “scandals” amount to a piffle. Watergate was a Constitutional crisis. It was about a pattern of behavior on the part of the president of the United States abusing power to carry out his personal vendettas. It was about whether the president was accountable to the other branches of the government; it was about whether the Congress could summon the courage to hold accountable a president who held himself above the law. It was about a president and his aides who were out of control in their efforts to punish the president’s “enemies.”
+
+It was also about, though this has still gone largely unrecognized, an attempt by a sitting president to determine the nomination of the opposition party’s presidential candidate. Potentially strong challengers were spied upon, their offices broken into and files disappeared, their campaign events disrupted by what were diminished by their categorization as laughable “dirty tricks.” It was about black bag jobs and paying criminals to carry out ideas that sprang from the fevered brain of a president who saw opponents, political and otherwise, as enemies, and then trying to hush the whole thing up. The attempt, not unsuccessful though not exclusively their doing, to try to get the opposition party to nominate its weakest candidate was a step along the road to fascism. It was a putsch by a head of state.
+
+Nixon’s extraordinary abuse of his new power started almost as soon as he had put away his Inaugural finery. In February 1969 he told his staff that he wanted private funds raised to establish an intelligence unit within the White House to carry out around-the-clock surveillance of political opponents. This led to the hiring of a group of fanatics, bums, fools, and losers—most of them paid for with private funds but run by White House aides and right out of the Executive Office Building, next door to the White House. Some were of Cuban origin and had participated in the disastrous Bay of Pigs invasion of Cuba; to motivate them Nixon instructed that they be told that their mission was to root out Communists in the Democratic Party. (He even ordered that they be required to read the chapter of his memoir Six Crisis that recounts his exposure of Alger Hiss as a spy for the Soviet Union. But Nixon was always telling people, even Mao, to read Six Crises. The shrewd Mao had beat him to it.).
+
+The following year Nixon signed off on a plan (the “Huston plan”) that included not just wiretaps also but break-ins and intercepting mail; the plan was so extreme that even the powerful FBI director J. Edgar Hoover, no civil libertarian, objected; though Nixon said that the plan had been rescinded parts of it were implemented. The list of “enemies” he ordered John Dean to draw up, was considered by many who were on it funny and even a point of pride, but it was a chilling exercise of power: the president used the levers of government, including the IRS , to audit and harass his opponents, a wide swath of people in public and private lives. Nixon was often heard on the tapes telling his aides he wanted them to “get the goods” on this or that perceived enemy. Edward Kennedy, presumably Nixon’s most powerful opponent for reelection, was put under twenty-four hour surveillance for a time by one of the clowns hired by the White House to carry out Nixon’s plan.
+
+Nixon’s most serious problems arose out of his obsession about the leak of the Pentagon Papers, in 1971. This led—shortly after the Papers were first published in The New York Times—to the establishing, four days later, the White House “plumbers” office in the EOB . A sign saying PLUMBERS was on the door. But even before the plumbers office was fully set up Nixon’s aides implemented “Special Operation No. 1”: in a first step toward punishing the leaker, Daniel Ellsberg, the White House sanctioned the gravest offense—a break-in at the office of Ellsberg’s psychiatrist in order to get the files of this particular patient. A raid of the office of the psychiatrist of a private citizen on the orders of the president of the United States. This clear flouting of the Fourth Amendment protection of private property from searches and seizures was the most disturbing act during this extraordinary period and it shook even conservative senators; Nixon knew that its discovery was the single greatest danger to him, and this was what he was so frantically trying to cover up. As it happened, even though one of the plumbers had cased the place, the psychiatrist’s office contained no files at all.
+
+The obsession over the leak of the Pentagon Papers also led to the mad suggestion by the president of the United States that the offices of the Brookings Institution be firebombed in order to get to the safes in the offices of former Kissinger aides, Leslie Gelb and Morton Halperin, who were suspected of keeping the drafts of some unpublished chapters of the Pentagon Papers. The president could be heard on the tapes instructing his aides: “Godammit. Get in there and get those files. Blow the safe and get it.” You see, Kissinger had ordered up the study. Ellsberg had been assigned by Kissinger to do a super-secret study on the papers and had been given access to them, which were stored at Rand. Though one of the burglars had searched Brookings and reported that the files existed, there were none. In any event, some White House aides thwarted that plan before it was fully carried out.
+
+In this context the break-in of the Democratic National Committee headquarters in the Watergate office building on June 17, 1972 was almost routine. This one, when the burglars were caught, which started the unraveling of Nixon’s secret plots against his enemies, was actually the burglars’ fourth attempt: in the first attempt they faked a banquet to get into the building but ended up locked in a closet; the second time they couldn’t break the lock on the DNC office door; the third time, on Memorial Day, they got into the DNC office but put a bug on the wrong phone, so on they went back to fix it. Perhaps because breaking in had become so habitual they got sloppy and left the immortal piece of tape on a door. That the plumbers were stumblebums doesn’t negate the sinister nature of what they were told to do.
+
+In October 1973, Nixon rattled through a series of beheadings of those who got in the way of his desperate attempts to prevent the tapes into which he had sealed his own fate—as he was oddly aware—from being turned over to the prosecutors. He first ordered the attorney general, Elliott Richardson, to fire Archibald Cox, the Independent Prosecutor who had subpoenaed the tapes and got a court order that they must be released. Richardson, a Boston Brahmin, also refused and was fired by the president; the next in line, Bill Ruckelshaus, a popular environmentalist, also refused and was fired. Finally, the next in line, Robert Bork, agreed to fire Cox. The prosecutors’ staff was barricaded in their offices trying to protect their files from the FBI , who had surrounded them and told them they could not remove their papers. As the bulletins rolled in, one after another on that dark Saturday night, it felt as if we were living in a banana republic and now there were grounds for fearing a President who was irrational and out of control. There was a run on the bookstores to buy legal scholar Raoul Berger’s Impeachment: The Constitutional Problems (1969). No one knew how to impeach a president.
+
+When the House Judiciary Committee took up its work at the beginning of 1974, trying to impeach a sitting president who still had a fairly strong political base was a daunting prospect. Impeachment had not yet been cheapened by the zealots who conducted a trivial pursuit of President Clinton. The triumphalism came later, spurred on by the myth that Watergate was a victory of the good guys over the bad guys. It was about something far deeper: whether our constitutional system would survive. If the Committee did vote for articles of impeachment by a bipartisan and definite majority it was probable that the House would agree and vote to impeach—indict—the president. Next would come a trial in the Senate. And the president remained defiant. The committee had to get it right.
+
+Almost forgotten is the part played by an obscure New Jersey congressman, Peter Rodino, who had been chairman of the committee for only a year. (Inevitably once the spotlight fell on him, rumors circulated, without any evidence, that he must have ties to the mob.) Rodino was not the most articulate member by far but the miracle of the Judiciary Committee’s adopting on a bipartisan basis three articles of impeachment was due to the fact that ordinary people rose to the task and did extraordinary things; Rodino’s choices made a critical difference.
+
+Showboat attorneys or flashy advisers were turned away. As it was, Rodino had to struggle against some committee members who wanted to conduct a prosecution of the president. The two people who along with Rodino shaped not just the committee’s action but the history of the downfall of Richard Nixon were a twenty-seven-year-old Francis O’Brien, who had no prior experience in such matters but was recommended to Rodino for his uncommon judgment, and John Doar, the counsel whom O’Brien had found. Doar had served in the Eisenhower Justice Department and then was a civil rights hero in Robert Kennedy’s Justice Department. He was methodical and low-key and built the case against Nixon brick by brick, slowly earning the trust of committee members, the press, and the public.
+
+These three men had concluded that if there were to be articles of impeachment that would be accepted by a still-divided country they had to be seen as arising from a fair process, be bipartisan and come from the center of the committee members: those on the right who defended Nixon to the end and the most partisan Democrats on the committee had to be contained, and moderate Republicans and southern Democrats had to be convinced that voting for articles of impeachment was necessary and urgent. James Madison’s writings and the Federalist Papers became as familiar in the discussions as morning newspapers.
+
+The atmosphere in Washington was unlike anything that had gone before or has happened since. We lived in fear. Knowing that the telephones of some of the presidents’ “enemies” were being tapped, we joked in our telephone conversations about our phones being bugged. (No Internet then, but just think of the Nixon people’s probable temptation to trace emails.) One Sunday morning when the newspaper delivery was late, a perfectly sane woman I knew said, “They’ve stopped the papers.” It got to the point where, near the end, Secretary of Defense James Schlesinger felt compelled to send a memo to military commanders to obey no command that came from the White House to dispatch the troops to restore order.
+
+This brings us to the strange character of Richard Nixon, probably the most peculiar person to serve as president of the United States. He was also an unlikely successful political figure. He didn’t particularly like people and few people liked him. He had very few friends, trusted almost no one. He was awkward in many ways, from his odd motions at times to his virtual inability to make small talk. Nixon’s confusion of opponents with enemies and his indulging his long nurtured grievances gave us a president who came to office filled with hatreds and was willing to use the instruments of government to “get” them. The president was a dangerous man.
+
+But even then, we didn’t know just how dangerous were Nixon’s personality traits. Not until I was doing research for a book about him for the American Presidents series did it become clear that he was often drunk, barking out orders in after-midnight calls to his aides, his words slurred, and they would have to decide whether to carry them out. Worse still, on the advice of a wealthy backer who kept him stocked, Nixon began to take Dilantin, an anti-convulsive drug, on the grounds that it would lessen depression, though it had never been approved for that. Dilantin served to enhance the effects of too much alcohol: mental confusion, slurring of words, physical clumsiness. Often Nixon was holed up with his best and only close pal, Bebe Rebozo, outside the White House, in Key Biscayne or at Camp David. On the eve of the “incursion” into Cambodia, a disastrous spreading of the Vietnam War, the two men were at Camp David and one or the other would call Kissinger to make sure that the incursion went forward. “It’s your ass, Henry,” said one of them, their drunken voices hard to distinguish.
+
+So contrary to the myths that have been built around it, or the use that later politicians want to make of it, Watergate wasn’t about the mistakes of a bureaucracy, it wasn’t a cops and robbers story, or about courageous journalism. It was about a pattern of acts by a president that threatened the constitution, the law, and the Bill of Rights.
+
+Nothing happening now comes close to that.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=20, in_dist=False START ===========
+** Prompt **
+R
+** Gen text **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the
+collecting through the unfortunate man’s jaws of plates of words in a number of life, was very rapidly, who, ornamented vessels, ornamented land in nicotine, of the _Nautilus_ was piercing sea mammals with his furnaces twenty miles to which was piercing sword would not wishing and from their unknown to beak of these uninhabited. The _Nautilus_ and from their unknown to west quarter of digging if their unknown reefs like a
+which, victims to rise are marked by order to which heaped up to direct west quarter-pipe in fact?”<|endoftext|>
+** Reference **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the current so-called scandals. But the furors over the IRS , Benghazi, and the Justice Department’s sweeping investigation of the Associated Press, don’t begin to rise—or sink—to that level. The wise and pithy Matt Dowd, a former Republican operative, said recently, “We rush to scandal before we settle on stupidity.” Washington just loves scandals; they’re ever so much more exciting than the daily grind of legislation—if there is any—and the tit-for-tat between the president and the congressional Republicans over the budget was becoming tedious. Faux outrage is a specialty here.
+
+Obama, anxious not to be seen defending everybody’s punching bag, the IRS , quickly ceded ground on what could be perfectly defensible actions. He may come to regret taking what seemed a trigger-happy decision to order a criminal investigation of the Internal Revenue Service, a sure way to drag people who may have—may have—simply made errors of judgment through a long and expensive legal process that is likely also to keep the agency from examining the validity of the application for tax-free status of any group with powerful allies. If, following the Citizens United decision, there is a sudden doubling of the number of new organizations with similar names and missions, and these organizations apply for tax exempt status—and also the right to hide the names of their donors—might it not make sense to use a search engine to find them? This what the just-fired sacrificial acting IRS commissioner, testifying before a congressional committee on Friday, termed a “grouping” of the cases that had already been almost universally condemned as “targeting,” which he insisted it wasn’t. But this simple explanation wouldn’t do, didn’t warrant the term “outrage” routinely conferred on the IRS case. Could it just possibly be that the Tea Party and their allies see a great benefit in making a stink over this? How better to freeze the IRS examinations of these groups?
+
+According to press reports none of the Tea Party groups have as yet been denied 501(c)(4) status, though this has happened to some liberal organizations. The real problem is that the process takes a long time and the questions are excessive, some even ridiculous. Pinning the whole thing on Obama—pinning all that they can of these “scandals” on him—gladdens most Republicans’ hearts. I say “most,” because such prominent conservative commentators as Charles Krauthammer and Bill Kristol have urged the Republicans to proceed with more caution, fearing that as often happens they will overdo it. And Republican congressional leaders have begun to worry that the troops may go too far, inviting the sort of backlash that smacked Newt Gingrich and his fellow revolutionaries in 1998, following their reckless impeachment of Bill Clinton, losing them seats and costing Gingrich his Speakership. It’s quite possible that some lower-rank government employees did some stupid things, and it’s clear that the agency had poor leadership (under a Bush-appointed director) but there is no evidence that any of this was directly or indirectly on the president’s orders.
+
+Meanwhile, new information about what happened in Benghazi keeps coming in, changing that story. The Talmudic scholarship that’s been applied to the administration’s talking points—what the various agencies urged that a representative of the administration should say on the Sunday talk shows—has led to the conclusion that that mushy and somewhat misleading statement was the typical product of a typical inter-agency struggle over blame-shifting. The omission of some material from an original draft—on the not unreasonable ground that the terrorist groups that perpetrated the attack shouldn’t be put on notice that the US knew who they were—hardly ranks as a cover-up. Was the administration confused or was it anxious to avoid the acknowledgement that the US consulate in Benghazi was attacked by terrorists from the start, by saying that they came in later? The administration later released all of the emails among the agencies to Congress but few members bothered to go to the briefing or read the material. And as it turned out, the White House didn’t play a hand in doctoring what the talking points would say.
+
+In order to stoke the conspiracy theories, Republican congressional aides leaked false versions of the interagency emails and ABC ran with them without checking. Republicans focused the controversy on Hillary Clinton rather than David Petraeus, the CIA director at the time, though Petraeus also agreed to the talking points and was responsible for hiring the local defenders who melted away at the first shot, and the misinformed intelligence on what happened that night was a failure by the CIA. (But Petraeus was most unlikely to run for president in 2016.) That the US presence in Benghazi was essentially a CIA operation was kept quiet. The inability to adequately protect our foreign missions has been a bipartisan failure and Congress’s stinginess with funds for the protection of our assets in foreign countries also bears some responsibility. In any case, the Republicans might be well advised to tread carefully on the matter of ignored warnings. So far, the George W. Bush administration has got by amazingly with their obvious failure to act on indications months before September 11, 2001, that a major terrorist plot was in the works .
+
+The Justice Department clearly overreached—even its own guidelines were ignored—in its effort to gather information about a leak to the Associated Press about the CIA foiling a terrorist plot in Yemen—a leak which the AP delayed publishing at the request of the White House and the CIA, and only ran when it heard that the White House was going to release information. But this doesn’t reflect a crusade against the press—though the news media make a lot of noise about such actions, and perhaps rightly so. It is true that Obama has been especially fierce (if selectively) about national security leaks, but there’s a long history of administrations going too far to stop leaks and intimidate potential leakers. Even if the president urged Attorney General Eric Holder, a close friend, to go after the AP, does anyone seriously believe that he spelled out how it was to do so?
+
+Thus far, not one of these so-called scandals has reached the Oval Office. Even in the event, which seems unlikely now, that one of them does, it still wouldn’t come close to the pattern of actions taken by Nixon and his aides that nearly undid our democratic system of government four decades ago. Barack Obama couldn’t be Richard Nixon if he tried. No one could. Nixon was, fortunately, sui generis. So, what was Watergate about, and how does it differ from what is going on now?
+
+Compared to Watergate, on the basis of everything we know about what are the current “scandals” amount to a piffle. Watergate was a Constitutional crisis. It was about a pattern of behavior on the part of the president of the United States abusing power to carry out his personal vendettas. It was about whether the president was accountable to the other branches of the government; it was about whether the Congress could summon the courage to hold accountable a president who held himself above the law. It was about a president and his aides who were out of control in their efforts to punish the president’s “enemies.”
+
+It was also about, though this has still gone largely unrecognized, an attempt by a sitting president to determine the nomination of the opposition party’s presidential candidate. Potentially strong challengers were spied upon, their offices broken into and files disappeared, their campaign events disrupted by what were diminished by their categorization as laughable “dirty tricks.” It was about black bag jobs and paying criminals to carry out ideas that sprang from the fevered brain of a president who saw opponents, political and otherwise, as enemies, and then trying to hush the whole thing up. The attempt, not unsuccessful though not exclusively their doing, to try to get the opposition party to nominate its weakest candidate was a step along the road to fascism. It was a putsch by a head of state.
+
+Nixon’s extraordinary abuse of his new power started almost as soon as he had put away his Inaugural finery. In February 1969 he told his staff that he wanted private funds raised to establish an intelligence unit within the White House to carry out around-the-clock surveillance of political opponents. This led to the hiring of a group of fanatics, bums, fools, and losers—most of them paid for with private funds but run by White House aides and right out of the Executive Office Building, next door to the White House. Some were of Cuban origin and had participated in the disastrous Bay of Pigs invasion of Cuba; to motivate them Nixon instructed that they be told that their mission was to root out Communists in the Democratic Party. (He even ordered that they be required to read the chapter of his memoir Six Crisis that recounts his exposure of Alger Hiss as a spy for the Soviet Union. But Nixon was always telling people, even Mao, to read Six Crises. The shrewd Mao had beat him to it.).
+
+The following year Nixon signed off on a plan (the “Huston plan”) that included not just wiretaps also but break-ins and intercepting mail; the plan was so extreme that even the powerful FBI director J. Edgar Hoover, no civil libertarian, objected; though Nixon said that the plan had been rescinded parts of it were implemented. The list of “enemies” he ordered John Dean to draw up, was considered by many who were on it funny and even a point of pride, but it was a chilling exercise of power: the president used the levers of government, including the IRS , to audit and harass his opponents, a wide swath of people in public and private lives. Nixon was often heard on the tapes telling his aides he wanted them to “get the goods” on this or that perceived enemy. Edward Kennedy, presumably Nixon’s most powerful opponent for reelection, was put under twenty-four hour surveillance for a time by one of the clowns hired by the White House to carry out Nixon’s plan.
+
+Nixon’s most serious problems arose out of his obsession about the leak of the Pentagon Papers, in 1971. This led—shortly after the Papers were first published in The New York Times—to the establishing, four days later, the White House “plumbers” office in the EOB . A sign saying PLUMBERS was on the door. But even before the plumbers office was fully set up Nixon’s aides implemented “Special Operation No. 1”: in a first step toward punishing the leaker, Daniel Ellsberg, the White House sanctioned the gravest offense—a break-in at the office of Ellsberg’s psychiatrist in order to get the files of this particular patient. A raid of the office of the psychiatrist of a private citizen on the orders of the president of the United States. This clear flouting of the Fourth Amendment protection of private property from searches and seizures was the most disturbing act during this extraordinary period and it shook even conservative senators; Nixon knew that its discovery was the single greatest danger to him, and this was what he was so frantically trying to cover up. As it happened, even though one of the plumbers had cased the place, the psychiatrist’s office contained no files at all.
+
+The obsession over the leak of the Pentagon Papers also led to the mad suggestion by the president of the United States that the offices of the Brookings Institution be firebombed in order to get to the safes in the offices of former Kissinger aides, Leslie Gelb and Morton Halperin, who were suspected of keeping the drafts of some unpublished chapters of the Pentagon Papers. The president could be heard on the tapes instructing his aides: “Godammit. Get in there and get those files. Blow the safe and get it.” You see, Kissinger had ordered up the study. Ellsberg had been assigned by Kissinger to do a super-secret study on the papers and had been given access to them, which were stored at Rand. Though one of the burglars had searched Brookings and reported that the files existed, there were none. In any event, some White House aides thwarted that plan before it was fully carried out.
+
+In this context the break-in of the Democratic National Committee headquarters in the Watergate office building on June 17, 1972 was almost routine. This one, when the burglars were caught, which started the unraveling of Nixon’s secret plots against his enemies, was actually the burglars’ fourth attempt: in the first attempt they faked a banquet to get into the building but ended up locked in a closet; the second time they couldn’t break the lock on the DNC office door; the third time, on Memorial Day, they got into the DNC office but put a bug on the wrong phone, so on they went back to fix it. Perhaps because breaking in had become so habitual they got sloppy and left the immortal piece of tape on a door. That the plumbers were stumblebums doesn’t negate the sinister nature of what they were told to do.
+
+In October 1973, Nixon rattled through a series of beheadings of those who got in the way of his desperate attempts to prevent the tapes into which he had sealed his own fate—as he was oddly aware—from being turned over to the prosecutors. He first ordered the attorney general, Elliott Richardson, to fire Archibald Cox, the Independent Prosecutor who had subpoenaed the tapes and got a court order that they must be released. Richardson, a Boston Brahmin, also refused and was fired by the president; the next in line, Bill Ruckelshaus, a popular environmentalist, also refused and was fired. Finally, the next in line, Robert Bork, agreed to fire Cox. The prosecutors’ staff was barricaded in their offices trying to protect their files from the FBI , who had surrounded them and told them they could not remove their papers. As the bulletins rolled in, one after another on that dark Saturday night, it felt as if we were living in a banana republic and now there were grounds for fearing a President who was irrational and out of control. There was a run on the bookstores to buy legal scholar Raoul Berger’s Impeachment: The Constitutional Problems (1969). No one knew how to impeach a president.
+
+When the House Judiciary Committee took up its work at the beginning of 1974, trying to impeach a sitting president who still had a fairly strong political base was a daunting prospect. Impeachment had not yet been cheapened by the zealots who conducted a trivial pursuit of President Clinton. The triumphalism came later, spurred on by the myth that Watergate was a victory of the good guys over the bad guys. It was about something far deeper: whether our constitutional system would survive. If the Committee did vote for articles of impeachment by a bipartisan and definite majority it was probable that the House would agree and vote to impeach—indict—the president. Next would come a trial in the Senate. And the president remained defiant. The committee had to get it right.
+
+Almost forgotten is the part played by an obscure New Jersey congressman, Peter Rodino, who had been chairman of the committee for only a year. (Inevitably once the spotlight fell on him, rumors circulated, without any evidence, that he must have ties to the mob.) Rodino was not the most articulate member by far but the miracle of the Judiciary Committee’s adopting on a bipartisan basis three articles of impeachment was due to the fact that ordinary people rose to the task and did extraordinary things; Rodino’s choices made a critical difference.
+
+Showboat attorneys or flashy advisers were turned away. As it was, Rodino had to struggle against some committee members who wanted to conduct a prosecution of the president. The two people who along with Rodino shaped not just the committee’s action but the history of the downfall of Richard Nixon were a twenty-seven-year-old Francis O’Brien, who had no prior experience in such matters but was recommended to Rodino for his uncommon judgment, and John Doar, the counsel whom O’Brien had found. Doar had served in the Eisenhower Justice Department and then was a civil rights hero in Robert Kennedy’s Justice Department. He was methodical and low-key and built the case against Nixon brick by brick, slowly earning the trust of committee members, the press, and the public.
+
+These three men had concluded that if there were to be articles of impeachment that would be accepted by a still-divided country they had to be seen as arising from a fair process, be bipartisan and come from the center of the committee members: those on the right who defended Nixon to the end and the most partisan Democrats on the committee had to be contained, and moderate Republicans and southern Democrats had to be convinced that voting for articles of impeachment was necessary and urgent. James Madison’s writings and the Federalist Papers became as familiar in the discussions as morning newspapers.
+
+The atmosphere in Washington was unlike anything that had gone before or has happened since. We lived in fear. Knowing that the telephones of some of the presidents’ “enemies” were being tapped, we joked in our telephone conversations about our phones being bugged. (No Internet then, but just think of the Nixon people’s probable temptation to trace emails.) One Sunday morning when the newspaper delivery was late, a perfectly sane woman I knew said, “They’ve stopped the papers.” It got to the point where, near the end, Secretary of Defense James Schlesinger felt compelled to send a memo to military commanders to obey no command that came from the White House to dispatch the troops to restore order.
+
+This brings us to the strange character of Richard Nixon, probably the most peculiar person to serve as president of the United States. He was also an unlikely successful political figure. He didn’t particularly like people and few people liked him. He had very few friends, trusted almost no one. He was awkward in many ways, from his odd motions at times to his virtual inability to make small talk. Nixon’s confusion of opponents with enemies and his indulging his long nurtured grievances gave us a president who came to office filled with hatreds and was willing to use the instruments of government to “get” them. The president was a dangerous man.
+
+But even then, we didn’t know just how dangerous were Nixon’s personality traits. Not until I was doing research for a book about him for the American Presidents series did it become clear that he was often drunk, barking out orders in after-midnight calls to his aides, his words slurred, and they would have to decide whether to carry them out. Worse still, on the advice of a wealthy backer who kept him stocked, Nixon began to take Dilantin, an anti-convulsive drug, on the grounds that it would lessen depression, though it had never been approved for that. Dilantin served to enhance the effects of too much alcohol: mental confusion, slurring of words, physical clumsiness. Often Nixon was holed up with his best and only close pal, Bebe Rebozo, outside the White House, in Key Biscayne or at Camp David. On the eve of the “incursion” into Cambodia, a disastrous spreading of the Vietnam War, the two men were at Camp David and one or the other would call Kissinger to make sure that the incursion went forward. “It’s your ass, Henry,” said one of them, their drunken voices hard to distinguish.
+
+So contrary to the myths that have been built around it, or the use that later politicians want to make of it, Watergate wasn’t about the mistakes of a bureaucracy, it wasn’t a cops and robbers story, or about courageous journalism. It was about a pattern of acts by a president that threatened the constitution, the law, and the Bill of Rights.
+
+Nothing happening now comes close to that.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=20, in_dist=False START ===========
+** Prompt **
+R
+** Gen text **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the
+Dumont drowed wind veeringapatam cross-trees, who, who, who, who, who, who, who, who was known in
+Dumont drowsiness I saw his jaws had taken which was known in such a great depths in spite of these ingots of “you are peculiar to the light must not wishing to which was known in spite of these ingots of these ingots—real suddenly overturned by mischievous
+carried along with his teeth, was known in spite of these ingots of these ingots of these ingots at seven years old trade in those magnificent museum, and furnished with the midst of these ingots of these ingots of these ingots of these ingots of these brown leather halcyons, and resting on the English wrench, and furnished with the English or port light boat, and insurrection against the English “winds
+being of northern seas which heaped upholds and furnished with pleasure boat, if I had already obliged to the air freely. The little fishes of these brownish plants and furnished with command of these brownish activity, if I had already encircled that bristae blocking my life and harpooners approached
+ Sir, as zoophy conical way, in profited with powdered resin!<|endoftext|>
+** Reference **
+References to Watergate, impeachment, even Richard Nixon, are being tossed around these days as if they were analogous to the current so-called scandals. But the furors over the IRS , Benghazi, and the Justice Department’s sweeping investigation of the Associated Press, don’t begin to rise—or sink—to that level. The wise and pithy Matt Dowd, a former Republican operative, said recently, “We rush to scandal before we settle on stupidity.” Washington just loves scandals; they’re ever so much more exciting than the daily grind of legislation—if there is any—and the tit-for-tat between the president and the congressional Republicans over the budget was becoming tedious. Faux outrage is a specialty here.
+
+Obama, anxious not to be seen defending everybody’s punching bag, the IRS , quickly ceded ground on what could be perfectly defensible actions. He may come to regret taking what seemed a trigger-happy decision to order a criminal investigation of the Internal Revenue Service, a sure way to drag people who may have—may have—simply made errors of judgment through a long and expensive legal process that is likely also to keep the agency from examining the validity of the application for tax-free status of any group with powerful allies. If, following the Citizens United decision, there is a sudden doubling of the number of new organizations with similar names and missions, and these organizations apply for tax exempt status—and also the right to hide the names of their donors—might it not make sense to use a search engine to find them? This what the just-fired sacrificial acting IRS commissioner, testifying before a congressional committee on Friday, termed a “grouping” of the cases that had already been almost universally condemned as “targeting,” which he insisted it wasn’t. But this simple explanation wouldn’t do, didn’t warrant the term “outrage” routinely conferred on the IRS case. Could it just possibly be that the Tea Party and their allies see a great benefit in making a stink over this? How better to freeze the IRS examinations of these groups?
+
+According to press reports none of the Tea Party groups have as yet been denied 501(c)(4) status, though this has happened to some liberal organizations. The real problem is that the process takes a long time and the questions are excessive, some even ridiculous. Pinning the whole thing on Obama—pinning all that they can of these “scandals” on him—gladdens most Republicans’ hearts. I say “most,” because such prominent conservative commentators as Charles Krauthammer and Bill Kristol have urged the Republicans to proceed with more caution, fearing that as often happens they will overdo it. And Republican congressional leaders have begun to worry that the troops may go too far, inviting the sort of backlash that smacked Newt Gingrich and his fellow revolutionaries in 1998, following their reckless impeachment of Bill Clinton, losing them seats and costing Gingrich his Speakership. It’s quite possible that some lower-rank government employees did some stupid things, and it’s clear that the agency had poor leadership (under a Bush-appointed director) but there is no evidence that any of this was directly or indirectly on the president’s orders.
+
+Meanwhile, new information about what happened in Benghazi keeps coming in, changing that story. The Talmudic scholarship that’s been applied to the administration’s talking points—what the various agencies urged that a representative of the administration should say on the Sunday talk shows—has led to the conclusion that that mushy and somewhat misleading statement was the typical product of a typical inter-agency struggle over blame-shifting. The omission of some material from an original draft—on the not unreasonable ground that the terrorist groups that perpetrated the attack shouldn’t be put on notice that the US knew who they were—hardly ranks as a cover-up. Was the administration confused or was it anxious to avoid the acknowledgement that the US consulate in Benghazi was attacked by terrorists from the start, by saying that they came in later? The administration later released all of the emails among the agencies to Congress but few members bothered to go to the briefing or read the material. And as it turned out, the White House didn’t play a hand in doctoring what the talking points would say.
+
+In order to stoke the conspiracy theories, Republican congressional aides leaked false versions of the interagency emails and ABC ran with them without checking. Republicans focused the controversy on Hillary Clinton rather than David Petraeus, the CIA director at the time, though Petraeus also agreed to the talking points and was responsible for hiring the local defenders who melted away at the first shot, and the misinformed intelligence on what happened that night was a failure by the CIA. (But Petraeus was most unlikely to run for president in 2016.) That the US presence in Benghazi was essentially a CIA operation was kept quiet. The inability to adequately protect our foreign missions has been a bipartisan failure and Congress’s stinginess with funds for the protection of our assets in foreign countries also bears some responsibility. In any case, the Republicans might be well advised to tread carefully on the matter of ignored warnings. So far, the George W. Bush administration has got by amazingly with their obvious failure to act on indications months before September 11, 2001, that a major terrorist plot was in the works .
+
+The Justice Department clearly overreached—even its own guidelines were ignored—in its effort to gather information about a leak to the Associated Press about the CIA foiling a terrorist plot in Yemen—a leak which the AP delayed publishing at the request of the White House and the CIA, and only ran when it heard that the White House was going to release information. But this doesn’t reflect a crusade against the press—though the news media make a lot of noise about such actions, and perhaps rightly so. It is true that Obama has been especially fierce (if selectively) about national security leaks, but there’s a long history of administrations going too far to stop leaks and intimidate potential leakers. Even if the president urged Attorney General Eric Holder, a close friend, to go after the AP, does anyone seriously believe that he spelled out how it was to do so?
+
+Thus far, not one of these so-called scandals has reached the Oval Office. Even in the event, which seems unlikely now, that one of them does, it still wouldn’t come close to the pattern of actions taken by Nixon and his aides that nearly undid our democratic system of government four decades ago. Barack Obama couldn’t be Richard Nixon if he tried. No one could. Nixon was, fortunately, sui generis. So, what was Watergate about, and how does it differ from what is going on now?
+
+Compared to Watergate, on the basis of everything we know about what are the current “scandals” amount to a piffle. Watergate was a Constitutional crisis. It was about a pattern of behavior on the part of the president of the United States abusing power to carry out his personal vendettas. It was about whether the president was accountable to the other branches of the government; it was about whether the Congress could summon the courage to hold accountable a president who held himself above the law. It was about a president and his aides who were out of control in their efforts to punish the president’s “enemies.”
+
+It was also about, though this has still gone largely unrecognized, an attempt by a sitting president to determine the nomination of the opposition party’s presidential candidate. Potentially strong challengers were spied upon, their offices broken into and files disappeared, their campaign events disrupted by what were diminished by their categorization as laughable “dirty tricks.” It was about black bag jobs and paying criminals to carry out ideas that sprang from the fevered brain of a president who saw opponents, political and otherwise, as enemies, and then trying to hush the whole thing up. The attempt, not unsuccessful though not exclusively their doing, to try to get the opposition party to nominate its weakest candidate was a step along the road to fascism. It was a putsch by a head of state.
+
+Nixon’s extraordinary abuse of his new power started almost as soon as he had put away his Inaugural finery. In February 1969 he told his staff that he wanted private funds raised to establish an intelligence unit within the White House to carry out around-the-clock surveillance of political opponents. This led to the hiring of a group of fanatics, bums, fools, and losers—most of them paid for with private funds but run by White House aides and right out of the Executive Office Building, next door to the White House. Some were of Cuban origin and had participated in the disastrous Bay of Pigs invasion of Cuba; to motivate them Nixon instructed that they be told that their mission was to root out Communists in the Democratic Party. (He even ordered that they be required to read the chapter of his memoir Six Crisis that recounts his exposure of Alger Hiss as a spy for the Soviet Union. But Nixon was always telling people, even Mao, to read Six Crises. The shrewd Mao had beat him to it.).
+
+The following year Nixon signed off on a plan (the “Huston plan”) that included not just wiretaps also but break-ins and intercepting mail; the plan was so extreme that even the powerful FBI director J. Edgar Hoover, no civil libertarian, objected; though Nixon said that the plan had been rescinded parts of it were implemented. The list of “enemies” he ordered John Dean to draw up, was considered by many who were on it funny and even a point of pride, but it was a chilling exercise of power: the president used the levers of government, including the IRS , to audit and harass his opponents, a wide swath of people in public and private lives. Nixon was often heard on the tapes telling his aides he wanted them to “get the goods” on this or that perceived enemy. Edward Kennedy, presumably Nixon’s most powerful opponent for reelection, was put under twenty-four hour surveillance for a time by one of the clowns hired by the White House to carry out Nixon’s plan.
+
+Nixon’s most serious problems arose out of his obsession about the leak of the Pentagon Papers, in 1971. This led—shortly after the Papers were first published in The New York Times—to the establishing, four days later, the White House “plumbers” office in the EOB . A sign saying PLUMBERS was on the door. But even before the plumbers office was fully set up Nixon’s aides implemented “Special Operation No. 1”: in a first step toward punishing the leaker, Daniel Ellsberg, the White House sanctioned the gravest offense—a break-in at the office of Ellsberg’s psychiatrist in order to get the files of this particular patient. A raid of the office of the psychiatrist of a private citizen on the orders of the president of the United States. This clear flouting of the Fourth Amendment protection of private property from searches and seizures was the most disturbing act during this extraordinary period and it shook even conservative senators; Nixon knew that its discovery was the single greatest danger to him, and this was what he was so frantically trying to cover up. As it happened, even though one of the plumbers had cased the place, the psychiatrist’s office contained no files at all.
+
+The obsession over the leak of the Pentagon Papers also led to the mad suggestion by the president of the United States that the offices of the Brookings Institution be firebombed in order to get to the safes in the offices of former Kissinger aides, Leslie Gelb and Morton Halperin, who were suspected of keeping the drafts of some unpublished chapters of the Pentagon Papers. The president could be heard on the tapes instructing his aides: “Godammit. Get in there and get those files. Blow the safe and get it.” You see, Kissinger had ordered up the study. Ellsberg had been assigned by Kissinger to do a super-secret study on the papers and had been given access to them, which were stored at Rand. Though one of the burglars had searched Brookings and reported that the files existed, there were none. In any event, some White House aides thwarted that plan before it was fully carried out.
+
+In this context the break-in of the Democratic National Committee headquarters in the Watergate office building on June 17, 1972 was almost routine. This one, when the burglars were caught, which started the unraveling of Nixon’s secret plots against his enemies, was actually the burglars’ fourth attempt: in the first attempt they faked a banquet to get into the building but ended up locked in a closet; the second time they couldn’t break the lock on the DNC office door; the third time, on Memorial Day, they got into the DNC office but put a bug on the wrong phone, so on they went back to fix it. Perhaps because breaking in had become so habitual they got sloppy and left the immortal piece of tape on a door. That the plumbers were stumblebums doesn’t negate the sinister nature of what they were told to do.
+
+In October 1973, Nixon rattled through a series of beheadings of those who got in the way of his desperate attempts to prevent the tapes into which he had sealed his own fate—as he was oddly aware—from being turned over to the prosecutors. He first ordered the attorney general, Elliott Richardson, to fire Archibald Cox, the Independent Prosecutor who had subpoenaed the tapes and got a court order that they must be released. Richardson, a Boston Brahmin, also refused and was fired by the president; the next in line, Bill Ruckelshaus, a popular environmentalist, also refused and was fired. Finally, the next in line, Robert Bork, agreed to fire Cox. The prosecutors’ staff was barricaded in their offices trying to protect their files from the FBI , who had surrounded them and told them they could not remove their papers. As the bulletins rolled in, one after another on that dark Saturday night, it felt as if we were living in a banana republic and now there were grounds for fearing a President who was irrational and out of control. There was a run on the bookstores to buy legal scholar Raoul Berger’s Impeachment: The Constitutional Problems (1969). No one knew how to impeach a president.
+
+When the House Judiciary Committee took up its work at the beginning of 1974, trying to impeach a sitting president who still had a fairly strong political base was a daunting prospect. Impeachment had not yet been cheapened by the zealots who conducted a trivial pursuit of President Clinton. The triumphalism came later, spurred on by the myth that Watergate was a victory of the good guys over the bad guys. It was about something far deeper: whether our constitutional system would survive. If the Committee did vote for articles of impeachment by a bipartisan and definite majority it was probable that the House would agree and vote to impeach—indict—the president. Next would come a trial in the Senate. And the president remained defiant. The committee had to get it right.
+
+Almost forgotten is the part played by an obscure New Jersey congressman, Peter Rodino, who had been chairman of the committee for only a year. (Inevitably once the spotlight fell on him, rumors circulated, without any evidence, that he must have ties to the mob.) Rodino was not the most articulate member by far but the miracle of the Judiciary Committee’s adopting on a bipartisan basis three articles of impeachment was due to the fact that ordinary people rose to the task and did extraordinary things; Rodino’s choices made a critical difference.
+
+Showboat attorneys or flashy advisers were turned away. As it was, Rodino had to struggle against some committee members who wanted to conduct a prosecution of the president. The two people who along with Rodino shaped not just the committee’s action but the history of the downfall of Richard Nixon were a twenty-seven-year-old Francis O’Brien, who had no prior experience in such matters but was recommended to Rodino for his uncommon judgment, and John Doar, the counsel whom O’Brien had found. Doar had served in the Eisenhower Justice Department and then was a civil rights hero in Robert Kennedy’s Justice Department. He was methodical and low-key and built the case against Nixon brick by brick, slowly earning the trust of committee members, the press, and the public.
+
+These three men had concluded that if there were to be articles of impeachment that would be accepted by a still-divided country they had to be seen as arising from a fair process, be bipartisan and come from the center of the committee members: those on the right who defended Nixon to the end and the most partisan Democrats on the committee had to be contained, and moderate Republicans and southern Democrats had to be convinced that voting for articles of impeachment was necessary and urgent. James Madison’s writings and the Federalist Papers became as familiar in the discussions as morning newspapers.
+
+The atmosphere in Washington was unlike anything that had gone before or has happened since. We lived in fear. Knowing that the telephones of some of the presidents’ “enemies” were being tapped, we joked in our telephone conversations about our phones being bugged. (No Internet then, but just think of the Nixon people’s probable temptation to trace emails.) One Sunday morning when the newspaper delivery was late, a perfectly sane woman I knew said, “They’ve stopped the papers.” It got to the point where, near the end, Secretary of Defense James Schlesinger felt compelled to send a memo to military commanders to obey no command that came from the White House to dispatch the troops to restore order.
+
+This brings us to the strange character of Richard Nixon, probably the most peculiar person to serve as president of the United States. He was also an unlikely successful political figure. He didn’t particularly like people and few people liked him. He had very few friends, trusted almost no one. He was awkward in many ways, from his odd motions at times to his virtual inability to make small talk. Nixon’s confusion of opponents with enemies and his indulging his long nurtured grievances gave us a president who came to office filled with hatreds and was willing to use the instruments of government to “get” them. The president was a dangerous man.
+
+But even then, we didn’t know just how dangerous were Nixon’s personality traits. Not until I was doing research for a book about him for the American Presidents series did it become clear that he was often drunk, barking out orders in after-midnight calls to his aides, his words slurred, and they would have to decide whether to carry them out. Worse still, on the advice of a wealthy backer who kept him stocked, Nixon began to take Dilantin, an anti-convulsive drug, on the grounds that it would lessen depression, though it had never been approved for that. Dilantin served to enhance the effects of too much alcohol: mental confusion, slurring of words, physical clumsiness. Often Nixon was holed up with his best and only close pal, Bebe Rebozo, outside the White House, in Key Biscayne or at Camp David. On the eve of the “incursion” into Cambodia, a disastrous spreading of the Vietnam War, the two men were at Camp David and one or the other would call Kissinger to make sure that the incursion went forward. “It’s your ass, Henry,” said one of them, their drunken voices hard to distinguish.
+
+So contrary to the myths that have been built around it, or the use that later politicians want to make of it, Watergate wasn’t about the mistakes of a bureaucracy, it wasn’t a cops and robbers story, or about courageous journalism. It was about a pattern of acts by a president that threatened the constitution, the law, and the Bill of Rights.
+
+Nothing happening now comes close to that.
+=========== Model w/ MH END ===========
+Total time for 1 samples: 55.30

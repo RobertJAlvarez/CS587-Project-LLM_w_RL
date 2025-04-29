@@ -80,7 +80,7 @@ def generate_AR(
 
         # 7) Append and check stop
         if next_token.item() == tokenizer.eot_token:
-            tokens = torch.cat([tokens, next_token], dim=1)
+            # tokens = torch.cat([tokens, next_token], dim=1)
             break
         tokens = torch.cat([tokens, next_token], dim=1)
 

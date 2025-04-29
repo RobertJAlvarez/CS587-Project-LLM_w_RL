@@ -45,7 +45,9 @@ def test_models(num_samples: int = 32) -> None:
 
     # Load the trained weights.
     try:
-        model.load_state_dict(torch.load("models/best_gpt_model.pt"))
+        model.load_state_dict(
+            torch.load("models/best_gpt_model.pt"), map_location=device
+        )
     except Exception as e:
         print(f"Error loading model: {e}")
         exit(1)
@@ -57,7 +59,7 @@ def test_models(num_samples: int = 32) -> None:
 
     # Load the trained weights.
     try:
-        policy.load_state_dict(torch.load("models/best_policy.pt"))
+        policy.load_state_dict(torch.load("models/best_policy.pt"), map_location=device)
     except Exception as e:
         print(f"Error loading policy: {e}")
         exit(1)
@@ -123,9 +125,9 @@ def test_models(num_samples: int = 32) -> None:
                 ]
 
                 # Juanes metrics.
-                # perplexity_scores = [
-                #     compute_perplexity(model, tokenizer, g) for g in gen_texts
-                # ]
+                perplexity_scores = [
+                    compute_perplexity(model, tokenizer, g) for g in gen_texts
+                ]
                 list_words = [g.split() for g in gen_texts]
                 d1s = [distinct_n(words, 1) for words in list_words]
                 d2s = [distinct_n(words, 2) for words in list_words]
@@ -144,9 +146,9 @@ def test_models(num_samples: int = 32) -> None:
                     sum(rouge_l_scores) / len(rouge_l_scores)
                 )
 
-                # results[d_name][title]["perplexity"].append(
-                #     sum(perplexity_scores) / len(perplexity_scores)
-                # )
+                results[d_name][title]["perplexity"].append(
+                    sum(perplexity_scores) / len(perplexity_scores)
+                )
                 results[d_name][title]["diversity1"].append(sum(d1s) / len(d1s))
                 results[d_name][title]["diversity2"].append(sum(d2s) / len(d2s))
                 results[d_name][title]["repetition_rates"].append(
@@ -157,7 +159,7 @@ def test_models(num_samples: int = 32) -> None:
                 print(
                     f"=========== {title}, k={k}, in_dist={in_dist} START ==========="
                 )
-                print(f"** Prompt **\n{prompt[0]}")
+                print(f"** Prompt **\n{prompts[0]}")
                 print(f"** Gen text **\n{gen_texts[0]}")
                 print(f"** Reference **\n{references[0]}")
                 print(f"=========== {title} END ===========")
@@ -173,7 +175,7 @@ def test_models(num_samples: int = 32) -> None:
         "coherence",
         "diversity",
         "rouge_l",
-        # "perplexity",
+        "perplexity",
         "diversity1",
         "diversity2",
         "repetition_rates",

@@ -82,7 +82,7 @@ def generate_MH(
 
         # 7) Append and check EOT
         if next_token.item() == tokenizer.eot_token:
-            tokens = torch.cat([tokens, next_token], dim=1)
+            # tokens = torch.cat([tokens, next_token], dim=1)
             break
         tokens = torch.cat([tokens, next_token], dim=1)
         # --- replace up through here ---
