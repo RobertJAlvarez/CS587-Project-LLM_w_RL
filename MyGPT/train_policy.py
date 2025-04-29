@@ -10,6 +10,7 @@ from metrics import compute_fluency_score, compute_coherence_score
 from load_dataset import sample_paragraph_splits
 from sampling_policy import SamplingPolicy
 from generate_w_policy import generate_w_policy
+from test_policy import test_policy
 
 
 def compute_rewards(sample, reference) -> float:
@@ -144,3 +145,5 @@ if __name__ == "__main__":
             torch.save(policy.state_dict(), best_policy_path)
 
     print(f"Total training time = {(time.time() - start_time):.4f}s")
+
+    test_policy()

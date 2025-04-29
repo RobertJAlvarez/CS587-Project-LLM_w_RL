@@ -68,7 +68,7 @@ def distinct_n(tokens: list[str], n: int) -> float:
 def repetition_rate(tokens: list[str]) -> float:
     """
     Fraction of tokens that are repeats:
-      (total tokens − unique tokens) / total tokens.
+      (total tokens - unique tokens) / total tokens.
     """
     total = len(tokens)
     if total == 0:

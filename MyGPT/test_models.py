@@ -2,9 +2,11 @@ import argparse
 import tiktoken  # type: ignore
 import os
 import torch  # type: ignore
+import time
 import random
 from collections import defaultdict
 import matplotlib.pyplot as plt  # type: ignore
+from functools import partial
 
 from my_gpt import GPT, Config
 from load_dataset import sample_paragraph_splits, load_prompts_and_references
@@ -23,15 +25,8 @@ from metrics import (
     compute_rouge_l,
 )
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Generate text with a trained RoPE GPT model"
-    )
-    parser.add_argument(
-        "--num_samples", type=int, default=128, help="Number of paragraph samples"
-    )
-    args = parser.parse_args()
 
+def test_models(num_samples: int = 128) -> None:
     # Load the tokenizer (GPT-4 tokenizer).
     tokenizer = tiktoken.get_encoding("cl100k_base")
 
@@ -49,19 +44,24 @@ if __name__ == "__main__":
 
     # Load the trained weights.
     try:
-        model_path = "models/best_gpt_model.pt"
-        model.load_state_dict(torch.load(model_path, map_location=device))
-        print(f"Model loaded from {model_path}")
+        model.load_state_dict(torch.load("models/best_gpt_model.pt"))
     except Exception as e:
         print(f"Error loading model: {e}")
         exit(1)
-
-    # Move model to the appropriate device.
     model.to(device)
     model.eval()  # Set the model to evaluation mode.
 
     # Initialize policy.
     policy = SamplingPolicy().to(device)
+
+    # Load the trained weights.
+    try:
+        policy.load_state_dict(torch.load("models/best_policy.pt"))
+    except Exception as e:
+        print(f"Error loading policy: {e}")
+        exit(1)
+    policy.to(device)
+    policy.eval()  # Set the policy to evaluation mode.
 
     # Generate text using specified setting.
     print("All models use 'KV cache'")
@@ -70,13 +70,19 @@ if __name__ == "__main__":
     results = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
 
     # Evaluate each model sampling based on fluency, coherence, and diversity.
-    gen_fs = [generate, generate_w_policy, generate_AR, generate_HMC, generate_MH]
+    gen_fs = [
+        partial(generate, model=model, tokenizer=tokenizer),
+        partial(generate_w_policy, model=model, tokenizer=tokenizer, policy=policy),
+        partial(generate_AR, model=model, tokenizer=tokenizer),
+        partial(generate_HMC, model=model, tokenizer=tokenizer),
+        partial(generate_MH, model=model, tokenizer=tokenizer),
+    ]
     titles = [
         "Original model",
         "Model w/ RL",
-        "Model with AR",
-        "Model with HMC",
-        "Model with MH",
+        "Model w/ AR",
+        "Model w/ HMC",
+        "Model w/ MH",
     ]
 
     for k in [4, 8, 12, 16, 20]:
@@ -86,22 +92,23 @@ if __name__ == "__main__":
             # Load prompts/references.
             if in_dist:
                 prompts, references = sample_paragraph_splits(
-                    num_samples=args.num_samples, k=k
+                    num_samples=num_samples, k=k
                 )
             else:
                 prompts, references = load_prompts_and_references(
-                    num_samples=args.num_samples, k=k
+                    num_samples=num_samples, k=k
                 )
 
             for gen_f, title in zip(gen_fs, titles):
                 # Generate text per prompt.
                 gen_texts = []
+                start_time = time.time()
                 for prompt in prompts:
-                    if gen_fs == generate_w_policy:
-                        sample, *_ = gen_f(model, prompt, tokenizer, policy)
-                    else:
-                        sample, *_ = gen_f(model, prompt, tokenizer)
+                    sample, *_ = gen_f(prompt=prompt)
                     gen_texts.append(sample)
+
+                # Compute elapse time.
+                results[d_name][title]["time"].append(time.time() - start_time)
 
                 # Compute metrics.
                 fluency_scores = [compute_fluency_score(g) for g in gen_texts]
@@ -113,7 +120,7 @@ if __name__ == "__main__":
                     compute_rouge_l(r, g) for r, g in zip(references, gen_texts)
                 ]
 
-                # Store mean scores
+                # Store mean scores.
                 results[d_name][title]["k"].append(k)
                 results[d_name][title]["fluency"].append(
                     sum(fluency_scores) / len(fluency_scores)
@@ -126,35 +133,53 @@ if __name__ == "__main__":
                     sum(rouge_l_scores) / len(rouge_l_scores)
                 )
 
-                # Print 2 example at random.
-                for i in range(2):
-                    idx = random.randint(0, len(gen_texts))
-                    print(f"=========== {title} START ===========")
-                    print(f"** Prompt **\n{prompt[idx]}")
-                    print(f"** Gen text **\n{gen_texts[idx]}")
-                    print(f"** Reference **\n{references[idx]}")
-                    print(f"=========== {title} END ===========")
+                # Print example at random.
+                print(
+                    f"=========== {title}, k={k}, in_dist={in_dist} START ==========="
+                )
+                print(f"** Prompt **\n{prompt[0]}")
+                print(f"** Gen text **\n{gen_texts[0]}")
+                print(f"** Reference **\n{references[0]}")
+                print(f"=========== {title} END ===========")
 
-    os.makedirs("plots", exist_ok=True)
+    dir_name = f"plots-{num_samples}_samples"
+    os.makedirs(dir_name, exist_ok=True)
 
     metrics = ["fluency", "coherence", "diversity", "rouge_l"]
     colors = ["blue", "green", "red", "purple", "orange"]
 
-    for dataset_name, dataset_results in results.items():
+    for d_name, dataset_results in results.items():
         for metric in metrics:
             plt.figure(figsize=(8, 6))
             for title, color in zip(titles, colors):
+                times = dataset_results[title]["time"]
+
+                # Compute average time across k for that model
+                avg_time = sum(times) / len(times)
+
                 plt.plot(
                     dataset_results[title]["k"],
                     dataset_results[title][metric],
-                    label=title,
+                    label=f"{title} (avg {avg_time:.2f}s)",
                     marker="o",
                     color=color,
                 )
-            plt.title(f"{metric.capitalize()} vs k ({dataset_name})")
+            plt.title(f"{metric.capitalize()} vs k ({d_name})")
             plt.xlabel("k")
             plt.ylabel(metric.capitalize())
             plt.legend()
             plt.grid(True)
-            plt.savefig(f"plots/{metric}_vs_k_{dataset_name}.png")
+            plt.savefig(f"{dir_name}/{metric}_vs_k_{d_name}.png")
             plt.close()
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Generate text with a trained RoPE GPT model"
+    )
+    parser.add_argument(
+        "--num_samples", type=int, default=64, help="Number of paragraph samples"
+    )
+    args = parser.parse_args()
+
+    test_models(num_samples=args.num_samples)

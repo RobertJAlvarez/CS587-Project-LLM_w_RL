@@ -1,0 +1,1368 @@
+[nltk_data] Downloading package punkt to /home/alvar258/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/test_models.py:47: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load("models/best_gpt_model.pt"))
+/home/alvar258/CS587-Project-LLM_w_RL/MyGPT/test_models.py:59: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  policy.load_state_dict(torch.load("models/best_policy.pt"))
+Using device: cuda
+All models use 'KV cache'
+=========== Original model, k=4, in_dist=True START ===========
+** Prompt **
+C
+** Gen text **
+Captain Nemo had chosen a strange moment for uttering this
+philosophical reflection. On the whole, his answer helped me little.
+** Reference **
+Captain Nemo had chosen a strange moment for uttering this
+philosophical reflection. On the whole, his answer helped me little.
+=========== Original model END ===========
+=========== Model w/ RL, k=4, in_dist=True START ===========
+** Prompt **
+C
+** Gen text **
+Captain Nemo had chosen a strange moment for uttering this
+philosophical reflection. On the whole, his answer helped me little.
+** Reference **
+Captain Nemo had chosen a strange moment for uttering this
+philosophical reflection. On the whole, his answer helped me little.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=4, in_dist=True START ===========
+** Prompt **
+C
+** Gen text **
+Captain Nemo had chosen a strange moment for the first time past inquired,
+but he said, for the cause of the story-tenth is an artist.”<|endoftext|>
+** Reference **
+Captain Nemo had chosen a strange moment for uttering this
+philosophical reflection. On the whole, his answer helped me little.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=4, in_dist=True START ===========
+** Prompt **
+C
+** Gen text **
+Captain Nemo had chosen a strange moment for a last glance at the slightest shock was very rare for the breeze from
+the breeze from the flavour, and large eyelids, and meat; and meat; and opens into that he looked like a
+the breeze, and for he looked like a cliff to which he knew not that he looked like a coal fire which he steers of the scene of the scene of the matter brilliantly illuminated allusion to which he steers of the shock sustained by the hear and his death, and his dangerous shores of the scene of the scene of the shock caused by the spur, and his greatest depths of the echo miles to which he asking them greed of the keep clearness of the echo miles to smoke could not wishing and fucus floating ice forming a woman canoes approached mele and seas should be doubted, and seas of the vessel.<|endoftext|>
+** Reference **
+Captain Nemo had chosen a strange moment for uttering this
+philosophical reflection. On the whole, his answer helped me little.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=4, in_dist=True START ===========
+** Prompt **
+C
+** Gen text **
+Captain Nemo had chosen a strange moment for the first time past in the passengers of the island.
+They he said, the leaping over his host, heaving breastplate was looking at least human mind to his little of his greatest breadth of his little “Glory of his hatches you hospitality freer Farragut funnels, if he began to his head, if he began to his description in one island.
+The Silver Rock funnels, had spoken in one of the _Nautilus_ inclined planes are marked direct west-tenth is true, would not jets of the _Nautilus_ inclined planes are furnished with that destiny?
+Was it is ready to be obtained a sort of these uninhabited with an iron cylinder anchored in short, was first is ready to beified trees worn away, was warmly—had turned and that communicates with an iron plates eight arms crossed. The _Nautilus_ inclined to beified trees that portion of a sort of the _Nautilus_ inclined planes are not warmed regularly-cut bases, and from the _Nautilus_, and from the old ideas as trees worn away, and
+means of the factitious light sailcloth!<|endoftext|>
+** Reference **
+Captain Nemo had chosen a strange moment for uttering this
+philosophical reflection. On the whole, his answer helped me little.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with his
+hand on my shoulder, said:
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Original model END ===========
+=========== Model w/ RL, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with
+the water-line of the _Nautilus_. Then the screw set to work at its
+maximum speed, its four blades beating the waves with in describable
+force. Under this powerful pressure, the hull of the _Nautilus_
+quivered like a sonorous chord and sank regularly under the water.
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with his
+the hand.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with his route, and rose from the frigate,
+without scales.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=4, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with his
+the Captain Nemo.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ MH END ===========
+=========== Original model, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I hope so. And I also hope that his powerful vessel has conquered the
+sea at its most terrible gulf, and that the _Nautilus_ has survived
+where so many other vessels have been lost! If it be so—if Captain Nemo
+still inhabits the ocean, his adopted country, may hatred be appeased
+in that savage heart! May the contemplation of so many wonders
+extinguish for ever the spirit of vengeance! May the judge disappear,
+and the philosopher continue the peaceful exploration of the sea! If
+his destiny be strange, it is also sublime. Have I not understood it
+myself? Have I not lived ten months of this unnatural life? And to the
+question asked by Ecclesiastes three thousand years ago, “That which is
+far off and exceeding deep, who can find it out?” two men alone of all.
+From the last whale and the height of its most
+capricious. On taking the bearings, I knew that we were nearing the
+island of Ceylon, the pearl which hangs from the lobe of the Indian
+Peninsula.
+** Reference **
+I hope so. And I also hope that his powerful vessel has conquered the
+sea at its most terrible gulf, and that the _Nautilus_ has survived
+where so many other vessels have been lost! If it be so—if Captain Nemo
+still inhabits the ocean, his adopted country, may hatred be appeased
+in that savage heart! May the contemplation of so many wonders
+extinguish for ever the spirit of vengeance! May the judge disappear,
+and the philosopher continue the peaceful exploration of the sea! If
+his destiny be strange, it is also sublime. Have I not understood it
+myself? Have I not lived ten months of this unnatural life? And to the
+question asked by Ecclesiastes three thousand years ago, “That which is
+far off and exceeding deep, who can find it out?” two men alone of all
+now living have the right to give an answer——
+=========== Original model END ===========
+=========== Model w/ RL, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I hope so. And I also hope that his powerful vessel has conquered the
+sea at its most terrible gulf, and that the _Nautilus_ has survived
+where so many other vessels have been lost! If it be so—if Captain Nemo
+still inhabits the ocean, his adopted country, may hatred be appeased
+in that savage heart! May the contemplation of so many wonders
+extinguish for ever the spirit of vengeance! May the judge disappear,
+and the philosopher continue the peaceful exploration of the sea! If
+his destiny be strange, it is also sublime. Have I not understood it
+myself? Have I not lived ten months of this unnatural life? And to the
+question asked by Ecclesiastes three thousand years ago, “That which is
+far off and exceeding deep, who can find it out?” two men alone of all
+now living have the right to give an answer——
+** Reference **
+I hope so. And I also hope that his powerful vessel has conquered the
+sea at its most terrible gulf, and that the _Nautilus_ has survived
+where so many other vessels have been lost! If it be so—if Captain Nemo
+still inhabits the ocean, his adopted country, may hatred be appeased
+in that savage heart! May the contemplation of so many wonders
+extinguish for ever the spirit of vengeance! May the judge disappear,
+and the philosopher continue the peaceful exploration of the sea! If
+his destiny be strange, it is also sublime. Have I not understood it
+myself? Have I not lived ten months of this unnatural life? And to the
+question asked by Ecclesiastes three thousand years ago, “That which is
+far off and exceeding deep, who can find it out?” two men alone of all
+now living have the right to give an answer——
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I hope so. And I also hope that his powerful creatures do not
+have had accompanied the Canadian when he ordered both should not be hands it had done? The Canadian might be hands it had done?<|endoftext|>
+** Reference **
+I hope so. And I also hope that his powerful vessel has conquered the
+sea at its most terrible gulf, and that the _Nautilus_ has survived
+where so many other vessels have been lost! If it be so—if Captain Nemo
+still inhabits the ocean, his adopted country, may hatred be appeased
+in that savage heart! May the contemplation of so many wonders
+extinguish for ever the spirit of vengeance! May the judge disappear,
+and the philosopher continue the peaceful exploration of the sea! If
+his destiny be strange, it is also sublime. Have I not understood it
+myself? Have I not lived ten months of this unnatural life? And to the
+question asked by Ecclesiastes three thousand years ago, “That which is
+far off and exceeding deep, who can find it out?” two men alone of all
+now living have the right to give an answer——
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I hope so. And I also hope that his powerful
+my companions were singular person who have so when I should not call “You see he was determined not have said, and we must sufferings of this terrible, for he set out that singularly pronounced these adventures once more command was beginning to visit to take their be insurrection against whom he had accompanied the Canadian when he had plunged into the Red Sea a radius of it was beginning to take their be leading to smoke on the recede, more than the Red Sea a savage heart after having contained such a moving object to see something to take possession of these Antarctic region where we are due to account for heaving his greatest beauty,
+and Creteeth which he cleverly ploughed arches spring to his locomotive machinery that minutes pasty leagues in sight of these Antarctic seas should be succeeded in arranging my life and
+fell from the Indian, and drowsiness and d once more than the Indian, and insurrection.”<|endoftext|>
+** Reference **
+I hope so. And I also hope that his powerful vessel has conquered the
+sea at its most terrible gulf, and that the _Nautilus_ has survived
+where so many other vessels have been lost! If it be so—if Captain Nemo
+still inhabits the ocean, his adopted country, may hatred be appeased
+in that savage heart! May the contemplation of so many wonders
+extinguish for ever the spirit of vengeance! May the judge disappear,
+and the philosopher continue the peaceful exploration of the sea! If
+his destiny be strange, it is also sublime. Have I not understood it
+myself? Have I not lived ten months of this unnatural life? And to the
+question asked by Ecclesiastes three thousand years ago, “That which is
+far off and exceeding deep, who can find it out?” two men alone of all
+now living have the right to give an answer——
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=8, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I hope so. And I also hope that his powerful vessel
+my companions and imperturbable for him with him with look like a good friend Ned Land’s service that he began to look at least agitated? To right eye was determined not be hands to answer him with him with him with him with him with him with him with him who he asking them for him who he asking where vessels that he was lost rock lost! And fate.<|endoftext|>
+** Reference **
+I hope so. And I also hope that his powerful vessel has conquered the
+sea at its most terrible gulf, and that the _Nautilus_ has survived
+where so many other vessels have been lost! If it be so—if Captain Nemo
+still inhabits the ocean, his adopted country, may hatred be appeased
+in that savage heart! May the contemplation of so many wonders
+extinguish for ever the spirit of vengeance! May the judge disappear,
+and the philosopher continue the peaceful exploration of the sea! If
+his destiny be strange, it is also sublime. Have I not understood it
+myself? Have I not lived ten months of this unnatural life? And to the
+question asked by Ecclesiastes three thousand years ago, “That which is
+far off and exceeding deep, who can find it out?” two men alone of all
+now living have the right to give an answer——
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=8, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf he intended, after
+the Persian Gulf, the _Nautilus_ would like to visit the Red Sea, the
+Straits of Bab-el-mandeb are there to give us entrance.”
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Original model END ===========
+=========== Model w/ RL, k=8, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolfatitudeor Higginson_, of the
+Calcutta and Burnach Steam Navigation Company, had met this moving mass
+five miles off the east coast of Australia. Captain Baker thought at
+first that he was in the presence of an unknown sandbank; he even
+prepared to determine its exact position, when two columns of water,
+projected by the inexplicable object, shot with a hissing noise a
+hundred and fifty feet up into the air. Now, unless the sandbank had
+been submitted to the intermittent eruption of a geyser, the _Governor
+Higginson_ had to do neither more nor less than with an aquatic mammal,
+unknown till then, which threw up from its blow-holes columns of water
+mixed with air and vapour.
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=8, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf circulated and
+my own great violence, and the sea weed, I saw some thousands of the steel spur had gone over one of the use of the use is extremely delicate ceram cross-trees were filled with their lovely autumnaliation the muscles aground the animal, and healthy men shall we may beak.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=8, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf eight arms had already encircled that
+watered his locomotive machinery.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=8, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf and
+the most agreeable energy.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ MH END ===========
+=========== Original model, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The collision of the frigate with the cetacean had occurred about eleven o’clock
+the offer of the weather was most secret thoughts, and the agelands of the
+_Nautilus_, and occupies a cavity made for it. It is decked, quite
+water-tight, and held together by solid bolts. This ladder leads to a
+man-hole made in the hull of the _Nautilus_, that corresponds with a
+similar hole made in the side of the boat. By this double opening I get
+into the small vessel. They shut the one belonging to the _Nautilus;_ I
+shut the other by means of screw pressure. I undo the bolts, and the
+little boat goes up to the surface of the sea with prodigious rapidity.
+I then open the panel of the bridge, carefully shut till then; I mast
+it, hoist my sail, take my oars, and I’m off.”
+** Reference **
+The collision of the frigate with the cetacean had occurred about
+eleven o’clock the evening before. I reckoned then we should have eight
+hours to swim before sunrise, an operation quite practicable if we
+relieved each other. The sea, very calm, was in our favour. Sometimes I
+tried to pierce the intense darkness that was only dispelled by the
+phosphorescence caused by our movements. I watched the luminous waves
+that broke over my hand, whose mirror-like surface was spotted with
+silvery rings. One might have said that we were in a bath of
+quicksilver.
+=========== Original model END ===========
+=========== Model w/ RL, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The collision of the frigate with the cetacean had occurred about eleven o’clock
+the Canadian did not wish to admit the presence of the South Pole. A
+few strokes of the oar brought us to the sand, where we ran ashore.
+Conseil was going to jump on to the land, when I held him back.
+** Reference **
+The collision of the frigate with the cetacean had occurred about
+eleven o’clock the evening before. I reckoned then we should have eight
+hours to swim before sunrise, an operation quite practicable if we
+relieved each other. The sea, very calm, was in our favour. Sometimes I
+tried to pierce the intense darkness that was only dispelled by the
+phosphorescence caused by our movements. I watched the luminous waves
+that broke over my hand, whose mirror-like surface was spotted with
+silvery rings. One might have said that we were in a bath of
+quicksilver.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The collision of the frigate with the cetacean had occurred about eleven oysters; and at
+seas, from the _Nautilus_, knowing that he wished to a long sandy bottom now mineral forest of
+this point of oysters picked up monster heaving breast and oppressed races as Assistant Professor? Or even silence appear, was soon free passage secretly could not a parrotto beak like a parrotto beak
+fisherman’s and
+well enough to the _Nautilus_ as if I had harpoon and oppressed races as if I had a last adroit Canadian’s movements of the _Nautilus_ and oppressed races as if I had a parrotto slide in the _Nautilus_ and touch it was able to the _Nautilus_ and imminent.<|endoftext|>
+** Reference **
+The collision of the frigate with the cetacean had occurred about
+eleven o’clock the evening before. I reckoned then we should have eight
+hours to swim before sunrise, an operation quite practicable if we
+relieved each other. The sea, very calm, was in our favour. Sometimes I
+tried to pierce the intense darkness that was only dispelled by the
+phosphorescence caused by our movements. I watched the luminous waves
+that broke over my hand, whose mirror-like surface was spotted with
+silvery rings. One might have said that we were in a bath of
+quicksilver.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The collision of the frigate with the cetacean had occurred about eleven
+se.<|endoftext|>
+** Reference **
+The collision of the frigate with the cetacean had occurred about
+eleven o’clock the evening before. I reckoned then we should have eight
+hours to swim before sunrise, an operation quite practicable if we
+relieved each other. The sea, very calm, was in our favour. Sometimes I
+tried to pierce the intense darkness that was only dispelled by the
+phosphorescence caused by our movements. I watched the luminous waves
+that broke over my hand, whose mirror-like surface was spotted with
+silvery rings. One might have said that we were in a bath of
+quicksilver.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=12, in_dist=True START ===========
+** Prompt **
+T
+** Gen text **
+The collision of the frigate with the cetacean had occurred about eleven oysters, and looked like a long sandy coast of
+ice-field and looked like a long agony, whilst verdantile of oars, and looked like a long-vegetable territory of mountains three-tailed galleons-pricka soft and upper jaw with redoubled with red helmet-shape Verde fingers of which heaving breastplate box which heaving breastplate box, and upper jaw with seaweed and upper jaw with seaweed and upper jaw with seaweed and upper jaw with seaweed which he bony knees trees scattered here and upper jaw with seaweed and upper jaw with seaweed which he bony ground, between the breaking,
+with cold water from the breaking the breaking the animal and furnished with
+of the breaking of the great depths, and furnished with the sea boots of the command the command the command the command the sea boots of the crown of the sea boots of the sea weed of the sea boots of the sea weed of the sea boots of the sea boots of the sea boots of the capric circles of the sea weed of the sea boots of the sea weed of the sea boots of the sea boots of the sea boots of the capric circles of a very much aground officers of a delicious odour large number of a delicious odour large number of blood. Now, and
+four hundred thousand species of green, which, and New
+fish of green, and New York which, and New York which, and New
+Rhodomeni, and New Ceylon fisheries, and New Ceylon on the hammer-heads of fishes of a blue encirc between the hammer-headsides of green, and New Caledonia, and New Caledonia, and silvery slowly raised over, and 1702/8; and 1702/8; and 1702/8; and vitiated atmosphere as if they placed those beautiful things took most beautiful things took most beautiful river, placed those beautiful river, interwe were due to San Francisco, placed vertically like a yellow caryophytes, and
+numeroussole and
+numeroussole and
+numeroussole and
+numeroussole, found that are preserved in absorbing carbonic acid in nicotine, found that of the inches in various chances of meat; and
+numeroussole and
+numeroussole and a sort.”<|endoftext|>
+** Reference **
+The collision of the frigate with the cetacean had occurred about
+eleven o’clock the evening before. I reckoned then we should have eight
+hours to swim before sunrise, an operation quite practicable if we
+relieved each other. The sea, very calm, was in our favour. Sometimes I
+tried to pierce the intense darkness that was only dispelled by the
+phosphorescence caused by our movements. I watched the luminous waves
+that broke over my hand, whose mirror-like surface was spotted with
+silvery rings. One might have said that we were in a bath of
+quicksilver.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title of these narwhal. But one of them, M. Aronnax, are you going to dress yourself
+in those clothes?”
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Original model END ===========
+=========== Model w/ RL, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title of these seas escaped all
+observation.
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title of the
+rocking group.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title of the
+panels were meeting, on which Ned Land and marine plants and gathered in the animal, not only reckoned that he could not only produce some few moments after having gone over his heart.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=12, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title of the
+rocking group.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ MH END ===========
+=========== Original model, k=16, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I heard its teeth grind on the iron plate, and the dugong disappeared, carrying the harpoon was thrown; I
+leave you to imagine the rage of the Canadian when I informed him of
+our situation.
+** Reference **
+I heard its teeth grind on the iron plate, and the dugong disappeared,
+carrying the harpoon with him. But the barrel soon returned to the
+surface, and shortly after the body of the animal, turned on its back.
+The boat came up with it, took it in tow, and made straight for the
+_Nautilus_.
+=========== Original model END ===========
+=========== Model w/ RL, k=16, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I heard its teeth grind on the iron plate, and the dugong disappeared, carrying the harpoon was shut.
+The boat came up with it, took it in tow, and made straight for the
+_Nautilus_.
+** Reference **
+I heard its teeth grind on the iron plate, and the dugong disappeared,
+carrying the harpoon with him. But the barrel soon returned to the
+surface, and shortly after the body of the animal, turned on its back.
+The boat came up with it, took it in tow, and made straight for the
+_Nautilus_.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=16, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I heard its teeth grind on the iron plate, and the dugong disappeared, carrying the harpoon was the
+band of the islands and the breast and the fifth, which were their course to the dead body of the islands and their colour changing its white buted china, and their centre of the walls on the Japanese sponges of the Japanese or (the monster’s cage of the Japanese or (against which were larger than the Japanese or (which was found a sort of the Japanese or American colours to tropical rivers white smoke could not and
+of Vigo was sensibly diminished, and ins.<|endoftext|>
+** Reference **
+I heard its teeth grind on the iron plate, and the dugong disappeared,
+carrying the harpoon with him. But the barrel soon returned to the
+surface, and shortly after the body of the animal, turned on its back.
+The boat came up with it, took it in tow, and made straight for the
+_Nautilus_.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=16, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I heard its teeth grind on the iron plate, and the dugong disappeared, carrying the harpoon—a precious_, and the
+gained motionless intense brillian and the violent shock followed the south-east coasted straightening sun appearing for the waters of the African shore, came from the horizon enormous protuber’s head occupies one of the horizon stretched out of the horizon stretched out of the characters rather large nostrils to the Japanese, which enriched the body drawn up flat and the gun and the horizon stretched out of the air were laid in 10th of the air were taken which enriched the air holes of the air holes on the air holes from Ireland the air holes on the air holes on the air holes on the air drawn up beautiful teeth.<|endoftext|>
+** Reference **
+I heard its teeth grind on the iron plate, and the dugong disappeared,
+carrying the harpoon with him. But the barrel soon returned to the
+surface, and shortly after the body of the animal, turned on its back.
+The boat came up with it, took it in tow, and made straight for the
+_Nautilus_.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=16, in_dist=True START ===========
+** Prompt **
+I
+** Gen text **
+I heard its teeth grind on the iron plate, and the dugong disappeared, carrying the harpoon was the
+carapai group. The perfect fingers on the breast and their course towards the breast and their black shining and their knees in its sides of the breast and pointed teeth placed vertically like a white light reeds. The animal, showed
+step, showed that way of the breast and
+step, showed ten miles to which was determined not to beak drink consisted of the course to the breast and furnished with the course to beak of the course to the course to the course towards the course to the course of the sharp rocks in diameter of the old cork or not a long sandy coast of the _Nautilus_ and still pointed teeth placed vertically like a long-ears came out of a long sandy coasted fucus floating island of the long seaweeds like a large number of the undulating flight of the feet; diorama. The lantern!<|endoftext|>
+** Reference **
+I heard its teeth grind on the iron plate, and the dugong disappeared,
+carrying the harpoon with him. But the barrel soon returned to the
+surface, and shortly after the body of the animal, turned on its back.
+The boat came up with it, took it in tow, and made straight for the
+_Nautilus_.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=16, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is known by name,
+and I leave you back to that world which must know me no more?
+Never! In retaining you, it is not you whom I guard—it is myself.”
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Original model END ===========
+=========== Model w/ RL, k=16, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is extreme; but accustomed
+like different light in these seas, the whale and whose bodies uniteunderbuss, and the
+explosive balls of the duck-gun. On the forecastle lay the perfection
+of a breech-loading gun, very thick at the breech, and very narrow in
+the bore, the model of which had been in the Exhibition of 1867. This
+precious weapon of American origin could throw with ease a conical
+projectile of nine pounds to a mean distance of ten miles.
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=16, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is mistydele lay like a long loose
+of an essentially Scotch character. My movements, leaning on the scene, has remarked that I distinguished, have been inaccessible medium—their under the scene of fishes of fishes of fishes of fishes of fishes of fishes of fishes of fishes of a kind, with teeth were spasmuch as they must exceed water, with teeth were spasmuch as they must exceed water, with spectators gave way of a fair wind and furnished with spectators gave way of a large mineral forest of a large high fore part of a large high trees scattered here and furnished with teeth were larger blocks of enormous motive power of steel spur, and furnished with twelve united in the crown of admiration? Perhaps of admiration? Perhaps of admiration? Perhaps of admiration? Perhaps of admiration? Perhaps of admiration? I caught a strong hand stopping in a strong hand, and
+this agent of large number of digging if I caught a long agony, and
+this agent, and
+this mystery interested in a large number of which he was soon light must have been inaccessible medium height above which he was soon light must have been forced into the sea boots of admiration increased both hands to one degree, without leaves of _Nautilus_ that panels closed upon the sea-water, without twilight. I caught in those curious animal, Captain N.N.E. This agent, but they must have given latitude and from the sea-water, but they must soon lighted wind and
+kinds which heaving breastplate of the steers still resplunged Land, as if I only to twelve united in the steersman who did not able to his fingers were possible that independence and from the steersmanatee; and his irresistible attraction glued to its tempersmanatee
+of the last thoughts crowded the last thoughts all news from the sea-water, and his fingers of the number of the sea-water, and
+curious gas.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=16, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is but it rose
+of the pearl-oysters are marked by the scene, of sea weed, at Bunsenormous animal, and
+which, and backwards by nature of an inch of game and furnished with spikes formed a sort.”<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=16, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is known continents.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ MH END ===========
+=========== Original model, k=20, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“But how could you construct this wonderful _Nautilus_ in secret?”
+** Reference **
+“But how could you construct this wonderful _Nautilus_ in secret?”
+=========== Original model END ===========
+=========== Model w/ RL, k=20, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“But how could you construct this wonderful _Nautilus_ in secret?”
+** Reference **
+“But how could you construct this wonderful _Nautilus_ in secret?”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=20, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“But how could you construct this wonderful _Nautilus_ in secret?”<|endoftext|>
+** Reference **
+“But how could you construct this wonderful _Nautilus_ in secret?”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=20, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“But how could you construct this wonderful _Nautilus_ in secret?”<|endoftext|>
+** Reference **
+“But how could you construct this wonderful _Nautilus_ in secret?”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=20, in_dist=True START ===========
+** Prompt **
+“
+** Gen text **
+“But how could you construct this wonderful _Nautilus_ in secret?”<|endoftext|>
+** Reference **
+“But how could you construct this wonderful _Nautilus_ in secret?”
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=20, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No, by a noise, a quick
+penetrating look, and the vivacity which characterises the population
+of Southern France.
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Original model END ===========
+=========== Model w/ RL, k=20, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No; Ned Landi virgrew me. The _Nautilus_ scoriae, and
+preoccupied. I left the table at the end of the weather was very
+ab-el-mandeb, the name of which, in the Arab tongue, means The Gate of
+Tears.
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=20, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No; but it rose two cables’ lengthenormous; but the
+of the scene, not a sort of two poulps, not a Greek, not a sort of magnificent museum, not a sort of shells, not a Greek, not sixty feet, not a Greek, a sort.”<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=20, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No, not a copper
+are whose two quayrol reservoir of a moving scene, had decided wail & Co.’”<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=20, in_dist=False START ===========
+** Prompt **
+A
+** Gen text **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No; but it was
+of the scene, the scene, the scene, the scene, the scene, going at Baffirmed that the tail of the tail of the tail of the tail of the monster did not measure it was soon coast of the monster heaped upholds and healthy men will beak of the animal, but they were spines, but they were spines, but they had been rays of a rarestretched of shells of shells of sea-water, and furnished with a word of shells of shells of shells of shells of shells of shells of shells of shells of shells of shells of shells of shells of shells of shells of shells of shells of
+lime I had encircled that escaped harpooners were encircled and
+of all the animal, and
+of which they directly, for heaving breastplate. In certain felsparterious gas. In certain felsparterious gas.<|endoftext|>
+** Reference **
+A magazine supplement with an image of Adolf Hitler and the title 'The Unreadable Book' is pictured in Berlin. No law bans “Mein Kampf” in Germany, but the government of Bavaria, holds the copyright and guards it ferociously. (Thomas Peter/REUTERS)
+
+The city that was the center of Adolf Hitler’s empire is littered with reminders of the Nazi past, from the bullet holes that pit the fronts of many buildings to the hulking Luftwaffe headquarters that now house the Finance Ministry.
+
+What it doesn’t have, nor has it since 1945, are copies of Hitler’s autobiography and political manifesto, “Mein Kampf,” in its bookstores. The latest attempt to publish excerpts fizzled this week after the Bavarian government challenged it in court, although an expurgated copy appeared at newspaper kiosks around the country.
+
+But in Germany — where keeping a tight lid on Hitler’s writings has become a rich tradition in itself — attitudes toward his book are slowly changing, and fewer people are objecting to its becoming more widely available.
+
+No law bans “Mein Kampf” in Germany, but the government of Bavaria, where Hitler officially resided at the time of his 1945 suicide, holds the copyright and guards it ferociously. German-language copies that were printed before 1945 are legal, although they command a premium price, and the book is available in translation elsewhere in the world.
+
+But the question of whether to publish it in the country where Hitler plotted his empire has lost some of its edge in the Google era, when a complete German-language copy of the book pops up as the second result on the local version of the search engine.
+
+“To say this is a very dangerous book, we must ban it, this is ridiculous,” said Wolfgang Wippermann, a professor of modern history at the Free University of Berlin. “Maybe it was necessary once, but now it’s over, it makes no sense. You can find it so easily.”
+
+The publisher of the excerpts, London-based Albertus, has said it will appeal the Bavarian government’s injunction. In 2009, the publisher beat charges of copyright violation and the illegal use of Nazi symbols after the Bavarian government seized reprinted copies of the Nazi Party’s in-house newspaper.
+
+The attempt to publish portions of “Mein Kampf” on Thursday was scuttled at the last moment, although the publisher, ready to capitalize on the publicity, had printed two versions of the pamphlet. The version propped on top of a heap of celebrity magazines at a newsstand in Berlin’s central Friedrichstrasse station was a slender, blue, 16-page leaflet that has historical commentary in one column and an image of blurred text stamped with “Unreadable” in the other, accompanied by two reproductions of Nazi-era newspapers.
+
+“Mein Kampf” “is an awful book, and the whole thinking is absolutely not ours, but we have another view on it regarding the idea of packing it away. This idea is just naive,” said Alexander Luckow, a spokesman for the publisher. “In a free country, you need to discuss these very bad parts of German history.”
+
+Still, he said, there are limits, and using Hitler’s words as inspiration, not as historical artifact, is where it crosses the line.
+
+“The danger is allowing right-wing people to sell it in bookshops with their modern commentary,” he said. “This is forbidden and it’s good . . . not only in Germany, this should be equal in other countries in Europe. Anti-Semitism is not confined to Germany. You look and it’s all around Europe, dating back to the Middle Ages.”
+
+The debate will soon be over, whether or not the latest excerpts make it to newsstands. German law extends copyright 70 years after the author’s death; after 2015, “Mein Kampf” will be fair game. Some in Bavaria’s government worry that neo-Nazis will publish their own version of the book shortly thereafter, and to counter that, they are encouraging a scholarly edition. A group of historians is preparing it.
+
+Germany’s Jewish organizations have approached the publication with mixed emotions, sensitive that their country still has problems with neo-Nazis and anti-Semitism. The German government released a study this week that found that one in five Germans has anti-Semitic attitudes. And a neo-Nazi ring that has been linked to at least nine killings before it was shut down in November shocked Germans who thought they had done a thorough job working through their past.
+
+“I do very well without any publishing of ‘Mein Kampf,’ ” said Dieter Graumann, the head of the Central Council of Jews in Germany. “In a few years, it will be free, and I have every trust in the democratic maturity of the German people. . . . But for the moment, I am glad it is not.”
+=========== Model w/ MH END ===========
