@@ -3,12 +3,12 @@ import tiktoken  # type: ignore
 import time
 import torch  # type: ignore
 
-from my_gpt import GPT, Config
-from metrics import print_metrics
-from load_dataset import sample_paragraph_splits, load_prompts_and_references
-from sampling_policy import SamplingPolicy
-from generate_w_policy import generate_w_policy
 from generate import generate
+from generate_w_policy import generate_w_policy
+from load_dataset import sample_paragraph_splits, load_prompts_and_references
+from metrics import print_metrics
+from my_gpt import GPT, Config
+from sampling_policy import SamplingPolicy
 
 
 def test_policy(

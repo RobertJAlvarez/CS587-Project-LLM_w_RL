@@ -4,13 +4,13 @@ import time
 import torch  # type: ignore
 import torch.optim as optim  # type: ignore
 
-from my_gpt import GPT, Config
-from utils import normalize, ceildiv
-from metrics import compute_fluency_score, compute_coherence_score
-from load_dataset import sample_paragraph_splits
-from sampling_policy import SamplingPolicy
 from generate_w_policy import generate_w_policy
+from load_dataset import sample_paragraph_splits
+from metrics import compute_fluency_score, compute_coherence_score
+from my_gpt import GPT, Config
+from sampling_policy import SamplingPolicy
 from test_policy import test_policy
+from utils import normalize, ceildiv
 
 
 def compute_rewards(sample, reference) -> float:

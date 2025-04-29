@@ -1,7 +1,8 @@
-import torch  # type: ignore
-import tiktoken  # type: ignore
 import argparse
+import tiktoken  # type: ignore
 import time
+import torch  # type: ignore
+
 from my_gpt import GPT, Config
 
 

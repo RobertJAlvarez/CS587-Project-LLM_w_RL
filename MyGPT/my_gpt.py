@@ -1,12 +1,12 @@
+import argparse
+import os
+import re
+import tiktoken  # type: ignore
+import time
 import torch  # type: ignore
 import torch.nn as nn  # type: ignore
 import torch.optim as optim  # type: ignore
 from torch.utils.data import Dataset, DataLoader, random_split  # type: ignore
-import tiktoken  # type: ignore
-import argparse
-import os
-import re
-import time
 
 
 class Config:

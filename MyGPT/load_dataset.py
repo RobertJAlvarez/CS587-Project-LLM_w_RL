@@ -1,7 +1,7 @@
 from datasets import load_dataset  # type: ignore
+from datetime import datetime
 import random
 import re
-from datetime import datetime
 
 
 def tokenize(selected: list[str], k: int) -> tuple[list[str], list[str]]:

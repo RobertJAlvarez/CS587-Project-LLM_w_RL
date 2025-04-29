@@ -1,11 +1,11 @@
 import argparse
 import importlib
 import time
-import torch  # type: ignore
 import tiktoken  # type: ignore
+import torch  # type: ignore
 
+from metrics import evaluate_text
 from my_gpt import GPT, Config
-from Juanes_metric import evaluate_text
 
 
 def run_experiment(

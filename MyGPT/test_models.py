@@ -1,16 +1,11 @@
 import argparse
-import tiktoken  # type: ignore
-import os
-import torch  # type: ignore
-import time
-import random
 from collections import defaultdict
-import matplotlib.pyplot as plt  # type: ignore
 from functools import partial
-
-from my_gpt import GPT, Config
-from load_dataset import sample_paragraph_splits, load_prompts_and_references
-from sampling_policy import SamplingPolicy
+import matplotlib.pyplot as plt  # type: ignore
+import os
+import tiktoken  # type: ignore
+import time
+import torch  # type: ignore
 
 from generate import generate
 from generate_w_policy import generate_w_policy
@@ -18,13 +13,18 @@ from generate_AR import generate_AR
 from generate_HMC import generate_HMC
 from generate_MH import generate_MH
 
+from load_dataset import sample_paragraph_splits, load_prompts_and_references
 from metrics import (
     compute_fluency_score,
     compute_coherence_score,
     compute_diversity_score,
     compute_rouge_l,
+    compute_perplexity,
+    distinct_n,
+    repetition_rate,
 )
-from Juanes_metric import compute_perplexity, distinct_n, repetition_rate
+from my_gpt import GPT, Config
+from sampling_policy import SamplingPolicy
 
 
 def test_models(num_samples: int = 32) -> None:
