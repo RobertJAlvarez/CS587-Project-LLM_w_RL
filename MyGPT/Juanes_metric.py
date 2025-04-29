@@ -20,7 +20,7 @@ def compute_perplexity(
     device = device or next(model.parameters()).device
     model.eval()
 
-    # full token IDs
+    # Full token IDs.
     enc = tokenizer.encode(text)
     n = len(enc)
     if n < 2:
@@ -36,10 +36,10 @@ def compute_perplexity(
             logits = model(input_ids)[0]  # (1, L, V)
             log_probs = torch.log_softmax(logits, dim=-1)
 
-        # we score tokens from start+1 to end
+        # We score tokens from start+1 to end.
         for i in range(start + 1, end):
             token_id = enc[i]
-            pos = i - start  # position in this window
+            pos = i - start  # Position in this window.
             total_logp += log_probs[0, pos - 1, token_id].item()
             total_count += 1
 

@@ -24,9 +24,10 @@ from metrics import (
     compute_diversity_score,
     compute_rouge_l,
 )
+from Juanes_metric import compute_perplexity, distinct_n, repetition_rate
 
 
-def test_models(num_samples: int = 128) -> None:
+def test_models(num_samples: int = 32) -> None:
     # Load the tokenizer (GPT-4 tokenizer).
     tokenizer = tiktoken.get_encoding("cl100k_base")
 
@@ -85,6 +86,7 @@ def test_models(num_samples: int = 128) -> None:
         "Model w/ MH",
     ]
 
+    start_time_loop = time.time()
     for k in [4, 8, 12, 16, 20]:
         for in_dist, d_name in zip(
             [True, False], ["in_distribution", "out_of_distribution"]
@@ -120,6 +122,15 @@ def test_models(num_samples: int = 128) -> None:
                     compute_rouge_l(r, g) for r, g in zip(references, gen_texts)
                 ]
 
+                # Juanes metrics.
+                # perplexity_scores = [
+                #     compute_perplexity(model, tokenizer, g) for g in gen_texts
+                # ]
+                list_words = [g.split() for g in gen_texts]
+                d1s = [distinct_n(words, 1) for words in list_words]
+                d2s = [distinct_n(words, 2) for words in list_words]
+                repetition_rates = [repetition_rate(words) for words in list_words]
+
                 # Store mean scores.
                 results[d_name][title]["k"].append(k)
                 results[d_name][title]["fluency"].append(
@@ -133,6 +144,15 @@ def test_models(num_samples: int = 128) -> None:
                     sum(rouge_l_scores) / len(rouge_l_scores)
                 )
 
+                # results[d_name][title]["perplexity"].append(
+                #     sum(perplexity_scores) / len(perplexity_scores)
+                # )
+                results[d_name][title]["diversity1"].append(sum(d1s) / len(d1s))
+                results[d_name][title]["diversity2"].append(sum(d2s) / len(d2s))
+                results[d_name][title]["repetition_rates"].append(
+                    sum(repetition_rates) / len(repetition_rates)
+                )
+
                 # Print example at random.
                 print(
                     f"=========== {title}, k={k}, in_dist={in_dist} START ==========="
@@ -142,10 +162,22 @@ def test_models(num_samples: int = 128) -> None:
                 print(f"** Reference **\n{references[0]}")
                 print(f"=========== {title} END ===========")
 
+    total_time_loop = time.time() - start_time_loop
+    print(f"Total time for {num_samples} samples: {total_time_loop:.2f}")
+
     dir_name = f"plots-{num_samples}_samples"
     os.makedirs(dir_name, exist_ok=True)
 
-    metrics = ["fluency", "coherence", "diversity", "rouge_l"]
+    metrics = [
+        "fluency",
+        "coherence",
+        "diversity",
+        "rouge_l",
+        # "perplexity",
+        # "diversity1",
+        # "diversity2",
+        # "repetition_rates",
+    ]
     colors = ["blue", "green", "red", "purple", "orange"]
 
     for d_name, dataset_results in results.items():
