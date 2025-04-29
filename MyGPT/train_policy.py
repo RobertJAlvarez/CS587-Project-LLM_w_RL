@@ -43,6 +43,12 @@ if __name__ == "__main__":
         description="Generate text with a trained RoPE GPT model"
     )
     parser.add_argument(
+        "--in_distribution",
+        type=bool,
+        default=True,
+        help="Load data from module training text OR use a different dataset",
+    )
+    parser.add_argument(
         "--batch_size", type=int, default=32, help="Batch size for training"
     )
     parser.add_argument(
@@ -94,8 +100,13 @@ if __name__ == "__main__":
     ks = [5, 10, 15, 20]
     n_samples = ceildiv(num_epochs * batch_size, len(ks))
 
+    # Select function to get data In-Data-Distribution or Out-of-Data-Distribution.
+    gen_dataset = (
+        sample_paragraph_splits if args.in_distribution else load_prompts_and_references
+    )
+
     for k in ks:
-        ps, rs = load_prompts_and_references(num_samples=n_samples, k=k)
+        ps, rs = gen_dataset(num_samples=n_samples, k=k)
         prompts.extend(ps)
         references.extend(rs)
 
