@@ -46,7 +46,7 @@ def test_models(num_samples: int = 32) -> None:
     # Load the trained weights.
     try:
         model.load_state_dict(
-            torch.load("models/best_gpt_model.pt"), map_location=device
+            torch.load("models/best_gpt_model.pt", map_location=device)
         )
     except Exception as e:
         print(f"Error loading model: {e}")
@@ -59,7 +59,7 @@ def test_models(num_samples: int = 32) -> None:
 
     # Load the trained weights.
     try:
-        policy.load_state_dict(torch.load("models/best_policy.pt"), map_location=device)
+        policy.load_state_dict(torch.load("models/best_policy.pt", map_location=device))
     except Exception as e:
         print(f"Error loading policy: {e}")
         exit(1)
@@ -205,8 +205,6 @@ def test_models(num_samples: int = 32) -> None:
             plt.grid(True)
             plt.savefig(f"{dir_name}/{metric}_vs_k_{d_name}.png")
             plt.close()
-
-    print(results)
 
 
 if __name__ == "__main__":

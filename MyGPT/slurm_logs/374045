@@ -4,3 +4,1309 @@
   model.load_state_dict(torch.load("models/best_gpt_model.pt"))
 /home/alvar258/CS587-Project-LLM_w_RL/MyGPT/test_models.py:60: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
   policy.load_state_dict(torch.load("models/best_policy.pt"))
+Using device: cuda
+All models use 'KV cache'
+=========== Original model, k=4, in_dist=True START ===========
+** Prompt **
+“Ask it, Professor.”
+** Gen text **
+“Ask it, Professor.”
+** Reference **
+“Ask it, Professor.”
+=========== Original model END ===========
+=========== Model w/ RL, k=4, in_dist=True START ===========
+** Prompt **
+“Ask it, Professor.”
+** Gen text **
+“Ask it, Professor.”
+** Reference **
+“Ask it, Professor.”
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=4, in_dist=True START ===========
+** Prompt **
+“Ask it, Professor.”
+** Gen text **
+“Ask it, Professor.”
+** Reference **
+“Ask it, Professor.”
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=4, in_dist=True START ===========
+** Prompt **
+“Ask it, Professor.”
+** Gen text **
+“Ask it, Professor.”
+** Reference **
+“Ask it, Professor.”
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=4, in_dist=True START ===========
+** Prompt **
+“Ask it, Professor.”
+** Gen text **
+“Ask it, Professor.”
+** Reference **
+“Ask it, Professor.”
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=4, in_dist=False START ===========
+** Prompt **
+AMG Since adding more
+** Gen text **
+AMG Since adding more practicable plots called
+“macciota,” and on which I noticed several beautiful specimens of pink
+coral.
+** Reference **
+AMG
+
+Since adding more cool to anmachine is a very difficult task, you should not be surprised it took 9 months to design the new bike. Similarly to how long it takes for a new human being to be conceived and born, the Vilner AMG Diavel needed an immense amount of careful planning and revising the details until the modifying process could begin.The only thing which sustained a high degree of re-working was the tail of the bike, now slimmer and sporting a more aggressive stance.White was used for the frame and several other bodywork parts: the contrast enhances the mean nature of the Diavel as the visual effect puts more of the complex shapes on display.New air ducts have been crafted, and they received black leather straps with contrasting white stitching, all in perfect harmony with the white swingarm covers and headlight trim. And since the rear end was changed, Vilner also reworked the suspension covers for the fork.The AMG wheels, exhaust and the luxurious Alcantara embossed seat were left untouched, as there was nothing more one could do to make them better.It looks like the owner of this Ducati Diavel AMG (#350, by the way) was not entirely happy with the degree of uniqueness of his ride. We totally understand the guy, but after these final Vilner touches the bike simply cannot get any more exclusive and singular.
+=========== Original model END ===========
+=========== Model w/ RL, k=4, in_dist=False START ===========
+** Prompt **
+AMG Since adding more
+** Gen text **
+AMG Since adding more than the great circle of this:—
+** Reference **
+AMG
+
+Since adding more cool to anmachine is a very difficult task, you should not be surprised it took 9 months to design the new bike. Similarly to how long it takes for a new human being to be conceived and born, the Vilner AMG Diavel needed an immense amount of careful planning and revising the details until the modifying process could begin.The only thing which sustained a high degree of re-working was the tail of the bike, now slimmer and sporting a more aggressive stance.White was used for the frame and several other bodywork parts: the contrast enhances the mean nature of the Diavel as the visual effect puts more of the complex shapes on display.New air ducts have been crafted, and they received black leather straps with contrasting white stitching, all in perfect harmony with the white swingarm covers and headlight trim. And since the rear end was changed, Vilner also reworked the suspension covers for the fork.The AMG wheels, exhaust and the luxurious Alcantara embossed seat were left untouched, as there was nothing more one could do to make them better.It looks like the owner of this Ducati Diavel AMG (#350, by the way) was not entirely happy with the degree of uniqueness of his ride. We totally understand the guy, but after these final Vilner touches the bike simply cannot get any more exclusive and singular.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=4, in_dist=False START ===========
+** Prompt **
+AMG Since adding more
+** Gen text **
+AMG Since adding more than a
+marine flora of the Rouquayrol apparatuses? Should I felt—theirreservoirsides of the boat seemed to twelve united tried to twelve united tried to twelve united the _Nautilus_, I cannot form of these elements.”
+** Reference **
+AMG
+
+Since adding more cool to anmachine is a very difficult task, you should not be surprised it took 9 months to design the new bike. Similarly to how long it takes for a new human being to be conceived and born, the Vilner AMG Diavel needed an immense amount of careful planning and revising the details until the modifying process could begin.The only thing which sustained a high degree of re-working was the tail of the bike, now slimmer and sporting a more aggressive stance.White was used for the frame and several other bodywork parts: the contrast enhances the mean nature of the Diavel as the visual effect puts more of the complex shapes on display.New air ducts have been crafted, and they received black leather straps with contrasting white stitching, all in perfect harmony with the white swingarm covers and headlight trim. And since the rear end was changed, Vilner also reworked the suspension covers for the fork.The AMG wheels, exhaust and the luxurious Alcantara embossed seat were left untouched, as there was nothing more one could do to make them better.It looks like the owner of this Ducati Diavel AMG (#350, by the way) was not entirely happy with the degree of uniqueness of his ride. We totally understand the guy, but after these final Vilner touches the bike simply cannot get any more exclusive and singular.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=4, in_dist=False START ===========
+** Prompt **
+AMG Since adding more
+** Gen text **
+AMG Since adding more serious tone of mind, “Moby D’Urville was one of your identity. For a last
+are you entirely forgotten your identityifera, “Several of your native town, friend Ned Land’s own interests, I recognised, for a last moor else all that a monster must have given
+powerful to be serious tone of the _Nautilus_ and flavour of the _Nautilus_ and officers on this pearl is a last adieu, for we may brave Ned Land’s eyes only ties which heaped up to be hands to be leading to be welcome, now till
+master had better regain the _Nautilus_.”
+** Reference **
+AMG
+
+Since adding more cool to anmachine is a very difficult task, you should not be surprised it took 9 months to design the new bike. Similarly to how long it takes for a new human being to be conceived and born, the Vilner AMG Diavel needed an immense amount of careful planning and revising the details until the modifying process could begin.The only thing which sustained a high degree of re-working was the tail of the bike, now slimmer and sporting a more aggressive stance.White was used for the frame and several other bodywork parts: the contrast enhances the mean nature of the Diavel as the visual effect puts more of the complex shapes on display.New air ducts have been crafted, and they received black leather straps with contrasting white stitching, all in perfect harmony with the white swingarm covers and headlight trim. And since the rear end was changed, Vilner also reworked the suspension covers for the fork.The AMG wheels, exhaust and the luxurious Alcantara embossed seat were left untouched, as there was nothing more one could do to make them better.It looks like the owner of this Ducati Diavel AMG (#350, by the way) was not entirely happy with the degree of uniqueness of his ride. We totally understand the guy, but after these final Vilner touches the bike simply cannot get any more exclusive and singular.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=4, in_dist=False START ===========
+** Prompt **
+AMG Since adding more
+** Gen text **
+AMG Since adding more than two
+O
+** Reference **
+AMG
+
+Since adding more cool to anmachine is a very difficult task, you should not be surprised it took 9 months to design the new bike. Similarly to how long it takes for a new human being to be conceived and born, the Vilner AMG Diavel needed an immense amount of careful planning and revising the details until the modifying process could begin.The only thing which sustained a high degree of re-working was the tail of the bike, now slimmer and sporting a more aggressive stance.White was used for the frame and several other bodywork parts: the contrast enhances the mean nature of the Diavel as the visual effect puts more of the complex shapes on display.New air ducts have been crafted, and they received black leather straps with contrasting white stitching, all in perfect harmony with the white swingarm covers and headlight trim. And since the rear end was changed, Vilner also reworked the suspension covers for the fork.The AMG wheels, exhaust and the luxurious Alcantara embossed seat were left untouched, as there was nothing more one could do to make them better.It looks like the owner of this Ducati Diavel AMG (#350, by the way) was not entirely happy with the degree of uniqueness of his ride. We totally understand the guy, but after these final Vilner touches the bike simply cannot get any more exclusive and singular.
+=========== Model w/ MH END ===========
+=========== Original model, k=8, in_dist=True START ===========
+** Prompt **
+There was no resisting this imperious command, it
+** Gen text **
+There was no resisting this imperious command, it would have been
+useless. I went down to the cabin occupied by Ned Land and Conseil, and
+told them the Captain’s determination. You may judge how this
+communication was received by the Canadian.
+** Reference **
+There was no resisting this imperious command, it would have been
+useless. I went down to the cabin occupied by Ned Land and Conseil, and
+told them the Captain’s determination. You may judge how this
+communication was received by the Canadian.
+=========== Original model END ===========
+=========== Model w/ RL, k=8, in_dist=True START ===========
+** Prompt **
+There was no resisting this imperious command, it
+** Gen text **
+There was no resisting this imperious command, it would have been
+useless. I went down to the cabin occupied by Ned Land and Conseil, and
+told them the Captain’s determination. You may judge how this
+communication was received by the Canadian.
+** Reference **
+There was no resisting this imperious command, it would have been
+useless. I went down to the cabin occupied by Ned Land and Conseil, and
+told them the Captain’s determination. You may judge how this
+communication was received by the Canadian.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=8, in_dist=True START ===========
+** Prompt **
+There was no resisting this imperious command, it
+** Gen text **
+There was no resisting this imperious command, it would have been
+absence to have left me an international work and could not likely not likely not likely not likely not likely not likely not likely not likely not likely not likely not likely not likely not likely not likely not have been able to have been able to have been able to have been able to have been able to have been able to have been able to have been astonished at the righted arches spring to quit the righted arches spring to be torn this impassive in Latin, and
+the Canadian’s tails and fernsides of an international work of an international work.
+** Reference **
+There was no resisting this imperious command, it would have been
+useless. I went down to the cabin occupied by Ned Land and Conseil, and
+told them the Captain’s determination. You may judge how this
+communication was received by the Canadian.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=8, in_dist=True START ===========
+** Prompt **
+There was no resisting this imperious command, it
+** Gen text **
+There was no resisting this imperious command, it would have been white, it had it had it had it had
+invisible in a sad voice suddenly a simple pitching movement that traceded arches spring to stop from the Antarctic region. We had to quit the _Nautilus_ which it had to renew its merchant vessels on the Antarctic seas of it commanded and
+to return to return to return to Africa and
+Captain N.N.E. We had to the _Nautilus_, and that lighted that lighted rain falling into the midst of the midst of the midst of the midst of the midst of an object in 10th, whilst coming nearer objects of it was only having returned to which he steersmanatee;_ one of the midst of the midst of February from the westi and in 10th of this burning fluid with great depths of northern hemisphere. In spite of Land’s Bay of February, was followed their diving apparatus that way of February, where they were meeting friends of the west still more than the west like a Greek, where they were seldom seen the Indian Ocean to
+once been cleared the grave, where we did not one of the most precious metals to the unfortunate cetacean’s hands to the unfortunate crew, until they came to the course to the future would exhaust itself cutlets, he began to the unfortunate cetacean to the light of the speed of the vast gliding like a
+once been forced to be inaccessible Gibraltar, and could not abandoning the _Nautilus_ oblique position of it could not more than heaving breastplate.
+** Reference **
+There was no resisting this imperious command, it would have been
+useless. I went down to the cabin occupied by Ned Land and Conseil, and
+told them the Captain’s determination. You may judge how this
+communication was received by the Canadian.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=8, in_dist=True START ===========
+** Prompt **
+There was no resisting this imperious command, it
+** Gen text **
+There was no resisting this imperious command, it would have been
+invisible in it had simply an international work as soon asleep. This N.N.E. This manuscript on the _Nautilus_ so many fished in circumference. This manuscript on the _Nautilus_ so as yet unknown to quit the _Nautilus_ was first sight of an oblong circuitous
+became horizontal under the pumps that name of these parts of the pumps that overtop M. It was created by the pumps that are due to which grow.”
+** Reference **
+There was no resisting this imperious command, it would have been
+useless. I went down to the cabin occupied by Ned Land and Conseil, and
+told them the Captain’s determination. You may judge how this
+communication was received by the Canadian.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=8, in_dist=False START ===========
+** Prompt **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2
+** Gen text **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 they end, and their colour
+between the United States will with pleasure see them. When the _Nautilus_ shall
+perverse idea of vengeance of which he had cause to repent, turned upon
+the pinnace and assailed us in its turn.
+** Reference **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 out of 5 by 168 .
+
+Rated 3 out of 5 by DJR from Satisfied but not completely Great looking shoe but there were some slight defects in the stitching of the sole of the shoe. Looks like a factory second. The right shoe is uncomfortable over the knuckle of the ball of my foot. By the day's end it is painful. Hope it will loosen up as it breaks in. Don't get me wrong, I do not have buyers remorse and have bought several other AE without any issues.
+
+Rated 4 out of 5 by Sugardaddy from Great shoe in walnut This is a great shoe especially in walnut color. The look and feel is quite well. Unfortunately i bought the wrong shoe width but loved the shoe so much that i forgot about the return policy and kept wearing them. Buying it in the clearance made me feel i got my value for money.
+
+Rated 5 out of 5 by Anonymous from Very comfortable, you can never go wrong with Allen Edmonds Shoes are comfortable right out the box. I went to a wide shoe and it made a huge difference. I have tried other brands and always come back to Allen Edmonds. They are simply made well and are worth every penny.
+=========== Original model END ===========
+=========== Model w/ RL, k=8, in_dist=False START ===========
+** Prompt **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2
+** Gen text **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 they
+expected a rich convoy which France was escorting with a fleet of
+twenty-three vessels, commanded by Admiral Chateau-Renaud, for the
+ships of the coalition were already beating the Atlantic. This convoy
+was to go to Cadiz, but the Admiral, hearing that an English fleet was
+cruising in those waters, resolved to make for a French port.
+** Reference **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 out of 5 by 168 .
+
+Rated 3 out of 5 by DJR from Satisfied but not completely Great looking shoe but there were some slight defects in the stitching of the sole of the shoe. Looks like a factory second. The right shoe is uncomfortable over the knuckle of the ball of my foot. By the day's end it is painful. Hope it will loosen up as it breaks in. Don't get me wrong, I do not have buyers remorse and have bought several other AE without any issues.
+
+Rated 4 out of 5 by Sugardaddy from Great shoe in walnut This is a great shoe especially in walnut color. The look and feel is quite well. Unfortunately i bought the wrong shoe width but loved the shoe so much that i forgot about the return policy and kept wearing them. Buying it in the clearance made me feel i got my value for money.
+
+Rated 5 out of 5 by Anonymous from Very comfortable, you can never go wrong with Allen Edmonds Shoes are comfortable right out the box. I went to a wide shoe and it made a huge difference. I have tried other brands and always come back to Allen Edmonds. They are simply made well and are worth every penny.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=8, in_dist=False START ===========
+** Prompt **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2
+** Gen text **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 they possess three miles to the
+cap,000 yards long ribbons of ships of ships of ships of ships, or seven inches long seaweed which is to the thirty feet, and a hundred and a each square feet this sea boots of fifty feet, islets to twelve united in length of warm water, until five hundred and vitiated air, to twelve united in length of fifty feet, islets to which surrounded by mischievous
+to .000 yards long ribbons of an inch of an inch of temperature of an inch of temperature of an inch of an inch of an altar on the _Nautilus_ than fifty feet square inches in lengthened curves prolonged imprisonment. The calculation seven hundred and fifty feet square inches long seaweed?”
+** Reference **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 out of 5 by 168 .
+
+Rated 3 out of 5 by DJR from Satisfied but not completely Great looking shoe but there were some slight defects in the stitching of the sole of the shoe. Looks like a factory second. The right shoe is uncomfortable over the knuckle of the ball of my foot. By the day's end it is painful. Hope it will loosen up as it breaks in. Don't get me wrong, I do not have buyers remorse and have bought several other AE without any issues.
+
+Rated 4 out of 5 by Sugardaddy from Great shoe in walnut This is a great shoe especially in walnut color. The look and feel is quite well. Unfortunately i bought the wrong shoe width but loved the shoe so much that i forgot about the return policy and kept wearing them. Buying it in the clearance made me feel i got my value for money.
+
+Rated 5 out of 5 by Anonymous from Very comfortable, you can never go wrong with Allen Edmonds Shoes are comfortable right out the box. I went to a wide shoe and it made a huge difference. I have tried other brands and always come back to Allen Edmonds. They are simply made well and are worth every penny.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=8, in_dist=False START ===========
+** Prompt **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2
+** Gen text **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 they
+to their kinds,000 yards high pressure.”
+** Reference **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 out of 5 by 168 .
+
+Rated 3 out of 5 by DJR from Satisfied but not completely Great looking shoe but there were some slight defects in the stitching of the sole of the shoe. Looks like a factory second. The right shoe is uncomfortable over the knuckle of the ball of my foot. By the day's end it is painful. Hope it will loosen up as it breaks in. Don't get me wrong, I do not have buyers remorse and have bought several other AE without any issues.
+
+Rated 4 out of 5 by Sugardaddy from Great shoe in walnut This is a great shoe especially in walnut color. The look and feel is quite well. Unfortunately i bought the wrong shoe width but loved the shoe so much that i forgot about the return policy and kept wearing them. Buying it in the clearance made me feel i got my value for money.
+
+Rated 5 out of 5 by Anonymous from Very comfortable, you can never go wrong with Allen Edmonds Shoes are comfortable right out the box. I went to a wide shoe and it made a huge difference. I have tried other brands and always come back to Allen Edmonds. They are simply made well and are worth every penny.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=8, in_dist=False START ===========
+** Prompt **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2
+** Gen text **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 by
+rocks, 1500 square miles of tons, which Cook’s sharp rocks, 1500; and more delicate ceram crossways in depth of sea, 12′, 12thousandths of holding 97, 97, 1500; and more delicate, 3000; and more delicate, 1500; and more delicate,000 yards long,000 yards long,000 yards beneath the greatest depth of stony,000 yards long,000 yards long,000 yards long,000 yards long,000 yards long,000 yards long,000 yards long,000 yards long,000 yards long,000 yards in depth,
+and 1500. The lengthened wrecks withth of sea islets,
+and bright-coloured creatures,000 yards long,000 yards long,000 yards long,000 yards long,000 yards long,000 yards long, ten yards long, ten miles an apparatus, 15 lbs. It required many of acres. The hullsides, 150 a yard long ribbons of islands, that extended to which heaped up common sailors, or seven and it was still pointed
+lengthened traceded red helmet-sharks nearly thirty feet two yards long ribbons of sea weed of sea weed that defies with a yard thick, and
+on the rapid, and silvery slowly raised from the rapid, with a species of flowers, and large number yellow but already encircled that defies with a species of flowers, marked on the islands and sea weed, marked on the islands and large number of flowers, marked on the body thrown across New Ceylon to which the body thrown across New Ceylon to which held in the body thrown over which held in both conditions that defies flew from the body drawn all sides of mackerel, over extended to twelve united tried to twelve united tried to twelve united tried to twelve united the geological epochs, over this part of
+the _Nautilus_ and silicious and contemporary with which the geological epochsie to the ocean? The bundles of the sea otterrespooner which the fact?”
+** Reference **
+Sanford Cap-toe Derby Dress Shoe is rated 4.2 out of 5 by 168 .
+
+Rated 3 out of 5 by DJR from Satisfied but not completely Great looking shoe but there were some slight defects in the stitching of the sole of the shoe. Looks like a factory second. The right shoe is uncomfortable over the knuckle of the ball of my foot. By the day's end it is painful. Hope it will loosen up as it breaks in. Don't get me wrong, I do not have buyers remorse and have bought several other AE without any issues.
+
+Rated 4 out of 5 by Sugardaddy from Great shoe in walnut This is a great shoe especially in walnut color. The look and feel is quite well. Unfortunately i bought the wrong shoe width but loved the shoe so much that i forgot about the return policy and kept wearing them. Buying it in the clearance made me feel i got my value for money.
+
+Rated 5 out of 5 by Anonymous from Very comfortable, you can never go wrong with Allen Edmonds Shoes are comfortable right out the box. I went to a wide shoe and it made a huge difference. I have tried other brands and always come back to Allen Edmonds. They are simply made well and are worth every penny.
+=========== Model w/ MH END ===========
+=========== Original model, k=12, in_dist=True START ===========
+** Prompt **
+At five o’clock, the log showed that the speed of the _Nautilus_
+** Gen text **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+slackening, and I knew that it was allowing them to draw nearer.
+Besides, the reports were heard more distinctly, and the projectiles,
+labouring through the ambient water, were extinguished with a strange
+hissing noise.
+** Reference **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+slackening, and I knew that it was allowing them to draw nearer.
+Besides, the reports were heard more distinctly, and the projectiles,
+labouring through the ambient water, were extinguished with a strange
+hissing noise.
+=========== Original model END ===========
+=========== Model w/ RL, k=12, in_dist=True START ===========
+** Prompt **
+At five o’clock, the log showed that the speed of the _Nautilus_
+** Gen text **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+slackening, and I knew that it was allowing them to draw nearer.
+Besides, the reports were heard more distinctly, and the projectiles,
+labouring through the ambient water, were extinguished with a strange
+hissing noise.
+** Reference **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+slackening, and I knew that it was allowing them to draw nearer.
+Besides, the reports were heard more distinctly, and the projectiles,
+labouring through the ambient water, were extinguished with a strange
+hissing noise.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=12, in_dist=True START ===========
+** Prompt **
+At five o’clock, the log showed that the speed of the _Nautilus_
+** Gen text **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+Captain’s head, but coral was beautiful oyster of the sea scoured one of the speed of the chase away, and from the speed of the speed of the _Nautilus_ took a long seaweed which he began to the speed of the speed of the east.”
+** Reference **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+slackening, and I knew that it was allowing them to draw nearer.
+Besides, the reports were heard more distinctly, and the projectiles,
+labouring through the ambient water, were extinguished with a strange
+hissing noise.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=12, in_dist=True START ===========
+** Prompt **
+At five o’clock, the log showed that the speed of the _Nautilus_
+** Gen text **
+At five o’clock, the log showed that the speed of the _Nautilus_ was begun,
+and Vanikoro.”
+** Reference **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+slackening, and I knew that it was allowing them to draw nearer.
+Besides, the reports were heard more distinctly, and the projectiles,
+labouring through the ambient water, were extinguished with a strange
+hissing noise.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=12, in_dist=True START ===========
+** Prompt **
+At five o’clock, the log showed that the speed of the _Nautilus_
+** Gen text **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+Captain N.N.E.
+** Reference **
+At five o’clock, the log showed that the speed of the _Nautilus_ was
+slackening, and I knew that it was allowing them to draw nearer.
+Besides, the reports were heard more distinctly, and the projectiles,
+labouring through the ambient water, were extinguished with a strange
+hissing noise.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=12, in_dist=False START ===========
+** Prompt **
+The home secretary, Amber Rudd, did not look at evidence held by
+** Gen text **
+The home secretary, Amber Rudd, did not look at evidence held by
+the hands of naïads, whose festoons were waved by the gentle
+undulations caused by our walk. It was a real grief to me to crush
+under my feet the brilliant specimens of molluscs which strewed the
+ground by thousands, of hammer-heads, donaciae (veritable bounding
+shells), of staircases, and red helmet-shells, angel-wings, and many
+others produced by this inexhaustible ocean. But we were bound to walk,
+so we went on, whilst above our heads waved shoals of physalides
+leaving their tentacles to float in their train, medusæ whose umbrellas
+of opal or rose-pink, escalloped with a band of blue, sheltered us from
+the rays of the sun and fiery pelagiæ, which, in the darkness, would
+have strewn our path with phosphorescent light.
+** Reference **
+The home secretary, Amber Rudd, did not look at evidence held by South Yorkshire police on its operation at Orgreave during the 1984 miners strike and the subsequent collapsed prosecutions against 95 men before she turned down an inquiry into the events, the Guardian has learned.
+
+The Home Office has refused to say what documents Rudd and its officials considered, but South Yorkshire police said they had not sent the materials they held to the home secretary.
+
+Campaigners said they felt let down and that Rudd had made a superficial decision “without bothering to look at the evidence”.
+
+The South Yorkshire police archive on Orgreave is understood to include all its papers on the operation itself, in which officers are accused of having planned the use of violence against 8,000 miners who gathered to picket the coking plant near Rotherham.
+
+Documents also relate to the criminal charges subsequently brought against 95 miners, which collapsed in June 1985 after allegations that police officers had lied in court and fabricated evidence. Papers documenting 39 miners’ subsequent civil claims for assault, false arrest and malicious prosecution, which the force settled, paying £425,000 in damages, are also held.
+
+Other material includes witness statements, lists of arrest records, documents on the “mutual aid” given by other police forces, as well as photographs and film of the day. None of it was seen by the Home Office during 15 months in which first Theresa May, then Rudd, said they were considering an inquiry.
+
+The Home Office also did not approach the Independent Police Complaints Commission (IPCC) for the evidence it gathered and examined to produce its June 2015 report on Orgreave, the police watchdog’s deputy chair, Sarah Green, is understood to have told campaigners.
+
+The Home Office declined to say what evidence May, Rudd or her officials had considered before reaching the decision not to launch an inquiry. A spokesperson said only that Rudd had reviewed “a range of relevant documentation”.
+
+Joe Rollin, chair of the Orgreave Truth and Justice campaign (OTJC), said: “We were led up the garden path for more than a year, given signals that some form of inquiry would be held, but this now shows the Home Office let us down without even bothering to look at the evidence. People in our former mining communities felt crushed by the decision last Monday, and angry with themselves for ever believing the government would listen.”
+
+May first said in June last year that she would “consider any request to set up a public inquiry”, after the IPCC reported evidence of excessive force by police at Orgreave, and subsequent perjury by some officers, perverting of the course of justice and a cover-up.
+
+South Yorkshire police told the Guardian, in answer to a question about whether the force had given its files to the Home Office: “All of the materials in possession of South Yorkshire police have been previously made available to the IPCC in their raw form. We have not shared these files with any other body.”
+
+In July last year May, then home secretary, met OTJC representatives and was told that mistrust of the police has passed down to miners’ grandchildren. Families whose relatives were among the 96 people unlawfully killed due to South Yorkshire police failings at Hillsborough five years later also told May and Rudd that they wanted an inquiry. The Hillsborough families believe that the disaster and its subsequent alleged cover-up might have been avoided had the force’s culture been reformed after the malpractice exposed by the Orgreave events.
+
+However, last week Rudd announced she would not hold an inquiry in any form. She said this was principally because nobody had died at Orgreave, there had been no miscarriage of justice, policing had improved since 1984, and the link with Hillsborough could not be made with any certainty.
+
+Labour’s Andy Burnham, who has campaigned for an inquiry into Orgreave, said the former mining communities in South Yorkshire had “again been told by the government that they do not matter”.
+
+He said: “This news confirms my suspicion that the home secretary did not do a thorough job in looking at all the evidence, and for that reason her decision is inadequate and unsound.”
+
+Following Rudd’s refusal, a cross-party group of MPs led by the chair of the home affairs select committee, Yvette Cooper, and including the Conservative MP Edward Leigh, wrote asking her to support the committee holding its own inquiry into Orgreave.
+
+As the committee’s membership has a six-to-five Conservative majority, support from the government is seen as essential to securing a decision by members to pursue an inquiry. Cooper has also asked Rudd what evidence the Home Office relied on before refusing an inquiry into Orgreave. The Home Office is due to respond on Friday.
+=========== Original model END ===========
+=========== Model w/ RL, k=12, in_dist=False START ===========
+** Prompt **
+The home secretary, Amber Rudd, did not look at evidence held by
+** Gen text **
+The home secretary, Amber Rudd, did not look at evidence held by the unfortunate man with
+premature, produced flames by our feet, flew to its track. No one breathed; a deep silence
+reigned on the bridge. We were not a hundred feet from the burning
+focus, the light of which increased and dazzled our eyes.
+** Reference **
+The home secretary, Amber Rudd, did not look at evidence held by South Yorkshire police on its operation at Orgreave during the 1984 miners strike and the subsequent collapsed prosecutions against 95 men before she turned down an inquiry into the events, the Guardian has learned.
+
+The Home Office has refused to say what documents Rudd and its officials considered, but South Yorkshire police said they had not sent the materials they held to the home secretary.
+
+Campaigners said they felt let down and that Rudd had made a superficial decision “without bothering to look at the evidence”.
+
+The South Yorkshire police archive on Orgreave is understood to include all its papers on the operation itself, in which officers are accused of having planned the use of violence against 8,000 miners who gathered to picket the coking plant near Rotherham.
+
+Documents also relate to the criminal charges subsequently brought against 95 miners, which collapsed in June 1985 after allegations that police officers had lied in court and fabricated evidence. Papers documenting 39 miners’ subsequent civil claims for assault, false arrest and malicious prosecution, which the force settled, paying £425,000 in damages, are also held.
+
+Other material includes witness statements, lists of arrest records, documents on the “mutual aid” given by other police forces, as well as photographs and film of the day. None of it was seen by the Home Office during 15 months in which first Theresa May, then Rudd, said they were considering an inquiry.
+
+The Home Office also did not approach the Independent Police Complaints Commission (IPCC) for the evidence it gathered and examined to produce its June 2015 report on Orgreave, the police watchdog’s deputy chair, Sarah Green, is understood to have told campaigners.
+
+The Home Office declined to say what evidence May, Rudd or her officials had considered before reaching the decision not to launch an inquiry. A spokesperson said only that Rudd had reviewed “a range of relevant documentation”.
+
+Joe Rollin, chair of the Orgreave Truth and Justice campaign (OTJC), said: “We were led up the garden path for more than a year, given signals that some form of inquiry would be held, but this now shows the Home Office let us down without even bothering to look at the evidence. People in our former mining communities felt crushed by the decision last Monday, and angry with themselves for ever believing the government would listen.”
+
+May first said in June last year that she would “consider any request to set up a public inquiry”, after the IPCC reported evidence of excessive force by police at Orgreave, and subsequent perjury by some officers, perverting of the course of justice and a cover-up.
+
+South Yorkshire police told the Guardian, in answer to a question about whether the force had given its files to the Home Office: “All of the materials in possession of South Yorkshire police have been previously made available to the IPCC in their raw form. We have not shared these files with any other body.”
+
+In July last year May, then home secretary, met OTJC representatives and was told that mistrust of the police has passed down to miners’ grandchildren. Families whose relatives were among the 96 people unlawfully killed due to South Yorkshire police failings at Hillsborough five years later also told May and Rudd that they wanted an inquiry. The Hillsborough families believe that the disaster and its subsequent alleged cover-up might have been avoided had the force’s culture been reformed after the malpractice exposed by the Orgreave events.
+
+However, last week Rudd announced she would not hold an inquiry in any form. She said this was principally because nobody had died at Orgreave, there had been no miscarriage of justice, policing had improved since 1984, and the link with Hillsborough could not be made with any certainty.
+
+Labour’s Andy Burnham, who has campaigned for an inquiry into Orgreave, said the former mining communities in South Yorkshire had “again been told by the government that they do not matter”.
+
+He said: “This news confirms my suspicion that the home secretary did not do a thorough job in looking at all the evidence, and for that reason her decision is inadequate and unsound.”
+
+Following Rudd’s refusal, a cross-party group of MPs led by the chair of the home affairs select committee, Yvette Cooper, and including the Conservative MP Edward Leigh, wrote asking her to support the committee holding its own inquiry into Orgreave.
+
+As the committee’s membership has a six-to-five Conservative majority, support from the government is seen as essential to securing a decision by members to pursue an inquiry. Cooper has also asked Rudd what evidence the Home Office relied on before refusing an inquiry into Orgreave. The Home Office is due to respond on Friday.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=12, in_dist=False START ===========
+** Prompt **
+The home secretary, Amber Rudd, did not look at evidence held by
+** Gen text **
+The home secretary, Amber Rudd, did not look at evidence held by
+the help, and the _Nautilus_ was soon
+the waves two miles to the question of our feet, or the question of the question of the question of our first closed, but to dig a height of the east, but she could not less than the east, but she could not less than the _Nautilus_—
+** Reference **
+The home secretary, Amber Rudd, did not look at evidence held by South Yorkshire police on its operation at Orgreave during the 1984 miners strike and the subsequent collapsed prosecutions against 95 men before she turned down an inquiry into the events, the Guardian has learned.
+
+The Home Office has refused to say what documents Rudd and its officials considered, but South Yorkshire police said they had not sent the materials they held to the home secretary.
+
+Campaigners said they felt let down and that Rudd had made a superficial decision “without bothering to look at the evidence”.
+
+The South Yorkshire police archive on Orgreave is understood to include all its papers on the operation itself, in which officers are accused of having planned the use of violence against 8,000 miners who gathered to picket the coking plant near Rotherham.
+
+Documents also relate to the criminal charges subsequently brought against 95 miners, which collapsed in June 1985 after allegations that police officers had lied in court and fabricated evidence. Papers documenting 39 miners’ subsequent civil claims for assault, false arrest and malicious prosecution, which the force settled, paying £425,000 in damages, are also held.
+
+Other material includes witness statements, lists of arrest records, documents on the “mutual aid” given by other police forces, as well as photographs and film of the day. None of it was seen by the Home Office during 15 months in which first Theresa May, then Rudd, said they were considering an inquiry.
+
+The Home Office also did not approach the Independent Police Complaints Commission (IPCC) for the evidence it gathered and examined to produce its June 2015 report on Orgreave, the police watchdog’s deputy chair, Sarah Green, is understood to have told campaigners.
+
+The Home Office declined to say what evidence May, Rudd or her officials had considered before reaching the decision not to launch an inquiry. A spokesperson said only that Rudd had reviewed “a range of relevant documentation”.
+
+Joe Rollin, chair of the Orgreave Truth and Justice campaign (OTJC), said: “We were led up the garden path for more than a year, given signals that some form of inquiry would be held, but this now shows the Home Office let us down without even bothering to look at the evidence. People in our former mining communities felt crushed by the decision last Monday, and angry with themselves for ever believing the government would listen.”
+
+May first said in June last year that she would “consider any request to set up a public inquiry”, after the IPCC reported evidence of excessive force by police at Orgreave, and subsequent perjury by some officers, perverting of the course of justice and a cover-up.
+
+South Yorkshire police told the Guardian, in answer to a question about whether the force had given its files to the Home Office: “All of the materials in possession of South Yorkshire police have been previously made available to the IPCC in their raw form. We have not shared these files with any other body.”
+
+In July last year May, then home secretary, met OTJC representatives and was told that mistrust of the police has passed down to miners’ grandchildren. Families whose relatives were among the 96 people unlawfully killed due to South Yorkshire police failings at Hillsborough five years later also told May and Rudd that they wanted an inquiry. The Hillsborough families believe that the disaster and its subsequent alleged cover-up might have been avoided had the force’s culture been reformed after the malpractice exposed by the Orgreave events.
+
+However, last week Rudd announced she would not hold an inquiry in any form. She said this was principally because nobody had died at Orgreave, there had been no miscarriage of justice, policing had improved since 1984, and the link with Hillsborough could not be made with any certainty.
+
+Labour’s Andy Burnham, who has campaigned for an inquiry into Orgreave, said the former mining communities in South Yorkshire had “again been told by the government that they do not matter”.
+
+He said: “This news confirms my suspicion that the home secretary did not do a thorough job in looking at all the evidence, and for that reason her decision is inadequate and unsound.”
+
+Following Rudd’s refusal, a cross-party group of MPs led by the chair of the home affairs select committee, Yvette Cooper, and including the Conservative MP Edward Leigh, wrote asking her to support the committee holding its own inquiry into Orgreave.
+
+As the committee’s membership has a six-to-five Conservative majority, support from the government is seen as essential to securing a decision by members to pursue an inquiry. Cooper has also asked Rudd what evidence the Home Office relied on before refusing an inquiry into Orgreave. The Home Office is due to respond on Friday.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=12, in_dist=False START ===========
+** Prompt **
+The home secretary, Amber Rudd, did not look at evidence held by
+** Gen text **
+The home secretary, Amber Rudd, did not look at evidence held by the harpoonersmanometer. Several times more than two cables’ quarters of the animal, and, and, and, and the trouble one
+ently below the idea of the idea of the idea of the chart with anguish, and a
+useful state of the idea of the honour binds us lay quietly, not being more than two extremities monster, and a
+anchor before leaving the Canadian’s eyes looked like a tenacity could not being more am forced him with teeth were larger blocks of the ingenuity of the shock told me with arguments in its proper temperatures.
+** Reference **
+The home secretary, Amber Rudd, did not look at evidence held by South Yorkshire police on its operation at Orgreave during the 1984 miners strike and the subsequent collapsed prosecutions against 95 men before she turned down an inquiry into the events, the Guardian has learned.
+
+The Home Office has refused to say what documents Rudd and its officials considered, but South Yorkshire police said they had not sent the materials they held to the home secretary.
+
+Campaigners said they felt let down and that Rudd had made a superficial decision “without bothering to look at the evidence”.
+
+The South Yorkshire police archive on Orgreave is understood to include all its papers on the operation itself, in which officers are accused of having planned the use of violence against 8,000 miners who gathered to picket the coking plant near Rotherham.
+
+Documents also relate to the criminal charges subsequently brought against 95 miners, which collapsed in June 1985 after allegations that police officers had lied in court and fabricated evidence. Papers documenting 39 miners’ subsequent civil claims for assault, false arrest and malicious prosecution, which the force settled, paying £425,000 in damages, are also held.
+
+Other material includes witness statements, lists of arrest records, documents on the “mutual aid” given by other police forces, as well as photographs and film of the day. None of it was seen by the Home Office during 15 months in which first Theresa May, then Rudd, said they were considering an inquiry.
+
+The Home Office also did not approach the Independent Police Complaints Commission (IPCC) for the evidence it gathered and examined to produce its June 2015 report on Orgreave, the police watchdog’s deputy chair, Sarah Green, is understood to have told campaigners.
+
+The Home Office declined to say what evidence May, Rudd or her officials had considered before reaching the decision not to launch an inquiry. A spokesperson said only that Rudd had reviewed “a range of relevant documentation”.
+
+Joe Rollin, chair of the Orgreave Truth and Justice campaign (OTJC), said: “We were led up the garden path for more than a year, given signals that some form of inquiry would be held, but this now shows the Home Office let us down without even bothering to look at the evidence. People in our former mining communities felt crushed by the decision last Monday, and angry with themselves for ever believing the government would listen.”
+
+May first said in June last year that she would “consider any request to set up a public inquiry”, after the IPCC reported evidence of excessive force by police at Orgreave, and subsequent perjury by some officers, perverting of the course of justice and a cover-up.
+
+South Yorkshire police told the Guardian, in answer to a question about whether the force had given its files to the Home Office: “All of the materials in possession of South Yorkshire police have been previously made available to the IPCC in their raw form. We have not shared these files with any other body.”
+
+In July last year May, then home secretary, met OTJC representatives and was told that mistrust of the police has passed down to miners’ grandchildren. Families whose relatives were among the 96 people unlawfully killed due to South Yorkshire police failings at Hillsborough five years later also told May and Rudd that they wanted an inquiry. The Hillsborough families believe that the disaster and its subsequent alleged cover-up might have been avoided had the force’s culture been reformed after the malpractice exposed by the Orgreave events.
+
+However, last week Rudd announced she would not hold an inquiry in any form. She said this was principally because nobody had died at Orgreave, there had been no miscarriage of justice, policing had improved since 1984, and the link with Hillsborough could not be made with any certainty.
+
+Labour’s Andy Burnham, who has campaigned for an inquiry into Orgreave, said the former mining communities in South Yorkshire had “again been told by the government that they do not matter”.
+
+He said: “This news confirms my suspicion that the home secretary did not do a thorough job in looking at all the evidence, and for that reason her decision is inadequate and unsound.”
+
+Following Rudd’s refusal, a cross-party group of MPs led by the chair of the home affairs select committee, Yvette Cooper, and including the Conservative MP Edward Leigh, wrote asking her to support the committee holding its own inquiry into Orgreave.
+
+As the committee’s membership has a six-to-five Conservative majority, support from the government is seen as essential to securing a decision by members to pursue an inquiry. Cooper has also asked Rudd what evidence the Home Office relied on before refusing an inquiry into Orgreave. The Home Office is due to respond on Friday.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=12, in_dist=False START ===========
+** Prompt **
+The home secretary, Amber Rudd, did not look at evidence held by
+** Gen text **
+The home secretary, Amber Rudd, did not look at evidence held by the _Helvetia_.
+** Reference **
+The home secretary, Amber Rudd, did not look at evidence held by South Yorkshire police on its operation at Orgreave during the 1984 miners strike and the subsequent collapsed prosecutions against 95 men before she turned down an inquiry into the events, the Guardian has learned.
+
+The Home Office has refused to say what documents Rudd and its officials considered, but South Yorkshire police said they had not sent the materials they held to the home secretary.
+
+Campaigners said they felt let down and that Rudd had made a superficial decision “without bothering to look at the evidence”.
+
+The South Yorkshire police archive on Orgreave is understood to include all its papers on the operation itself, in which officers are accused of having planned the use of violence against 8,000 miners who gathered to picket the coking plant near Rotherham.
+
+Documents also relate to the criminal charges subsequently brought against 95 miners, which collapsed in June 1985 after allegations that police officers had lied in court and fabricated evidence. Papers documenting 39 miners’ subsequent civil claims for assault, false arrest and malicious prosecution, which the force settled, paying £425,000 in damages, are also held.
+
+Other material includes witness statements, lists of arrest records, documents on the “mutual aid” given by other police forces, as well as photographs and film of the day. None of it was seen by the Home Office during 15 months in which first Theresa May, then Rudd, said they were considering an inquiry.
+
+The Home Office also did not approach the Independent Police Complaints Commission (IPCC) for the evidence it gathered and examined to produce its June 2015 report on Orgreave, the police watchdog’s deputy chair, Sarah Green, is understood to have told campaigners.
+
+The Home Office declined to say what evidence May, Rudd or her officials had considered before reaching the decision not to launch an inquiry. A spokesperson said only that Rudd had reviewed “a range of relevant documentation”.
+
+Joe Rollin, chair of the Orgreave Truth and Justice campaign (OTJC), said: “We were led up the garden path for more than a year, given signals that some form of inquiry would be held, but this now shows the Home Office let us down without even bothering to look at the evidence. People in our former mining communities felt crushed by the decision last Monday, and angry with themselves for ever believing the government would listen.”
+
+May first said in June last year that she would “consider any request to set up a public inquiry”, after the IPCC reported evidence of excessive force by police at Orgreave, and subsequent perjury by some officers, perverting of the course of justice and a cover-up.
+
+South Yorkshire police told the Guardian, in answer to a question about whether the force had given its files to the Home Office: “All of the materials in possession of South Yorkshire police have been previously made available to the IPCC in their raw form. We have not shared these files with any other body.”
+
+In July last year May, then home secretary, met OTJC representatives and was told that mistrust of the police has passed down to miners’ grandchildren. Families whose relatives were among the 96 people unlawfully killed due to South Yorkshire police failings at Hillsborough five years later also told May and Rudd that they wanted an inquiry. The Hillsborough families believe that the disaster and its subsequent alleged cover-up might have been avoided had the force’s culture been reformed after the malpractice exposed by the Orgreave events.
+
+However, last week Rudd announced she would not hold an inquiry in any form. She said this was principally because nobody had died at Orgreave, there had been no miscarriage of justice, policing had improved since 1984, and the link with Hillsborough could not be made with any certainty.
+
+Labour’s Andy Burnham, who has campaigned for an inquiry into Orgreave, said the former mining communities in South Yorkshire had “again been told by the government that they do not matter”.
+
+He said: “This news confirms my suspicion that the home secretary did not do a thorough job in looking at all the evidence, and for that reason her decision is inadequate and unsound.”
+
+Following Rudd’s refusal, a cross-party group of MPs led by the chair of the home affairs select committee, Yvette Cooper, and including the Conservative MP Edward Leigh, wrote asking her to support the committee holding its own inquiry into Orgreave.
+
+As the committee’s membership has a six-to-five Conservative majority, support from the government is seen as essential to securing a decision by members to pursue an inquiry. Cooper has also asked Rudd what evidence the Home Office relied on before refusing an inquiry into Orgreave. The Home Office is due to respond on Friday.
+=========== Model w/ MH END ===========
+=========== Original model, k=16, in_dist=True START ===========
+** Prompt **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but
+** Gen text **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but making hostile demonstrations. Stones and arrows
+fell thickly.
+** Reference **
+Our boat was moored about sixty feet from us. The savages approached
+us, not running, but making hostile demonstrations. Stones and arrows
+fell thickly.
+=========== Original model END ===========
+=========== Model w/ RL, k=16, in_dist=True START ===========
+** Prompt **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but
+** Gen text **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but she could not
+raise them; a morbid sleep, full of hallucinations, bereft me of my
+being. Then the visions disappeared, and left me in complete
+insensibility.
+** Reference **
+Our boat was moored about sixty feet from us. The savages approached
+us, not running, but making hostile demonstrations. Stones and arrows
+fell thickly.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=16, in_dist=True START ===========
+** Prompt **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but
+** Gen text **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but making hostile demonstrations and could
+himself it could not to which had been inaccessible to which had taken which had spoken to such a great depths of the speed of these seas? On board the islands increased and cannot be assembled the islands and cannot be leading us, and did not to be leading us. The _Nautilus_ spectacle. The _Nautilus_ swamoch and
+walked Land’s grasp of these seas of these seas of these seas of these seas of these seas of these seas of these seas of these Antarctic region understand one of digging if some volcanic mountain. The battle between the electric sheets of digging if water-trees were forty-eight hours we are not beak of
+the _Nautilus_ spectacle wasRight!
+** Reference **
+Our boat was moored about sixty feet from us. The savages approached
+us, not running, but making hostile demonstrations. Stones and arrows
+fell thickly.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=16, in_dist=True START ===========
+** Prompt **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but
+** Gen text **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but it, although
+more, although
+away two yards, although
+what this iceberg is sold him I could not to which he knew not to which he knew not to which he ordered the island to which he knew not to which he wished to which he had to which he had to which he wished to which he wished to which was dangerous one of it had pressure of it had to which was awaiting the islands me in front, but the boat; he wished to which he wished to which had to which was awaiting the boat; he wished to 72 sustained by the boat all of the steersman. The Canadian sleeping six months no tempestsinking a road. The respirations of meat
+master had taken of meat
+really had seen the monster: Have confidence. The _Nautilus_ going to port had been able to leave the monster of the boat? For thirty years for vessels on the electric sheets of the monster’s cage of the question, filled with great depths of the monster could not to dig a manœuvre very heart beat for he began to dig a manœuvre very heart-rend of the _Nautilus_ who wished to dig a manœuvre did not jets of the _Nautilus_ visit its borders of the _Nautilus_ again, and oppressed races as if heaped up his conventional temperature of the _Nautilus_ at the _Nautilus_ first-rate man’s
+the real grief to approach to come to breathe with great depths.
+** Reference **
+Our boat was moored about sixty feet from us. The savages approached
+us, not running, but making hostile demonstrations. Stones and arrows
+fell thickly.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=16, in_dist=True START ===========
+** Prompt **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but
+** Gen text **
+Our boat was moored about sixty feet from us. The savages approached us, not running, but making hostile demonstrations and could
+himself it did not to which had been taken which had been taken which had been taken-fish to which had been about thirty feet below it, and could not to such a perfect lamps produced a perfect cause for a perfect lamps produced sometimes magical effects of digging round it had ever met our guns and was still open, and was still night? To the moment a perfect fingers, had taken that day before us.
+** Reference **
+Our boat was moored about sixty feet from us. The savages approached
+us, not running, but making hostile demonstrations. Stones and arrows
+fell thickly.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=16, in_dist=False START ===========
+** Prompt **
+If you're still hesitating if RoR is the best choice for you, here are top 10
+** Gen text **
+If you're still hesitating if RoR is the best choice for you, here are top 10° long. and 4th
+January, and in five days the moon will be full. Now, I shall be very
+much astonished if that satellite does not raise these masses of water
+sufficiently, and render me a service that I should be indebted to her
+for.”
+** Reference **
+If you're still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+If you’re still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+1 - Twitter (in its early days)
+
+We’re putting Twitter on our list as it was originally built with Ruby on Rails in 2006. With the growth of its popularity, after five years, founders have switched from RoR to Java server.
+
+I guess there’s no need to introduce ;-)
+
+3 - Yellow pages
+
+Famous book with business directories and telephones stepped into the virtual world, known as the Internet Yellow Pages or IYP. Ruby on Rails based website, the biggest one that IT&T runs.
+
+4 - Hulu
+
+Add-supported online video service, a favorite site of almost every Family Guy fan. Founded in 2007, offers a wide selection of TV shows, etc. Sort of free TV on your computer.
+
+5 - Slideshare
+
+E-learning platform that allows you to upload and share presentations. Created in 2006, it took only one year to hit 3 million unique visitors. Impressing one.
+
+6 - Github
+
+Our favorite. Social network platform for developers. Essential tool for every code lover. The most popular code hosting service in the world with over 9 million users and 21.1 million repositories. (in 2015)
+
+7 - Shopify
+
+E-commerce shop that allows users to build an online store. Necessity is the mother of invention - it was created in 2004 by Tobias Lütke, Daniel Weinand, and Scott Lake as the already existing e-commerce sites were unsatisfying.
+
+8 - Groupon
+
+Well known to every bargain hunter. The website which main idea is to offer coupons for deals to its local or international subscribers. Launched in 2008 in US, quickly spread and gained popularity, all over the world.
+
+9 - Urban Dictionary
+
+Crowdsourced online dictionary of slang, founded in 1999 and powered by Ruby on Rails. The must-visit website for contemporary human-being ever called ‘nerd’.
+
+10 - AirBnb
+
+A web service for everyone who want to rent a holiday accommodation. Founded in 2008, it connects hosts and travellers all over the world.
+
+Impressed? So how about staying behind such tech success by yourself?
+
+Join our series of free tutorials and learn how to make your own SaaS application in a full-stack, easy-to-approach Rails framework.
+
+Rails Rocks!
+
+Photo by: gratisography.com
+=========== Original model END ===========
+=========== Model w/ RL, k=16, in_dist=False START ===========
+** Prompt **
+If you're still hesitating if RoR is the best choice for you, here are top 10
+** Gen text **
+If you're still hesitating if RoR is the best choice for you, here are top 10° below zero,
+and I do not warmed by the perpendicular lines, pushed the great height,
+stretched by the electric light of the _Nautilus_, and breathe
+directly the pure air drawn from the reservoirs, and supplied by our
+apparatus, and to quit the impoverished and vitiated atmosphere.
+Towards evening the trench was dug one yard deeper. When I returned on
+board, I was nearly suffocated by the carbonic acid with which the air
+was filled—ah! if we had only the chemical means to drive away this
+deleterious gas. We had plenty of oxygen; all this water contained a
+considerable quantity, and by dissolving it with our powerful piles, it
+would restore the vivifying fluid. I had thought well over it; but of
+what good was that, since the carbonic acid produced by our respiration
+had invaded every part of the vessel? To absorb it, it was necessary to
+fill some jars with caustic potash, and to shake them incessantly. Now
+this substance was wanting on board, and nothing could replace it. On
+that evening, Captain Nemo ought to open the taps of his reservoirs,
+and let some pure air into the interior of the _Nautilus;_ without this
+precaution we could not get rid of the sense of suffocation. The next
+day, March 26th, I resumed my miner’s work in beginning the fifth yard.
+The side walls and the lower surface of the iceberg thickened visibly.
+It was evident that they would meet before the _Nautilus_ was able to
+disengage itself. Despair seized me for an instant; my pickaxe nearly
+fell from my hands. What was the good of digging if I must be
+suffocated, crushed by the water that was turning into stone?—a
+punishment that the ferocity of the savages even would not have
+invented! Just then Captain Nemo passed near me. I touched his hand and
+showed him the walls of our prison. The wall to port had advanced to at
+least four yards from the hull of the _Nautilus_. The Captain
+understood me, and signed me to follow him. We went on board. I took
+off my cork-jacket and accompanied him into the drawing-room.
+** Reference **
+If you're still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+If you’re still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+1 - Twitter (in its early days)
+
+We’re putting Twitter on our list as it was originally built with Ruby on Rails in 2006. With the growth of its popularity, after five years, founders have switched from RoR to Java server.
+
+I guess there’s no need to introduce ;-)
+
+3 - Yellow pages
+
+Famous book with business directories and telephones stepped into the virtual world, known as the Internet Yellow Pages or IYP. Ruby on Rails based website, the biggest one that IT&T runs.
+
+4 - Hulu
+
+Add-supported online video service, a favorite site of almost every Family Guy fan. Founded in 2007, offers a wide selection of TV shows, etc. Sort of free TV on your computer.
+
+5 - Slideshare
+
+E-learning platform that allows you to upload and share presentations. Created in 2006, it took only one year to hit 3 million unique visitors. Impressing one.
+
+6 - Github
+
+Our favorite. Social network platform for developers. Essential tool for every code lover. The most popular code hosting service in the world with over 9 million users and 21.1 million repositories. (in 2015)
+
+7 - Shopify
+
+E-commerce shop that allows users to build an online store. Necessity is the mother of invention - it was created in 2004 by Tobias Lütke, Daniel Weinand, and Scott Lake as the already existing e-commerce sites were unsatisfying.
+
+8 - Groupon
+
+Well known to every bargain hunter. The website which main idea is to offer coupons for deals to its local or international subscribers. Launched in 2008 in US, quickly spread and gained popularity, all over the world.
+
+9 - Urban Dictionary
+
+Crowdsourced online dictionary of slang, founded in 1999 and powered by Ruby on Rails. The must-visit website for contemporary human-being ever called ‘nerd’.
+
+10 - AirBnb
+
+A web service for everyone who want to rent a holiday accommodation. Founded in 2008, it connects hosts and travellers all over the world.
+
+Impressed? So how about staying behind such tech success by yourself?
+
+Join our series of free tutorials and learn how to make your own SaaS application in a full-stack, easy-to-approach Rails framework.
+
+Rails Rocks!
+
+Photo by: gratisography.com
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=16, in_dist=False START ===========
+** Prompt **
+If you're still hesitating if RoR is the best choice for you, here are top 10
+** Gen text **
+If you're still hesitating if RoR is the best choice for you, here are top 10° long ribbons of N.N.E. The most
+the _Nautilus_, and overrun day by the old and overrun day of the old and overrun day with La Perouse had been very late: and
+the _Nautilus_ one of the third an immense centres of February to the unfortunate crew disabled,000 yards and by the old and by the old cork jackets,000 yards of the unfortunate crew. In certain seas, stopped at the old cork of the old cork jackets, the unfortunate crew shown each other by the old and in absorbing carbonic acid in the unfortunate crew. In reality, it was Sargasso Seaas and
+the seven years old cork jackets, stopped at Recherche, was soon light of a sort of the pumps that disappear which grow slowly to our feet, it was covered with which grow slowly to which he looked like a sort of the last thoughts crowded the lastly coast of the last thoughts crowded the geological epochs, it was wanting in the geological epochs, drawn from the geological epochs, and from the geological epochs, and from the loud strokes of the east, it was E.N.E. The _Nautilus_ and from the east, and from the east, to twelve united against the vessel was E.N.E. I did not the east, and
+the air from the vessel could not it was at the east, and
+the whale frequent those going round of the vessel could not it was E.N.E. I had conquered of the _Nautilus_ and from our feet of the _Nautilus_ and
+the be developed itself float on the east. For one of the east. It was righting vision disappeared under the east. It was rapidity of the east. It was necessary to the east. It was rapid flight of the east. It was necessary to grow slowly raised from the east. It was necessary to awake its speed. It was Sargasso Sea a sonorous stroke of the east. It was rapidity of a third an immense centres of the east. It was rapidity of digging a copper swif the crew. It was rapidity of the crew. I caught a second (the natives of the crew. I caught very
+the natives of the crew. I caught a great number of the unfortunate man unexplored both of the crew. I caught a great number of the unfortunate manœuvre very late.”
+** Reference **
+If you're still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+If you’re still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+1 - Twitter (in its early days)
+
+We’re putting Twitter on our list as it was originally built with Ruby on Rails in 2006. With the growth of its popularity, after five years, founders have switched from RoR to Java server.
+
+I guess there’s no need to introduce ;-)
+
+3 - Yellow pages
+
+Famous book with business directories and telephones stepped into the virtual world, known as the Internet Yellow Pages or IYP. Ruby on Rails based website, the biggest one that IT&T runs.
+
+4 - Hulu
+
+Add-supported online video service, a favorite site of almost every Family Guy fan. Founded in 2007, offers a wide selection of TV shows, etc. Sort of free TV on your computer.
+
+5 - Slideshare
+
+E-learning platform that allows you to upload and share presentations. Created in 2006, it took only one year to hit 3 million unique visitors. Impressing one.
+
+6 - Github
+
+Our favorite. Social network platform for developers. Essential tool for every code lover. The most popular code hosting service in the world with over 9 million users and 21.1 million repositories. (in 2015)
+
+7 - Shopify
+
+E-commerce shop that allows users to build an online store. Necessity is the mother of invention - it was created in 2004 by Tobias Lütke, Daniel Weinand, and Scott Lake as the already existing e-commerce sites were unsatisfying.
+
+8 - Groupon
+
+Well known to every bargain hunter. The website which main idea is to offer coupons for deals to its local or international subscribers. Launched in 2008 in US, quickly spread and gained popularity, all over the world.
+
+9 - Urban Dictionary
+
+Crowdsourced online dictionary of slang, founded in 1999 and powered by Ruby on Rails. The must-visit website for contemporary human-being ever called ‘nerd’.
+
+10 - AirBnb
+
+A web service for everyone who want to rent a holiday accommodation. Founded in 2008, it connects hosts and travellers all over the world.
+
+Impressed? So how about staying behind such tech success by yourself?
+
+Join our series of free tutorials and learn how to make your own SaaS application in a full-stack, easy-to-approach Rails framework.
+
+Rails Rocks!
+
+Photo by: gratisography.com
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=16, in_dist=False START ===========
+** Prompt **
+If you're still hesitating if RoR is the best choice for you, here are top 10
+** Gen text **
+If you're still hesitating if RoR is the best choice for you, here are top 10° 97, M. In
+rather feet,000 leagues in length of the _Nautilus_.”
+** Reference **
+If you're still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+If you’re still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+1 - Twitter (in its early days)
+
+We’re putting Twitter on our list as it was originally built with Ruby on Rails in 2006. With the growth of its popularity, after five years, founders have switched from RoR to Java server.
+
+I guess there’s no need to introduce ;-)
+
+3 - Yellow pages
+
+Famous book with business directories and telephones stepped into the virtual world, known as the Internet Yellow Pages or IYP. Ruby on Rails based website, the biggest one that IT&T runs.
+
+4 - Hulu
+
+Add-supported online video service, a favorite site of almost every Family Guy fan. Founded in 2007, offers a wide selection of TV shows, etc. Sort of free TV on your computer.
+
+5 - Slideshare
+
+E-learning platform that allows you to upload and share presentations. Created in 2006, it took only one year to hit 3 million unique visitors. Impressing one.
+
+6 - Github
+
+Our favorite. Social network platform for developers. Essential tool for every code lover. The most popular code hosting service in the world with over 9 million users and 21.1 million repositories. (in 2015)
+
+7 - Shopify
+
+E-commerce shop that allows users to build an online store. Necessity is the mother of invention - it was created in 2004 by Tobias Lütke, Daniel Weinand, and Scott Lake as the already existing e-commerce sites were unsatisfying.
+
+8 - Groupon
+
+Well known to every bargain hunter. The website which main idea is to offer coupons for deals to its local or international subscribers. Launched in 2008 in US, quickly spread and gained popularity, all over the world.
+
+9 - Urban Dictionary
+
+Crowdsourced online dictionary of slang, founded in 1999 and powered by Ruby on Rails. The must-visit website for contemporary human-being ever called ‘nerd’.
+
+10 - AirBnb
+
+A web service for everyone who want to rent a holiday accommodation. Founded in 2008, it connects hosts and travellers all over the world.
+
+Impressed? So how about staying behind such tech success by yourself?
+
+Join our series of free tutorials and learn how to make your own SaaS application in a full-stack, easy-to-approach Rails framework.
+
+Rails Rocks!
+
+Photo by: gratisography.com
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=16, in_dist=False START ===========
+** Prompt **
+If you're still hesitating if RoR is the best choice for you, here are top 10
+** Gen text **
+If you're still hesitating if RoR is the best choice for you, here are top 10°, which road to
+the Aleut has turned upside; macrocet cataractised by La Perouse had gone, so many square miles to its greatest beauty,
+and the builder, or Havrecks of 4th of the resistance of the resistance of the resistance of the resistance of the resistance of seed-3rd of the resistance of the resistance of the resistance of the resistance of the resistance of the resistance of reeds of reeds of the resistance of reeds of reeds of reeds of reeds of reeds of reeds of reeds of reeds of reeds at its darkened spirals, and large high coral that of reeds at fifteen fogs, and their centre of fifty feet, and large and their charming positions, and
+air briskly coast; and
+darkness of reeds at which more than two lights of the species of the sea weed known continents, and Japan.
+** Reference **
+If you're still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+If you’re still hesitating if RoR is the best choice for you, here are top 10 famous websites built with Ruby on Rails. Feel inspired!
+
+1 - Twitter (in its early days)
+
+We’re putting Twitter on our list as it was originally built with Ruby on Rails in 2006. With the growth of its popularity, after five years, founders have switched from RoR to Java server.
+
+I guess there’s no need to introduce ;-)
+
+3 - Yellow pages
+
+Famous book with business directories and telephones stepped into the virtual world, known as the Internet Yellow Pages or IYP. Ruby on Rails based website, the biggest one that IT&T runs.
+
+4 - Hulu
+
+Add-supported online video service, a favorite site of almost every Family Guy fan. Founded in 2007, offers a wide selection of TV shows, etc. Sort of free TV on your computer.
+
+5 - Slideshare
+
+E-learning platform that allows you to upload and share presentations. Created in 2006, it took only one year to hit 3 million unique visitors. Impressing one.
+
+6 - Github
+
+Our favorite. Social network platform for developers. Essential tool for every code lover. The most popular code hosting service in the world with over 9 million users and 21.1 million repositories. (in 2015)
+
+7 - Shopify
+
+E-commerce shop that allows users to build an online store. Necessity is the mother of invention - it was created in 2004 by Tobias Lütke, Daniel Weinand, and Scott Lake as the already existing e-commerce sites were unsatisfying.
+
+8 - Groupon
+
+Well known to every bargain hunter. The website which main idea is to offer coupons for deals to its local or international subscribers. Launched in 2008 in US, quickly spread and gained popularity, all over the world.
+
+9 - Urban Dictionary
+
+Crowdsourced online dictionary of slang, founded in 1999 and powered by Ruby on Rails. The must-visit website for contemporary human-being ever called ‘nerd’.
+
+10 - AirBnb
+
+A web service for everyone who want to rent a holiday accommodation. Founded in 2008, it connects hosts and travellers all over the world.
+
+Impressed? So how about staying behind such tech success by yourself?
+
+Join our series of free tutorials and learn how to make your own SaaS application in a full-stack, easy-to-approach Rails framework.
+
+Rails Rocks!
+
+Photo by: gratisography.com
+=========== Model w/ MH END ===========
+=========== Original model, k=20, in_dist=True START ===========
+** Prompt **
+The captain then decided to take more direct means.
+** Gen text **
+The captain then decided to take more direct means.
+** Reference **
+The captain then decided to take more direct means.
+=========== Original model END ===========
+=========== Model w/ RL, k=20, in_dist=True START ===========
+** Prompt **
+The captain then decided to take more direct means.
+** Gen text **
+The captain then decided to take more direct means.
+** Reference **
+The captain then decided to take more direct means.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=20, in_dist=True START ===========
+** Prompt **
+The captain then decided to take more direct means.
+** Gen text **
+The captain then decided to take more direct means.
+** Reference **
+The captain then decided to take more direct means.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=20, in_dist=True START ===========
+** Prompt **
+The captain then decided to take more direct means.
+** Gen text **
+The captain then decided to take more direct means.
+** Reference **
+The captain then decided to take more direct means.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=20, in_dist=True START ===========
+** Prompt **
+The captain then decided to take more direct means.
+** Gen text **
+The captain then decided to take more direct means.
+** Reference **
+The captain then decided to take more direct means.
+=========== Model w/ MH END ===========
+Loading datasets...
+=========== Original model, k=20, in_dist=False START ===========
+** Prompt **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost
+** Gen text **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost up in the
+northern regions; and, until it is proved to the contrary, we may
+suppose either a continent or an ocean free from ice at these two
+points of the globe.”
+** Reference **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost and Paul Gascoigne
+
+The “industrial scale” of phone hacking at the Daily Mirror, Sunday Mirror and the People made the News of the World look like a “small cottage industry” in comparison, the high court in London has heard.
+
+Scores of celebrities, including the actor Sadie Frost and ex-footballer Paul Gascoigne, were targeted thousands of times by journalists using the illegal practice from mid-1999 until 2009, it was claimed.
+
+In the first hint of the true extent of phone hacking at the three titles, the court heard that the former Sunday Mirror journalist Dan Evans hacked about 100 celebrities every day from 2003 to mid-2004.
+
+Such was the reliance on phone hacking for stories that one senior journalist was desperate for Evans to create “an enigma-type machine that would automatically crack pin codes”, the court was told.
+
+David Sherborne, the barrister for eight victims, said hacking at the titles was “utterly unprecedented” and that knowledge of the activity went to the highest levels of the newspaper group.
+
+“This was not just the work of junior reporters … quite the opposite,” he said. “The evidence demonstrates that voicemail interception, as well as the unlawful obtaining of personal information by blagging or use of private investigators, was in widespread and habitual use by a large number of journalists across all three MGN titles.”
+
+Between June 2002 and mid-2006, Sherborne said MGN journalists made nearly 10,000 calls to Orange’s voicemail platform, which allows people to access their messages by calling a general number and entering their personal details. He said senior MGN journalists gave “deliberately crafted and disingenuous statements” to the Leveson inquiry into press ethics, and accused MGN of withholding key evidence that meant that only the “very tip of the proverbial iceberg” could be revealed.
+
+Two senior journalists, who cannot be named for legal reasons, allegedly introduced Evans to phone hacking in April 2003 and ordered him to build a “phone-hacking database” using pay-as-you-go phones and a list of celebrity mobile numbers. Evans, who later pleaded guilty to phone hacking, covered up his illegal activities by throwing his mobile phones – dubbed “burners” – into the river Thames every two months, the court heard.
+
+The evidence came on the opening day of a civil trial brought by eight claimants – including Frost, Gascoigne and BBC creative director Alan Yentob – against MGN for invasion of privacy.
+
+The judge, Mr Justice Mann, is being asked to assess the extent of phone hacking across the three titles and rule on the level of damages for each of the claimants. The other claimants involved in the case are TV soap stars Lucy Taggart, Shane Richie and Shobna Gulati, flight attendant Lauren Alcorn and TV producer Robert Ashworth.
+
+Frost is alleged to have been hacked on a daily basis, morning and evening, in part because she was married to fellow actor Jude Law and was good friends with the model Kate Moss.
+
+She described having her voicemails intercepted as like being “monitored and hunted down by a sort of secret police, who were digging into our lives as much as they could in order to discover every possible detail about our private lives, as well as our professional ones, to use against us”.
+
+Sherborne said the “most deeply private” information was intercepted and published by journalists, including Frost’s attendance at AA meetings, Richie’s financial problems, Ashworth’s divorce, and Taggart’s relationship with actor Steve McFadden.
+
+Of the stories that Mirror Group has admitted were the result of phone hacking, 49 were printed in the Sunday Mirror, 40 in the Daily Mirror and 23 in the People between June 2000 and October 2006.
+
+“Strangers were deliberately picking through this, sifting for things they could get away with publishing,” Sherborne said. “No one imagined that all this private information, this treasure trove about just the sort of people who filled these newspapers in their millions, could be accessed and listened to in this way, let alone plundered as a source for stories.”
+
+Frost, for example, was hacked at least twice daily by Evans because, like Yentob, she was deemed a particularly fruitful source of stories and was on his so-called “back pocket list” of targets. In Frost’s case, this hacking resulted in 27 articles that Mirror Group has admitted were gleaned unlawfully from her private messages.
+
+By comparison, Sienna Miller received £100,000 in damages from the News of the World publisher in 2011 over 11 articles based on hacking by that newspaper.
+
+MGN has admitted that 99 articles relating to the eight celebrities would not have been published without phones being hacked, the court heard.
+
+Landline call records show that Yentob had his voicemails intercepted 330 times from July 2002 to March 2005, although the court heard that the true extent was likely to be much greater when hacking from pay-as-you-go phones was included.
+
+James Hipwell, a former Daily Mirror journalist, said Yentob was a principal target of showbusiness journalists and that his voicemails would be used in hacking tutorials. Journalists would sing an amended version of a Spike Milligan song while eavesdropping on his messages, Hipwell claimed. In a witness statement, the BBC executive said he felt “violated on a truly massive scale” by the hacking.
+
+Sherborne said: “It is abundantly clear that the documentary evidence before the court is only likely to reveal a tiny proportion of the total wrongdoing committed by MGN as against each of the claimants – merely the very tip of the proverbial iceberg.”
+
+Lawyers for the victims pieced together a picture of hacking at Mirror Group using evidence including landline call data, expenses receipts for pay-as-you-go telephones, internal emails from the Sunday Mirror and the People and witness statements from former exployees including Evans and ex-reporters James Hipwell and David Brown.
+
+Evans, who will give evidence as a witness in the trial, was allegedly instructed not to refer to telephones or voicemails explicitly in emails. Instead, he used the euphemism “getting the muppets” to stand up a story.
+
+In one email read to court, a Sunday Mirror journalist told his bosses that an unnamed celebrity “sounds so cute on the voicemail”. In another email, a senior editorial staff member warned colleagues not to telephone a TV producer because “he’s answering” – meaning the journalists would not be able to access his voicemails and may be rumbled.
+
+The court also heard that senior journalists made in-jokes about a hacked voicemail alleged to have been the source of a scoop revealing Sven-Göran Eriksson’s affair with Ulrika Jonsson.
+
+In Mirror Group’s written defence statement, Matthew Nicklin QC said the group had published a public apology and had written privately to the eight victims before the start of this trial. However, he said the discovery of hacking could not be said to have caused the victims serious long-term, life-changing suffering like that in personal injury cases. Nor could their hurt be equated with the kind of traumatic lengthy bullying suffered in harassment or discrimination cases.
+
+The publicly listed publisher had strenuously denied any wrongdoing until September last year, when it made limited admissions in court. The newspaper group has since set up a £12m compensation fund for hacking victims and last month printed an apology in its three papers for “an unwarranted and unacceptable intrusion into people’s private lives”.
+=========== Original model END ===========
+=========== Model w/ RL, k=20, in_dist=False START ===========
+** Prompt **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost
+** Gen text **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost up,
+and I could not help showing my repugnance to the
+drink; but he assured me that it was excellent, and not to be
+distinguished from cow’s milk. I tasted it, and was of his opinion. It
+was a useful reserve to us, for in the shape of salt butter or cheese
+it would form an agreeable variety from our ordinary food. From that
+day I noticed with uneasiness that Ned Land’s ill-will towards Captain
+Nemo increased, and I resolved to watch the Canadian’s gestures
+closely.
+** Reference **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost and Paul Gascoigne
+
+The “industrial scale” of phone hacking at the Daily Mirror, Sunday Mirror and the People made the News of the World look like a “small cottage industry” in comparison, the high court in London has heard.
+
+Scores of celebrities, including the actor Sadie Frost and ex-footballer Paul Gascoigne, were targeted thousands of times by journalists using the illegal practice from mid-1999 until 2009, it was claimed.
+
+In the first hint of the true extent of phone hacking at the three titles, the court heard that the former Sunday Mirror journalist Dan Evans hacked about 100 celebrities every day from 2003 to mid-2004.
+
+Such was the reliance on phone hacking for stories that one senior journalist was desperate for Evans to create “an enigma-type machine that would automatically crack pin codes”, the court was told.
+
+David Sherborne, the barrister for eight victims, said hacking at the titles was “utterly unprecedented” and that knowledge of the activity went to the highest levels of the newspaper group.
+
+“This was not just the work of junior reporters … quite the opposite,” he said. “The evidence demonstrates that voicemail interception, as well as the unlawful obtaining of personal information by blagging or use of private investigators, was in widespread and habitual use by a large number of journalists across all three MGN titles.”
+
+Between June 2002 and mid-2006, Sherborne said MGN journalists made nearly 10,000 calls to Orange’s voicemail platform, which allows people to access their messages by calling a general number and entering their personal details. He said senior MGN journalists gave “deliberately crafted and disingenuous statements” to the Leveson inquiry into press ethics, and accused MGN of withholding key evidence that meant that only the “very tip of the proverbial iceberg” could be revealed.
+
+Two senior journalists, who cannot be named for legal reasons, allegedly introduced Evans to phone hacking in April 2003 and ordered him to build a “phone-hacking database” using pay-as-you-go phones and a list of celebrity mobile numbers. Evans, who later pleaded guilty to phone hacking, covered up his illegal activities by throwing his mobile phones – dubbed “burners” – into the river Thames every two months, the court heard.
+
+The evidence came on the opening day of a civil trial brought by eight claimants – including Frost, Gascoigne and BBC creative director Alan Yentob – against MGN for invasion of privacy.
+
+The judge, Mr Justice Mann, is being asked to assess the extent of phone hacking across the three titles and rule on the level of damages for each of the claimants. The other claimants involved in the case are TV soap stars Lucy Taggart, Shane Richie and Shobna Gulati, flight attendant Lauren Alcorn and TV producer Robert Ashworth.
+
+Frost is alleged to have been hacked on a daily basis, morning and evening, in part because she was married to fellow actor Jude Law and was good friends with the model Kate Moss.
+
+She described having her voicemails intercepted as like being “monitored and hunted down by a sort of secret police, who were digging into our lives as much as they could in order to discover every possible detail about our private lives, as well as our professional ones, to use against us”.
+
+Sherborne said the “most deeply private” information was intercepted and published by journalists, including Frost’s attendance at AA meetings, Richie’s financial problems, Ashworth’s divorce, and Taggart’s relationship with actor Steve McFadden.
+
+Of the stories that Mirror Group has admitted were the result of phone hacking, 49 were printed in the Sunday Mirror, 40 in the Daily Mirror and 23 in the People between June 2000 and October 2006.
+
+“Strangers were deliberately picking through this, sifting for things they could get away with publishing,” Sherborne said. “No one imagined that all this private information, this treasure trove about just the sort of people who filled these newspapers in their millions, could be accessed and listened to in this way, let alone plundered as a source for stories.”
+
+Frost, for example, was hacked at least twice daily by Evans because, like Yentob, she was deemed a particularly fruitful source of stories and was on his so-called “back pocket list” of targets. In Frost’s case, this hacking resulted in 27 articles that Mirror Group has admitted were gleaned unlawfully from her private messages.
+
+By comparison, Sienna Miller received £100,000 in damages from the News of the World publisher in 2011 over 11 articles based on hacking by that newspaper.
+
+MGN has admitted that 99 articles relating to the eight celebrities would not have been published without phones being hacked, the court heard.
+
+Landline call records show that Yentob had his voicemails intercepted 330 times from July 2002 to March 2005, although the court heard that the true extent was likely to be much greater when hacking from pay-as-you-go phones was included.
+
+James Hipwell, a former Daily Mirror journalist, said Yentob was a principal target of showbusiness journalists and that his voicemails would be used in hacking tutorials. Journalists would sing an amended version of a Spike Milligan song while eavesdropping on his messages, Hipwell claimed. In a witness statement, the BBC executive said he felt “violated on a truly massive scale” by the hacking.
+
+Sherborne said: “It is abundantly clear that the documentary evidence before the court is only likely to reveal a tiny proportion of the total wrongdoing committed by MGN as against each of the claimants – merely the very tip of the proverbial iceberg.”
+
+Lawyers for the victims pieced together a picture of hacking at Mirror Group using evidence including landline call data, expenses receipts for pay-as-you-go telephones, internal emails from the Sunday Mirror and the People and witness statements from former exployees including Evans and ex-reporters James Hipwell and David Brown.
+
+Evans, who will give evidence as a witness in the trial, was allegedly instructed not to refer to telephones or voicemails explicitly in emails. Instead, he used the euphemism “getting the muppets” to stand up a story.
+
+In one email read to court, a Sunday Mirror journalist told his bosses that an unnamed celebrity “sounds so cute on the voicemail”. In another email, a senior editorial staff member warned colleagues not to telephone a TV producer because “he’s answering” – meaning the journalists would not be able to access his voicemails and may be rumbled.
+
+The court also heard that senior journalists made in-jokes about a hacked voicemail alleged to have been the source of a scoop revealing Sven-Göran Eriksson’s affair with Ulrika Jonsson.
+
+In Mirror Group’s written defence statement, Matthew Nicklin QC said the group had published a public apology and had written privately to the eight victims before the start of this trial. However, he said the discovery of hacking could not be said to have caused the victims serious long-term, life-changing suffering like that in personal injury cases. Nor could their hurt be equated with the kind of traumatic lengthy bullying suffered in harassment or discrimination cases.
+
+The publicly listed publisher had strenuously denied any wrongdoing until September last year, when it made limited admissions in court. The newspaper group has since set up a £12m compensation fund for hacking victims and last month printed an apology in its three papers for “an unwarranted and unacceptable intrusion into people’s private lives”.
+=========== Model w/ RL END ===========
+=========== Model w/ AR, k=20, in_dist=False START ===========
+** Prompt **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost
+** Gen text **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost up filled with
+regions, the several species, I did not that he had oppressed races as well.
+** Reference **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost and Paul Gascoigne
+
+The “industrial scale” of phone hacking at the Daily Mirror, Sunday Mirror and the People made the News of the World look like a “small cottage industry” in comparison, the high court in London has heard.
+
+Scores of celebrities, including the actor Sadie Frost and ex-footballer Paul Gascoigne, were targeted thousands of times by journalists using the illegal practice from mid-1999 until 2009, it was claimed.
+
+In the first hint of the true extent of phone hacking at the three titles, the court heard that the former Sunday Mirror journalist Dan Evans hacked about 100 celebrities every day from 2003 to mid-2004.
+
+Such was the reliance on phone hacking for stories that one senior journalist was desperate for Evans to create “an enigma-type machine that would automatically crack pin codes”, the court was told.
+
+David Sherborne, the barrister for eight victims, said hacking at the titles was “utterly unprecedented” and that knowledge of the activity went to the highest levels of the newspaper group.
+
+“This was not just the work of junior reporters … quite the opposite,” he said. “The evidence demonstrates that voicemail interception, as well as the unlawful obtaining of personal information by blagging or use of private investigators, was in widespread and habitual use by a large number of journalists across all three MGN titles.”
+
+Between June 2002 and mid-2006, Sherborne said MGN journalists made nearly 10,000 calls to Orange’s voicemail platform, which allows people to access their messages by calling a general number and entering their personal details. He said senior MGN journalists gave “deliberately crafted and disingenuous statements” to the Leveson inquiry into press ethics, and accused MGN of withholding key evidence that meant that only the “very tip of the proverbial iceberg” could be revealed.
+
+Two senior journalists, who cannot be named for legal reasons, allegedly introduced Evans to phone hacking in April 2003 and ordered him to build a “phone-hacking database” using pay-as-you-go phones and a list of celebrity mobile numbers. Evans, who later pleaded guilty to phone hacking, covered up his illegal activities by throwing his mobile phones – dubbed “burners” – into the river Thames every two months, the court heard.
+
+The evidence came on the opening day of a civil trial brought by eight claimants – including Frost, Gascoigne and BBC creative director Alan Yentob – against MGN for invasion of privacy.
+
+The judge, Mr Justice Mann, is being asked to assess the extent of phone hacking across the three titles and rule on the level of damages for each of the claimants. The other claimants involved in the case are TV soap stars Lucy Taggart, Shane Richie and Shobna Gulati, flight attendant Lauren Alcorn and TV producer Robert Ashworth.
+
+Frost is alleged to have been hacked on a daily basis, morning and evening, in part because she was married to fellow actor Jude Law and was good friends with the model Kate Moss.
+
+She described having her voicemails intercepted as like being “monitored and hunted down by a sort of secret police, who were digging into our lives as much as they could in order to discover every possible detail about our private lives, as well as our professional ones, to use against us”.
+
+Sherborne said the “most deeply private” information was intercepted and published by journalists, including Frost’s attendance at AA meetings, Richie’s financial problems, Ashworth’s divorce, and Taggart’s relationship with actor Steve McFadden.
+
+Of the stories that Mirror Group has admitted were the result of phone hacking, 49 were printed in the Sunday Mirror, 40 in the Daily Mirror and 23 in the People between June 2000 and October 2006.
+
+“Strangers were deliberately picking through this, sifting for things they could get away with publishing,” Sherborne said. “No one imagined that all this private information, this treasure trove about just the sort of people who filled these newspapers in their millions, could be accessed and listened to in this way, let alone plundered as a source for stories.”
+
+Frost, for example, was hacked at least twice daily by Evans because, like Yentob, she was deemed a particularly fruitful source of stories and was on his so-called “back pocket list” of targets. In Frost’s case, this hacking resulted in 27 articles that Mirror Group has admitted were gleaned unlawfully from her private messages.
+
+By comparison, Sienna Miller received £100,000 in damages from the News of the World publisher in 2011 over 11 articles based on hacking by that newspaper.
+
+MGN has admitted that 99 articles relating to the eight celebrities would not have been published without phones being hacked, the court heard.
+
+Landline call records show that Yentob had his voicemails intercepted 330 times from July 2002 to March 2005, although the court heard that the true extent was likely to be much greater when hacking from pay-as-you-go phones was included.
+
+James Hipwell, a former Daily Mirror journalist, said Yentob was a principal target of showbusiness journalists and that his voicemails would be used in hacking tutorials. Journalists would sing an amended version of a Spike Milligan song while eavesdropping on his messages, Hipwell claimed. In a witness statement, the BBC executive said he felt “violated on a truly massive scale” by the hacking.
+
+Sherborne said: “It is abundantly clear that the documentary evidence before the court is only likely to reveal a tiny proportion of the total wrongdoing committed by MGN as against each of the claimants – merely the very tip of the proverbial iceberg.”
+
+Lawyers for the victims pieced together a picture of hacking at Mirror Group using evidence including landline call data, expenses receipts for pay-as-you-go telephones, internal emails from the Sunday Mirror and the People and witness statements from former exployees including Evans and ex-reporters James Hipwell and David Brown.
+
+Evans, who will give evidence as a witness in the trial, was allegedly instructed not to refer to telephones or voicemails explicitly in emails. Instead, he used the euphemism “getting the muppets” to stand up a story.
+
+In one email read to court, a Sunday Mirror journalist told his bosses that an unnamed celebrity “sounds so cute on the voicemail”. In another email, a senior editorial staff member warned colleagues not to telephone a TV producer because “he’s answering” – meaning the journalists would not be able to access his voicemails and may be rumbled.
+
+The court also heard that senior journalists made in-jokes about a hacked voicemail alleged to have been the source of a scoop revealing Sven-Göran Eriksson’s affair with Ulrika Jonsson.
+
+In Mirror Group’s written defence statement, Matthew Nicklin QC said the group had published a public apology and had written privately to the eight victims before the start of this trial. However, he said the discovery of hacking could not be said to have caused the victims serious long-term, life-changing suffering like that in personal injury cases. Nor could their hurt be equated with the kind of traumatic lengthy bullying suffered in harassment or discrimination cases.
+
+The publicly listed publisher had strenuously denied any wrongdoing until September last year, when it made limited admissions in court. The newspaper group has since set up a £12m compensation fund for hacking victims and last month printed an apology in its three papers for “an unwarranted and unacceptable intrusion into people’s private lives”.
+=========== Model w/ AR END ===========
+=========== Model w/ HMC, k=20, in_dist=False START ===========
+** Prompt **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost
+** Gen text **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost up had risen. The very rough and it was threatening; and in which is not being more weight of
+glasses could not steel surmounted the subject result than in which I did not that he knew not steel surmiles broad daylight, therefore, therefore called the preparations for the _Nautilus_ told me but that time I did not that time I did not that time not that savages have little lodging by misfortune and in which I did not that day nearer; but of the scene will have little vogue during which I amiable. The Canadian’s eyes all, and) came to which he knew not that heaving of an end of it joined the scene of this _Nautilus_Conseveral days my fate destined to which he had already
+could only produce some hours.”
+** Reference **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost and Paul Gascoigne
+
+The “industrial scale” of phone hacking at the Daily Mirror, Sunday Mirror and the People made the News of the World look like a “small cottage industry” in comparison, the high court in London has heard.
+
+Scores of celebrities, including the actor Sadie Frost and ex-footballer Paul Gascoigne, were targeted thousands of times by journalists using the illegal practice from mid-1999 until 2009, it was claimed.
+
+In the first hint of the true extent of phone hacking at the three titles, the court heard that the former Sunday Mirror journalist Dan Evans hacked about 100 celebrities every day from 2003 to mid-2004.
+
+Such was the reliance on phone hacking for stories that one senior journalist was desperate for Evans to create “an enigma-type machine that would automatically crack pin codes”, the court was told.
+
+David Sherborne, the barrister for eight victims, said hacking at the titles was “utterly unprecedented” and that knowledge of the activity went to the highest levels of the newspaper group.
+
+“This was not just the work of junior reporters … quite the opposite,” he said. “The evidence demonstrates that voicemail interception, as well as the unlawful obtaining of personal information by blagging or use of private investigators, was in widespread and habitual use by a large number of journalists across all three MGN titles.”
+
+Between June 2002 and mid-2006, Sherborne said MGN journalists made nearly 10,000 calls to Orange’s voicemail platform, which allows people to access their messages by calling a general number and entering their personal details. He said senior MGN journalists gave “deliberately crafted and disingenuous statements” to the Leveson inquiry into press ethics, and accused MGN of withholding key evidence that meant that only the “very tip of the proverbial iceberg” could be revealed.
+
+Two senior journalists, who cannot be named for legal reasons, allegedly introduced Evans to phone hacking in April 2003 and ordered him to build a “phone-hacking database” using pay-as-you-go phones and a list of celebrity mobile numbers. Evans, who later pleaded guilty to phone hacking, covered up his illegal activities by throwing his mobile phones – dubbed “burners” – into the river Thames every two months, the court heard.
+
+The evidence came on the opening day of a civil trial brought by eight claimants – including Frost, Gascoigne and BBC creative director Alan Yentob – against MGN for invasion of privacy.
+
+The judge, Mr Justice Mann, is being asked to assess the extent of phone hacking across the three titles and rule on the level of damages for each of the claimants. The other claimants involved in the case are TV soap stars Lucy Taggart, Shane Richie and Shobna Gulati, flight attendant Lauren Alcorn and TV producer Robert Ashworth.
+
+Frost is alleged to have been hacked on a daily basis, morning and evening, in part because she was married to fellow actor Jude Law and was good friends with the model Kate Moss.
+
+She described having her voicemails intercepted as like being “monitored and hunted down by a sort of secret police, who were digging into our lives as much as they could in order to discover every possible detail about our private lives, as well as our professional ones, to use against us”.
+
+Sherborne said the “most deeply private” information was intercepted and published by journalists, including Frost’s attendance at AA meetings, Richie’s financial problems, Ashworth’s divorce, and Taggart’s relationship with actor Steve McFadden.
+
+Of the stories that Mirror Group has admitted were the result of phone hacking, 49 were printed in the Sunday Mirror, 40 in the Daily Mirror and 23 in the People between June 2000 and October 2006.
+
+“Strangers were deliberately picking through this, sifting for things they could get away with publishing,” Sherborne said. “No one imagined that all this private information, this treasure trove about just the sort of people who filled these newspapers in their millions, could be accessed and listened to in this way, let alone plundered as a source for stories.”
+
+Frost, for example, was hacked at least twice daily by Evans because, like Yentob, she was deemed a particularly fruitful source of stories and was on his so-called “back pocket list” of targets. In Frost’s case, this hacking resulted in 27 articles that Mirror Group has admitted were gleaned unlawfully from her private messages.
+
+By comparison, Sienna Miller received £100,000 in damages from the News of the World publisher in 2011 over 11 articles based on hacking by that newspaper.
+
+MGN has admitted that 99 articles relating to the eight celebrities would not have been published without phones being hacked, the court heard.
+
+Landline call records show that Yentob had his voicemails intercepted 330 times from July 2002 to March 2005, although the court heard that the true extent was likely to be much greater when hacking from pay-as-you-go phones was included.
+
+James Hipwell, a former Daily Mirror journalist, said Yentob was a principal target of showbusiness journalists and that his voicemails would be used in hacking tutorials. Journalists would sing an amended version of a Spike Milligan song while eavesdropping on his messages, Hipwell claimed. In a witness statement, the BBC executive said he felt “violated on a truly massive scale” by the hacking.
+
+Sherborne said: “It is abundantly clear that the documentary evidence before the court is only likely to reveal a tiny proportion of the total wrongdoing committed by MGN as against each of the claimants – merely the very tip of the proverbial iceberg.”
+
+Lawyers for the victims pieced together a picture of hacking at Mirror Group using evidence including landline call data, expenses receipts for pay-as-you-go telephones, internal emails from the Sunday Mirror and the People and witness statements from former exployees including Evans and ex-reporters James Hipwell and David Brown.
+
+Evans, who will give evidence as a witness in the trial, was allegedly instructed not to refer to telephones or voicemails explicitly in emails. Instead, he used the euphemism “getting the muppets” to stand up a story.
+
+In one email read to court, a Sunday Mirror journalist told his bosses that an unnamed celebrity “sounds so cute on the voicemail”. In another email, a senior editorial staff member warned colleagues not to telephone a TV producer because “he’s answering” – meaning the journalists would not be able to access his voicemails and may be rumbled.
+
+The court also heard that senior journalists made in-jokes about a hacked voicemail alleged to have been the source of a scoop revealing Sven-Göran Eriksson’s affair with Ulrika Jonsson.
+
+In Mirror Group’s written defence statement, Matthew Nicklin QC said the group had published a public apology and had written privately to the eight victims before the start of this trial. However, he said the discovery of hacking could not be said to have caused the victims serious long-term, life-changing suffering like that in personal injury cases. Nor could their hurt be equated with the kind of traumatic lengthy bullying suffered in harassment or discrimination cases.
+
+The publicly listed publisher had strenuously denied any wrongdoing until September last year, when it made limited admissions in court. The newspaper group has since set up a £12m compensation fund for hacking victims and last month printed an apology in its three papers for “an unwarranted and unacceptable intrusion into people’s private lives”.
+=========== Model w/ HMC END ===========
+=========== Model w/ MH, k=20, in_dist=False START ===========
+** Prompt **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost
+** Gen text **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost up filled with
+entlemen,” said that he had dealings with extreme light.
+** Reference **
+One journalist hacked phones of 100 celebrities every day for 18 months, says barrister acting for victims including Sadie Frost and Paul Gascoigne
+
+The “industrial scale” of phone hacking at the Daily Mirror, Sunday Mirror and the People made the News of the World look like a “small cottage industry” in comparison, the high court in London has heard.
+
+Scores of celebrities, including the actor Sadie Frost and ex-footballer Paul Gascoigne, were targeted thousands of times by journalists using the illegal practice from mid-1999 until 2009, it was claimed.
+
+In the first hint of the true extent of phone hacking at the three titles, the court heard that the former Sunday Mirror journalist Dan Evans hacked about 100 celebrities every day from 2003 to mid-2004.
+
+Such was the reliance on phone hacking for stories that one senior journalist was desperate for Evans to create “an enigma-type machine that would automatically crack pin codes”, the court was told.
+
+David Sherborne, the barrister for eight victims, said hacking at the titles was “utterly unprecedented” and that knowledge of the activity went to the highest levels of the newspaper group.
+
+“This was not just the work of junior reporters … quite the opposite,” he said. “The evidence demonstrates that voicemail interception, as well as the unlawful obtaining of personal information by blagging or use of private investigators, was in widespread and habitual use by a large number of journalists across all three MGN titles.”
+
+Between June 2002 and mid-2006, Sherborne said MGN journalists made nearly 10,000 calls to Orange’s voicemail platform, which allows people to access their messages by calling a general number and entering their personal details. He said senior MGN journalists gave “deliberately crafted and disingenuous statements” to the Leveson inquiry into press ethics, and accused MGN of withholding key evidence that meant that only the “very tip of the proverbial iceberg” could be revealed.
+
+Two senior journalists, who cannot be named for legal reasons, allegedly introduced Evans to phone hacking in April 2003 and ordered him to build a “phone-hacking database” using pay-as-you-go phones and a list of celebrity mobile numbers. Evans, who later pleaded guilty to phone hacking, covered up his illegal activities by throwing his mobile phones – dubbed “burners” – into the river Thames every two months, the court heard.
+
+The evidence came on the opening day of a civil trial brought by eight claimants – including Frost, Gascoigne and BBC creative director Alan Yentob – against MGN for invasion of privacy.
+
+The judge, Mr Justice Mann, is being asked to assess the extent of phone hacking across the three titles and rule on the level of damages for each of the claimants. The other claimants involved in the case are TV soap stars Lucy Taggart, Shane Richie and Shobna Gulati, flight attendant Lauren Alcorn and TV producer Robert Ashworth.
+
+Frost is alleged to have been hacked on a daily basis, morning and evening, in part because she was married to fellow actor Jude Law and was good friends with the model Kate Moss.
+
+She described having her voicemails intercepted as like being “monitored and hunted down by a sort of secret police, who were digging into our lives as much as they could in order to discover every possible detail about our private lives, as well as our professional ones, to use against us”.
+
+Sherborne said the “most deeply private” information was intercepted and published by journalists, including Frost’s attendance at AA meetings, Richie’s financial problems, Ashworth’s divorce, and Taggart’s relationship with actor Steve McFadden.
+
+Of the stories that Mirror Group has admitted were the result of phone hacking, 49 were printed in the Sunday Mirror, 40 in the Daily Mirror and 23 in the People between June 2000 and October 2006.
+
+“Strangers were deliberately picking through this, sifting for things they could get away with publishing,” Sherborne said. “No one imagined that all this private information, this treasure trove about just the sort of people who filled these newspapers in their millions, could be accessed and listened to in this way, let alone plundered as a source for stories.”
+
+Frost, for example, was hacked at least twice daily by Evans because, like Yentob, she was deemed a particularly fruitful source of stories and was on his so-called “back pocket list” of targets. In Frost’s case, this hacking resulted in 27 articles that Mirror Group has admitted were gleaned unlawfully from her private messages.
+
+By comparison, Sienna Miller received £100,000 in damages from the News of the World publisher in 2011 over 11 articles based on hacking by that newspaper.
+
+MGN has admitted that 99 articles relating to the eight celebrities would not have been published without phones being hacked, the court heard.
+
+Landline call records show that Yentob had his voicemails intercepted 330 times from July 2002 to March 2005, although the court heard that the true extent was likely to be much greater when hacking from pay-as-you-go phones was included.
+
+James Hipwell, a former Daily Mirror journalist, said Yentob was a principal target of showbusiness journalists and that his voicemails would be used in hacking tutorials. Journalists would sing an amended version of a Spike Milligan song while eavesdropping on his messages, Hipwell claimed. In a witness statement, the BBC executive said he felt “violated on a truly massive scale” by the hacking.
+
+Sherborne said: “It is abundantly clear that the documentary evidence before the court is only likely to reveal a tiny proportion of the total wrongdoing committed by MGN as against each of the claimants – merely the very tip of the proverbial iceberg.”
+
+Lawyers for the victims pieced together a picture of hacking at Mirror Group using evidence including landline call data, expenses receipts for pay-as-you-go telephones, internal emails from the Sunday Mirror and the People and witness statements from former exployees including Evans and ex-reporters James Hipwell and David Brown.
+
+Evans, who will give evidence as a witness in the trial, was allegedly instructed not to refer to telephones or voicemails explicitly in emails. Instead, he used the euphemism “getting the muppets” to stand up a story.
+
+In one email read to court, a Sunday Mirror journalist told his bosses that an unnamed celebrity “sounds so cute on the voicemail”. In another email, a senior editorial staff member warned colleagues not to telephone a TV producer because “he’s answering” – meaning the journalists would not be able to access his voicemails and may be rumbled.
+
+The court also heard that senior journalists made in-jokes about a hacked voicemail alleged to have been the source of a scoop revealing Sven-Göran Eriksson’s affair with Ulrika Jonsson.
+
+In Mirror Group’s written defence statement, Matthew Nicklin QC said the group had published a public apology and had written privately to the eight victims before the start of this trial. However, he said the discovery of hacking could not be said to have caused the victims serious long-term, life-changing suffering like that in personal injury cases. Nor could their hurt be equated with the kind of traumatic lengthy bullying suffered in harassment or discrimination cases.
+
+The publicly listed publisher had strenuously denied any wrongdoing until September last year, when it made limited admissions in court. The newspaper group has since set up a £12m compensation fund for hacking victims and last month printed an apology in its three papers for “an unwarranted and unacceptable intrusion into people’s private lives”.
+=========== Model w/ MH END ===========
+Total time for 8 samples: 508.61

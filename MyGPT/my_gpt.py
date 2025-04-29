@@ -558,7 +558,7 @@ if __name__ == "__main__":
     print("Training complete.")
 
     # Load the best model for final evaluation.
-    model.load_state_dict(torch.load(best_model_path), map_location=device)
+    model.load_state_dict(torch.load(best_model_path, map_location=device))
     final_validation_loss = evaluate(model, validation_loader, criterion, device)
     print(f"Best model validation loss: {final_validation_loss:.4f}")
 
