@@ -5,7 +5,7 @@ import torch  # type: ignore
 import torch.optim as optim  # type: ignore
 
 from generate_w_policy import generate_w_policy
-from load_dataset import sample_paragraph_splits
+from load_dataset import sample_paragraph_splits, load_prompts_and_references
 from metrics import compute_fluency_score, compute_coherence_score
 from my_gpt import GPT, Config
 from sampling_policy import SamplingPolicy
@@ -95,7 +95,7 @@ if __name__ == "__main__":
     n_samples = ceildiv(num_epochs * batch_size, len(ks))
 
     for k in ks:
-        ps, rs = sample_paragraph_splits(num_samples=n_samples, k=k)
+        ps, rs = load_prompts_and_references(num_samples=n_samples, k=k)
         prompts.extend(ps)
         references.extend(rs)
 
